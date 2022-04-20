@@ -29,3 +29,4 @@ fun Fragment.isInternetAvailable(context: Context?): Boolean {
         }
     }
     return false
+}
