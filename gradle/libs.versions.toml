@@ -1,0 +1,82 @@
+[versions]
+gradle = "7.1.2"
+kotlin = "1.6.20"
+legacySupport = "1.0.0"
+coroutines = "1.6.0"
+material = "1.5.0"
+constraint = "2.1.3"
+viewBindingPropertyDelegate = "1.5.6"
+appCompat = "1.4.1"
+splashScreen = "1.0.0-beta01"
+core = "1.7.0"
+activity = "1.4.0"
+fragment = "1.4.1"
+lifecycle = "2.4.1"
+navigation = "2.4.1"
+hilt = "2.41"
+retrofit = "2.9.0"
+okHttp = "5.0.0-alpha.5"
+room = "2.4.2"
+paging = "3.1.1"
+firebase = "4.3.10"
+firebasePlatform = "29.2.0"
+glide = "4.13.0"
+koin = "3.2.0-beta-1"
+[libraries]
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+
+android-core = { module = "androidx.core:core-ktx", version.ref = "core" }
+fragment-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+activity-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+ui-material = { module = "com.google.android.material:material", version.ref = "material" }
+ui-appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+ui-constraint = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint" }
+ui-viewBindingPropertyDelegate = { module = "com.github.kirich1409:viewbindingpropertydelegate-noreflection", version.ref = "viewBindingPropertyDelegate" }
+ui-splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "splashScreen" }
+legacySupport-legacySupport = { module = "androidx.legacy:legacy-support-v4", version.ref = "legacySupport" }
+lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-liveData = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+
+navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+navigation-safeArgsGradle = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
+
+hilt-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+
+
+retrofit-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-gsonConverter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+
+okHttp-bom = { module = "com.squareup.okhttp3:okhttp-bom", version.ref = "okHttp" }
+
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-kotlinExtensionsAndCoroutinesSupport = { module = "androidx.room:room-ktx,version.ref", version.ref = "room" }
+
+paging-paging = { module = "androidx.paging:paging-runtime-ktx", version.ref = "paging" }
+glide-glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+
+firebase-platform = { module = "com.google.firebase:firebase-bom", version.ref = "firebasePlatform" }
+
+koin-koin = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+
+[bundles]
+uiComponents = ["ui-appCompat", "ui-constraint", "ui-material", "ui-viewBindingPropertyDelegate"]
+hiltBundle = ["hilt-hilt", "hilt-compiler"]
+roomBundle = ["room-runtime", "room-compiler", "room-kotlinExtensionsAndCoroutinesSupport"]
+retrofitBundle = ["retrofit-retrofit", "retrofit-gsonConverter"]
+navigationBundle = ["navigation-fragment", "navigation-ui"]
+lifecycleBundle = ["lifecycle-viewModel", "lifecycle-runtime", "lifecycle-liveData"]
+
+
+[plugins]
+hiltPlug = { id = "com.google.dagger.hilt.android" }
+
+
+
+
+
