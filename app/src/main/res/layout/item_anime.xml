@@ -25,6 +25,7 @@
                 android:layout_height="150dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
+                android:contentDescription="@string/imageview_for_an_anime_poster"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/avatars" />
@@ -37,7 +38,7 @@
                 android:fontFamily="@font/nunito_bold"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/im_anime"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="@tools:sample/lorem" />
 
@@ -46,10 +47,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_bold"
-                android:text="カウボーイビバップ"
-                android:textSize="18sp"
+                android:text="@string/something_in_japanese"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/im_anime"
                 app:layout_constraintTop_toBottomOf="@id/tv_english_title" />
 
             <TextView
@@ -59,7 +59,7 @@
                 android:fontFamily="@font/nunito_regular"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/im_anime"
                 app:layout_constraintTop_toBottomOf="@id/tv_japanese_title"
                 tools:text="@tools:sample/lorem" />
 
@@ -67,15 +67,36 @@
                 android:id="@+id/tv_start_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
                 android:fontFamily="@font/nunito_regular"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_dash"
+
                 app:layout_constraintTop_toBottomOf="@id/tv_amount_of_episodes"
                 tools:text="@tools:sample/lorem" />
+
             <TextView
-                android:layout_width=""
-                android:layout_height=""
+                android:id="@+id/tv_dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/dash"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/im_anime"
+                app:layout_constraintTop_toBottomOf="@id/tv_amount_of_episodes" />
+
+            <TextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/tv_dash"
+                app:layout_constraintTop_toBottomOf="@id/tv_amount_of_episodes"
+
+                tools:text="@tools:sample/lorem" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

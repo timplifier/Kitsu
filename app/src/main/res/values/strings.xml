@@ -2,4 +2,7 @@
     <string name="app_name">Kitsu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dash">-</string>
+    <string name="something_in_japanese">カウボーイビバップ</string>
+    <string name="imageview_for_an_anime_poster">imageview for an anime poster</string>
 </resources>
