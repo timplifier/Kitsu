@@ -1,9 +1,15 @@
 package com.timplifier.kitsu.data.remote.apiservices
 
-import com.timplifier.kitsu.common.constants.Constants.ANIME_GET_REQUEST
+import com.timplifier.kitsu.common.constants.Constants.GET_ANIME
+import com.timplifier.kitsu.common.constants.Constants.GET_ANIME_BY_ID
+import com.timplifier.kitsu.data.remote.dtos.AnimeDto
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface AnimeApiService {
-    @GET(ANIME_GET_REQUEST)
-    suspend fun fetchAnime()
+    @GET(GET_ANIME)
+    suspend fun fetchAnime(): AnimeDto
+
+    @GET(GET_ANIME_BY_ID)
+    suspend fun fetchAnimeById(@Path("id") id : String) :
 }

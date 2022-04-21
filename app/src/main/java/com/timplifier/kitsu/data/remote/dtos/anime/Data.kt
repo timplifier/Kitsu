@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.data.remote.dtos
+package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
@@ -11,5 +11,7 @@ data class Data(
     @SerializedName("links")
     val links: Links,
     @SerializedName("attributes")
-    val attributes: Attributes
+    val attributes: Attributes,
+    @SerializedName("relationships")
+    val relationships: Relationships
 )
