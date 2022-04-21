@@ -2,10 +2,11 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.base.BaseDiffModel
 
 data class Data(
     @SerializedName("id")
-    val id: String,
+    override val value: String,
     @SerializedName("type")
     val type: String,
     @SerializedName("links")
@@ -14,4 +15,4 @@ data class Data(
     val animeDto: AnimeDto,
     @SerializedName("relationships")
     val relationships: Relationships
-)
+) : BaseDiffModel<String>
