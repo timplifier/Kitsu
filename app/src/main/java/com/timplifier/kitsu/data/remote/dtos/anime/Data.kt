@@ -6,7 +6,7 @@ import com.timplifier.kitsu.base.BaseDiffModel
 
 data class Data(
     @SerializedName("id")
-    override val value: String,
+    override val id: String,
     @SerializedName("type")
     val type: String,
     @SerializedName("links")

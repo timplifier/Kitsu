@@ -20,7 +20,7 @@ abstract class BaseRepository {
 
     }.flowOn(Dispatchers.IO).catch { exception ->
         emit(Either.Left(exception.localizedMessage ?: "An error occurred"))
-        
+
 
     }
 }

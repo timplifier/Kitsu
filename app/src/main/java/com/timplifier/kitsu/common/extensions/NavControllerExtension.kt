@@ -7,4 +7,5 @@ import androidx.navigation.NavController
 fun NavController.safeNavigation(@IdRes actionId: Int) {
     currentDestination?.getAction(actionId)?.let { navigate(actionId) }
 }
-fun NavController.directionsSafeNavigation(directions : Layout.Directions) {}
+
+fun NavController.directionsSafeNavigation(directions: Layout.Directions) {}

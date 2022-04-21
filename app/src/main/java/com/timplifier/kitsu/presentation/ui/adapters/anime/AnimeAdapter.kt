@@ -5,11 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.base.BaseDiffUtil
-import com.timplifier.kitsu.data.remote.dtos.anime.AnimeDto
+import com.timplifier.kitsu.data.remote.dtos.anime.Data
 import com.timplifier.kitsu.databinding.ItemAnimeBinding
 
 
-class AnimeAdapter : ListAdapter<AnimeDto, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
+class AnimeAdapter(
+    private val onItemClick: (id: String) -> Unit
+) : ListAdapter<Data, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimeViewHolder {
@@ -28,7 +30,13 @@ class AnimeAdapter : ListAdapter<AnimeDto, AnimeAdapter.AnimeViewHolder>(BaseDif
 
     inner class AnimeViewHolder(private val binding: ItemAnimeBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(animeDto: AnimeDto) {
+        fun onBind(data: Data) {
+            binding.apply {
+                root.setOnClickListener {
+
+                    onItemClick(data.id)
+                }
+            }
 
         }
 
