@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.di
 
-import com.timplifier.kitsu.data.RetrofitClient
+import com.timplifier.kitsu.data.remote.RetrofitClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

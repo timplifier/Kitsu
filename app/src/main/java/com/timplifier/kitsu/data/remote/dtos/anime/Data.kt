@@ -10,8 +10,8 @@ data class Data(
     val type: String,
     @SerializedName("links")
     val links: Links,
-    @SerializedName("attributes")
-    val attributes: Attributes,
+    @SerializedName("animeDto")
+    val animeDto: AnimeDto,
     @SerializedName("relationships")
     val relationships: Relationships
 )

@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.data
+package com.timplifier.kitsu.data.remote
 
 import com.timplifier.kitsu.common.constants.Constants.BASE_URL
 import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
