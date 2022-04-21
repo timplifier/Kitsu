@@ -3,27 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="12dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#191919"
         android:elevation="20dp"
         app:cardCornerRadius="10dp"
+
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_japanese_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_japanese_title">
+
+            <ImageView
+                android:id="@+id/im_average_rating"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/ic_star_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_average_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/im_average_rating"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
 
             <ImageView
                 android:id="@+id/im_anime"
                 android:layout_width="120dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="10dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/imageview_for_an_anime_poster"
                 app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +61,9 @@
                 android:id="@+id/tv_english_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:fontFamily="@font/nunito_bold"
+
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/im_anime"
@@ -48,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_bold"
                 android:text="@string/something_in_japanese"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/im_anime"
                 app:layout_constraintTop_toBottomOf="@id/tv_english_title" />
@@ -57,18 +86,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_regular"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/im_anime"
                 app:layout_constraintTop_toBottomOf="@id/tv_japanese_title"
                 tools:text="@tools:sample/lorem" />
 
+            <ImageView
+                android:id="@+id/im_status"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="27dp"
+                android:contentDescription="@string/imageview_for_an_anime_status"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_start_date" />
+
             <TextView
                 android:id="@+id/tv_start_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="3dp"
                 android:fontFamily="@font/nunito_regular"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@id/tv_dash"
 
@@ -79,8 +119,10 @@
                 android:id="@+id/tv_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:fontFamily="@font/nunito_bold"
                 android:text="@string/dash"
+                android:textColor="@color/white"
                 android:textSize="17sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/im_anime"
@@ -92,6 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
                 android:fontFamily="@font/nunito_regular"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/tv_dash"
                 app:layout_constraintTop_toBottomOf="@id/tv_amount_of_episodes"
