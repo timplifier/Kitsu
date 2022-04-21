@@ -4,7 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.viewbinding.ViewBinding
+import com.timplifier.kitsu.presentation.ui.state.UiState
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
 
 abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@LayoutRes layoutId: Int) :
     Fragment(
@@ -40,4 +44,17 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
 
     }
 
+    protected fun <T> StateFlow<UiState<T>>.spectateUiState(
+        lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
+        success: ((data: T) -> Unit)? = null,
+        loading: ((data: UiState.Loading<T>) -> Unit)? = null,
+        error: ((error: String) -> Unit)?,
+        idle: ((idle: UiState.Idle<T>) -> Unit)? = null,
+        gatherIfSucceed: ((state: UiState<T>) -> Unit)? = null
+    ) {
+        collect {
+            when (it) ->
+        }
+
+    }
 }
