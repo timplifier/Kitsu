@@ -1,10 +1,13 @@
 package com.timplifier.kitsu.presentation.ui.fragments.anime
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.base.BaseFragment
+import com.timplifier.kitsu.common.extensions.directionsSafeNavigation
 import com.timplifier.kitsu.databinding.FragmentAnimeBinding
+import com.timplifier.kitsu.presentation.ui.adapters.anime.AnimeAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -12,5 +15,11 @@ import dagger.hilt.android.AndroidEntryPoint
 class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layout.fragment_anime) {
     override val binding by viewBinding(FragmentAnimeBinding::bind)
     override val viewModel: AnimeViewModel by viewModels()
+    private val animeAdapter = AnimeAdapter(this::onItemClick)
+
+
+    private fun onItemClick(id: String) {
+        findNavController().directionsSafeNavigation()
+    }
 
 }
