@@ -34,17 +34,15 @@ class AnimeAdapter(
         fun onBind(data: Data) {
             val amountOfEpisodes = data.animeDto.episodeCount
             binding.apply {
+                tvAverageRating.text = data.animeDto.averageRating
+                imAnime.loadImageWithGlide(data.animeDto.posterImage.original)
+                tvEnglishTitle.text = data.animeDto.titles.en
+                tvJapaneseTitle.text = data.animeDto.titles.jaJp
+                tvAmountOfEpisodes.text = "Episodes: $amountOfEpisodes TV"
+                tvStartDate.text = data.animeDto.startDate
+                tvEndDate.text = data.animeDto.endDate
+
                 root.setOnClickListener {
-
-                    tvAverageRating.text = data.animeDto.averageRating
-                    imAnime.loadImageWithGlide(data.animeDto.posterImage.original)
-                    tvEnglishTitle.text = data.animeDto.titles.en
-                    tvJapaneseTitle.text = data.animeDto.titles.jaJp
-                    tvAmountOfEpisodes.text = "Episodes : $amountOfEpisodes TV"
-                    imStatus.setImageResource()
-                    tvStartDate.text = data.animeDto.startDate
-                    tvEndDate.text = data.animeDto.endDate
-
                     onItemClick(data.id)
                 }
             }

@@ -14,9 +14,6 @@ class AnimeViewModel @Inject constructor(
     private val _animeState = mutableUiStateFlow<List<Data>>()
     var animeState = _animeState.asStateFlow()
 
-    init {
-        fetchAnime()
-    }
 
     fun fetchAnime() = animeRepository.fetchAnime().gatherRequest(_animeState)
 

@@ -47,7 +47,7 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
 
     }
 
-    protected suspend fun <T> StateFlow<UiState<T>>.spectateUiState(
+    protected fun <T> StateFlow<UiState<T>>.spectateUiState(
         lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
         success: ((data: T) -> Unit)? = null,
         loading: ((data: UiState.Loading<T>) -> Unit)? = null,
