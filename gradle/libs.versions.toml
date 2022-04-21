@@ -66,8 +66,7 @@ koin-koin = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
 [bundles]
 uiComponents = ["ui-appCompat", "ui-constraint", "ui-material", "ui-viewBindingPropertyDelegate"]
-hiltBundle = ["hilt-hilt", "hilt-compiler"]
-roomBundle = ["room-runtime", "room-compiler", "room-kotlinExtensionsAndCoroutinesSupport"]
+roomBundle = ["room-runtime", "room-kotlinExtensionsAndCoroutinesSupport"]
 retrofitBundle = ["retrofit-retrofit", "retrofit-gsonConverter"]
 navigationBundle = ["navigation-fragment", "navigation-ui"]
 lifecycleBundle = ["lifecycle-viewModel", "lifecycle-runtime", "lifecycle-liveData"]

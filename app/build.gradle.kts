@@ -37,9 +37,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
-        getByName("debug") {
-            buildConfigField("url", "BASE_URL", "https://kitsu.io/api/edge/")
-        }
+//        getByName("debug") {
+//            buildConfigField("url", "BASE_URL", "https://kitsu.io/api/edge/")
+//        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -47,6 +47,18 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    packagingOptions {
+        resources.pickFirsts.add("META-INF/*")
+        resources.excludes.add("META-INF/DEPENDENCIES")
+        resources.excludes.add("META-INF/LICENSE")
+        resources.excludes.add("META-INF/LICENSE.txt")
+        resources.excludes.add("META-INF/license.txt")
+        resources.excludes.add("META-INF/NOTICE")
+        resources.excludes.add("META-INF/NOTICE.txt")
+        resources.excludes.add("META-INF/notice.txt")
+        resources.excludes.add("META-INF/ASL2.0")
+        resources.excludes.add("META-INF/*")
     }
     //ViewBinding
     buildFeatures.viewBinding = true
@@ -80,10 +92,11 @@ dependencies {
     implementation(libs.okHttp.bom)
 
     // Hilt
-    implementation(libs.bundles.hiltBundle)
+    implementation(libs.hilt.hilt)
+    kapt(libs.hilt.compiler)
 
     // Legacy Support
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation(libs.legacySupport.legacySupport)
 
     // Glide
     implementation(libs.glide.glide)
@@ -93,4 +106,5 @@ dependencies {
 
     // Room
     implementation(libs.bundles.roomBundle)
+    kapt(libs.room.compiler)
 }
