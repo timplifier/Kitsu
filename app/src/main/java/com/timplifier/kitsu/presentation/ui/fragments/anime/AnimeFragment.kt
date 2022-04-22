@@ -2,10 +2,12 @@ package com.timplifier.kitsu.presentation.ui.fragments.anime
 
 import android.util.Log
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.base.BaseFragment
+import com.timplifier.kitsu.common.extensions.directionsSafeNavigation
 import com.timplifier.kitsu.common.extensions.isInternetAvailable
 import com.timplifier.kitsu.common.extensions.submitData
 import com.timplifier.kitsu.databinding.FragmentAnimeBinding
@@ -47,6 +49,11 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
     }
 
     private fun onItemClick(id: String) {
+        findNavController().directionsSafeNavigation(
+            AnimeFragmentDirections.actionAnimeFragmentToDetailedAnimeFragment(
+                id
+            )
+        )
     }
 }
 
