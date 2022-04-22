@@ -15,6 +15,10 @@ class AnimeViewModel @Inject constructor(
     var animeState = _animeState.asStateFlow()
 
 
+    init {
+        fetchAnime()
+    }
+
     fun fetchAnime() = animeRepository.fetchAnime().gatherRequest(_animeState)
 
 }

@@ -32,7 +32,7 @@ class AnimeAdapter(
     inner class AnimeViewHolder(private val binding: ItemAnimeBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: Data) {
-            val amountOfEpisodes = data.animeDto.episodeCount
+            val amountOfEpisodes: Int = data.animeDto.episodeCount
             binding.apply {
                 tvAverageRating.text = data.animeDto.averageRating
                 imAnime.loadImageWithGlide(data.animeDto.posterImage.original)

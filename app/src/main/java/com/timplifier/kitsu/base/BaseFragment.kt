@@ -59,10 +59,18 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
             collect {
                 gatherIfSucceed?.invoke(it)
                 when (it) {
-                    is UiState.Idle -> idle?.invoke(it)
-                    is UiState.Loading -> loading?.invoke(it)
-                    is UiState.Error -> error?.invoke(it.error)
-                    is UiState.Success -> success?.invoke(it.data)
+                    is UiState.Idle -> {
+                        idle?.invoke(it)
+                    }
+                    is UiState.Loading -> {
+                        loading?.invoke(it)
+                    }
+                    is UiState.Error -> {
+                        error?.invoke(it.error)
+                    }
+                    is UiState.Success -> {
+                        success?.invoke(it.data)
+                    }
                 }
             }
 

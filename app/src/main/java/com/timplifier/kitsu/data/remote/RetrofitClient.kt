@@ -25,10 +25,7 @@ class RetrofitClient {
         .client(okHttpClient)
         .build()
 
-    fun provideAnimeApiService(): AnimeApiService = retrofit.createApiService()
+    fun provideAnimeApiService(): AnimeApiService = retrofit.create(AnimeApiService::class.java)
 
 
-    private inline fun <reified T : Any> Retrofit.createApiService(): T {
-        return create(T::class.java)
-    }
 }

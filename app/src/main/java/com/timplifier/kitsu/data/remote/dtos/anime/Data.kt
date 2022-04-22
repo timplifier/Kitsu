@@ -15,4 +15,4 @@ data class Data(
     val animeDto: AnimeDto,
     @SerializedName("relationships")
     val relationships: Relationships
-) : BaseDiffModel<String>
+) : BaseDiffModel
