@@ -4,7 +4,7 @@ import com.timplifier.kitsu.base.BaseRepository
 import com.timplifier.kitsu.data.remote.apiservices.MangaApiService
 import javax.inject.Inject
 
-class MangaRepository @Inject constructor(
+class MangaRepositoryImpl @Inject constructor(
     private val mangaApiService: MangaApiService
 ) : BaseRepository() {
     fun fetchManga() = sendRequest {

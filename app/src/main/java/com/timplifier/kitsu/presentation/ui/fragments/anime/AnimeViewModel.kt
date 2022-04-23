@@ -2,14 +2,14 @@ package com.timplifier.kitsu.presentation.ui.fragments.anime
 
 import com.timplifier.kitsu.base.BaseViewModel
 import com.timplifier.kitsu.data.remote.dtos.anime.AnimeList
-import com.timplifier.kitsu.data.repositories.AnimeRepository
+import com.timplifier.kitsu.data.repositories.AnimeRepositoryImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
 @HiltViewModel
 class AnimeViewModel @Inject constructor(
-    private val animeRepository: AnimeRepository
+    private val animeRepositoryImpl: AnimeRepositoryImpl
 ) : BaseViewModel() {
     private val _animeState = mutableUiStateFlow<AnimeList>()
     var animeState = _animeState.asStateFlow()
@@ -19,6 +19,6 @@ class AnimeViewModel @Inject constructor(
         fetchAnime()
     }
 
-    fun fetchAnime() = animeRepository.fetchAnime().gatherRequest(_animeState)
+    fun fetchAnime() = animeRepositoryImpl.fetchAnime().gatherRequest(_animeState)
 
 }

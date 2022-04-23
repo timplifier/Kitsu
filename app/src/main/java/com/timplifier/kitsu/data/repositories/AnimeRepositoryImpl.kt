@@ -4,7 +4,7 @@ import com.timplifier.kitsu.base.BaseRepository
 import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
 import javax.inject.Inject
 
-class AnimeRepository @Inject constructor(
+class AnimeRepositoryImpl @Inject constructor(
     private val animeApiService: AnimeApiService
 
 ) : BaseRepository() {
