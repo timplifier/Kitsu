@@ -3,6 +3,8 @@ package com.timplifier.kitsu.presentation.ui.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,5 +23,12 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
+        val appBarConfiguration = AppBarConfiguration.Builder(
+            R.id.animeFragment,
+            R.id.mangaFragment
+        ).build()
+        NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration)
+        NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
+        binding.bottomNavigationView.itemIconTintList = null
     }
 }
