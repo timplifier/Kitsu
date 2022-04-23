@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/animeFragment"
+        android:enabled="true"
+        android:icon="@drawable/navigation_anime_selector"
+        android:title="@string/anime" />
+    <item
+        android:id="@+id/mangaFragment"
+        android:enabled="true"
+        android:icon="@drawable/navigation_manga_selector"
+        android:title="@string/manga" />
+</menu>

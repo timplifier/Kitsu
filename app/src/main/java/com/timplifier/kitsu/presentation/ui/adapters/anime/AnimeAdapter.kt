@@ -10,9 +10,8 @@ import com.timplifier.kitsu.data.remote.dtos.anime.Data
 import com.timplifier.kitsu.databinding.ItemAnimeBinding
 
 
-class AnimeAdapter(
-    private val onItemClick: (id: String) -> Unit
-) : ListAdapter<Data, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
+class AnimeAdapter
+    : ListAdapter<Data, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimeViewHolder {
@@ -42,9 +41,7 @@ class AnimeAdapter(
                 tvStartDate.text = data.animeDto.startDate
                 tvEndDate.text = data.animeDto.endDate
 
-                root.setOnClickListener {
-                    onItemClick(data.id)
-                }
+
             }
 
         }

@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layout.fragment_anime) {
     override val binding by viewBinding(FragmentAnimeBinding::bind)
     override val viewModel: AnimeViewModel by viewModels()
-    private val animeAdapter = AnimeAdapter(this::onItemClick)
+    private val animeAdapter = AnimeAdapter()
     override fun assembleViews() {
         setupAdapter()
     }
@@ -46,9 +46,7 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
             viewModel.fetchAnime()
     }
 
-    private fun onItemClick(id: String) {
 
-    }
 }
 
 
