@@ -49,7 +49,6 @@ class MangaAdapter
                     tvEndDate.text = mangaData.mangaDto.endDate
                 }
 
-
             }
 
         }

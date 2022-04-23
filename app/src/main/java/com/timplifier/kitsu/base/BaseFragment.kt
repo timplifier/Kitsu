@@ -8,7 +8,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
-import com.timplifier.kitsu.presentation.ui.state.UiState
+import com.timplifier.kitsu.presentation.ui.state.UIState
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -47,28 +47,28 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
 
     }
 
-    protected fun <T> StateFlow<UiState<T>>.spectateUiState(
+    protected fun <T> StateFlow<UIState<T>>.spectateUiState(
         lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
         success: ((data: T) -> Unit)? = null,
-        loading: ((data: UiState.Loading<T>) -> Unit)? = null,
+        loading: ((data: UIState.Loading<T>) -> Unit)? = null,
         error: ((error: String) -> Unit)?,
-        idle: ((idle: UiState.Idle<T>) -> Unit)? = null,
-        gatherIfSucceed: ((state: UiState<T>) -> Unit)? = null
+        idle: ((idle: UIState.Idle<T>) -> Unit)? = null,
+        gatherIfSucceed: ((state: UIState<T>) -> Unit)? = null
     ) {
         safeFlowGather(lifecycleState) {
             collect {
                 gatherIfSucceed?.invoke(it)
                 when (it) {
-                    is UiState.Idle -> {
+                    is UIState.Idle -> {
                         idle?.invoke(it)
                     }
-                    is UiState.Loading -> {
+                    is UIState.Loading -> {
                         loading?.invoke(it)
                     }
-                    is UiState.Error -> {
+                    is UIState.Error -> {
                         error?.invoke(it.error)
                     }
-                    is UiState.Success -> {
+                    is UIState.Success -> {
                         success?.invoke(it.data)
                     }
                 }

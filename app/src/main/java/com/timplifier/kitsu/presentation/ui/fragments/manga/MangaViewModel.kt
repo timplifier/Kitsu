@@ -20,5 +20,4 @@ class MangaViewModel @Inject constructor(
     }
 
     fun fetchManga() = mangaRepository.fetchManga().gatherRequest(_mangaState)
-
 }

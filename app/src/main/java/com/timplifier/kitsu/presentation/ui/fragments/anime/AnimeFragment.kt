@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.base.BaseFragment
-import com.timplifier.kitsu.common.extensions.isInternetAvailable
 import com.timplifier.kitsu.common.extensions.submitData
 import com.timplifier.kitsu.databinding.FragmentAnimeBinding
 import com.timplifier.kitsu.presentation.ui.adapters.AnimeAdapter
@@ -23,10 +22,9 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
     }
 
     private fun setupAdapter() {
-        val linearLayoutManager = LinearLayoutManager(context)
         binding.recyclerview.apply {
             adapter = animeAdapter
-            layoutManager = linearLayoutManager
+            layoutManager = LinearLayoutManager(context)
 
         }
     }
@@ -39,14 +37,6 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
                 animeAdapter.submitData(it.data)
             })
     }
-
-    override fun establishRequest() {
-
-        if (viewModel.animeState == null && isInternetAvailable(context))
-            viewModel.fetchAnime()
-    }
-
-
 }
 
 

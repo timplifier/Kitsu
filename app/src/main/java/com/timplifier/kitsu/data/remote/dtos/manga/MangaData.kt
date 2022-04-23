@@ -15,4 +15,4 @@ data class MangaData(
     val mangaDto: MangaDto,
     @SerializedName("relationships")
     val relationships: Relationships
-) : BaseDiffModel
+) : BaseDiffModel<String>

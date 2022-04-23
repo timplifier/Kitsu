@@ -6,12 +6,12 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.base.BaseDiffUtil
 import com.timplifier.kitsu.common.extensions.loadImageWithGlide
-import com.timplifier.kitsu.data.remote.dtos.anime.Data
+import com.timplifier.kitsu.data.remote.dtos.anime.AnimeData
 import com.timplifier.kitsu.databinding.ItemAnimeBinding
 
 
 class AnimeAdapter
-    : ListAdapter<Data, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
+    : ListAdapter<AnimeData, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimeViewHolder {
@@ -30,16 +30,16 @@ class AnimeAdapter
 
     inner class AnimeViewHolder(private val binding: ItemAnimeBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: Data) {
-            val amountOfEpisodes: Int = data.animeDto.episodeCount
+        fun onBind(animeData: AnimeData) {
+            val amountOfEpisodes: Int = animeData.animeDto.episodeCount
             binding.apply {
-                tvAverageRating.text = data.animeDto.averageRating
-                imAnime.loadImageWithGlide(data.animeDto.posterImage.original)
-                tvEnglishTitle.text = data.animeDto.titles.en
-                tvJapaneseTitle.text = data.animeDto.titles.jaJp
+                tvAverageRating.text = animeData.animeDto.averageRating
+                imAnime.loadImageWithGlide(animeData.animeDto.posterImage.original)
+                tvEnglishTitle.text = animeData.animeDto.titles.en
+                tvJapaneseTitle.text = animeData.animeDto.titles.jaJp
                 tvAmountOfEpisodes.text = "Episodes: $amountOfEpisodes TV"
-                tvStartDate.text = data.animeDto.startDate
-                tvEndDate.text = data.animeDto.endDate
+                tvStartDate.text = animeData.animeDto.startDate
+                tvEndDate.text = animeData.animeDto.endDate
 
 
             }

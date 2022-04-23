@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class AnimeList(
     @SerializedName("data")
-    val data: List<Data>,
+    val data: List<AnimeData>,
     @SerializedName("meta")
     val meta: MetaXX,
     @SerializedName("links")
