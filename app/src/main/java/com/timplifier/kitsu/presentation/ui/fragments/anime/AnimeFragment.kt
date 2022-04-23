@@ -38,7 +38,7 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
             error = {
                 Log.e("gaypop", it)
             }, success = {
-                animeAdapter.submitData(it)
+                animeAdapter.submitData(it.data)
             })
     }
 

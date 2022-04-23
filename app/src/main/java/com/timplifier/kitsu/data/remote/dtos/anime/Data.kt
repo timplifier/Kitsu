@@ -11,7 +11,7 @@ data class Data(
     val type: String,
     @SerializedName("links")
     val links: Links,
-    @SerializedName("animeDto")
+    @SerializedName("attributes")
     val animeDto: AnimeDto,
     @SerializedName("relationships")
     val relationships: Relationships
