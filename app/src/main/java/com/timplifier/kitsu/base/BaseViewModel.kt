@@ -14,15 +14,15 @@ abstract class BaseViewModel : ViewModel() {
     protected fun <T> mutableUiStateFlow() = MutableStateFlow<UIState<T>>(UIState.Idle())
 
     protected fun <T, S> Flow<Either<String, T>>.gatherRequest(
-        state: MutableStateFlow<UIState<T>>,
-        mappedData: () -> S
+        state: MutableStateFlow<UIState<S>>,
+        mappedData: (data: T) -> S
     ) {
         viewModelScope.launch(Dispatchers.IO) {
             state.value = UIState.Loading()
             this@gatherRequest.collect {
                 when (it) {
                     is Either.Left -> state.value = UIState.Error(it.value)
-                    is Either.Right -> state.value = UIState.Success(mappedData)
+                    is Either.Right -> state.value = UIState.Success(mappedData(it.value))
                 }
             }
 

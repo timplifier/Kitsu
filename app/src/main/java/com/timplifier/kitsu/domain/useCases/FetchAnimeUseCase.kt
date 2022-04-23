@@ -1,7 +1,10 @@
 package com.timplifier.kitsu.domain.useCases
 
 import com.timplifier.kitsu.domain.repositories.AnimeRepository
+import javax.inject.Inject
 
-class FetchAnimeUseCase(private val animeRepository: AnimeRepository) {
+class FetchAnimeUseCase @Inject constructor(
+    private val animeRepository: AnimeRepository
+) {
     operator fun invoke() = animeRepository.fetchAnime()
 }
