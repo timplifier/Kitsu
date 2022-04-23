@@ -19,5 +19,5 @@ data class AnimeDataDto(
 ) : BaseDiffModel<String>
 
 fun AnimeDataDto.toDomain() = AnimeDataModel(
-    id,type, links.toDomain(), animeDto, relationships.toDomain()
+    id, type, links.toDomain(), animeDto.to, relationships.toDomain()
 )

@@ -8,6 +8,7 @@ data class MetaXX(
     @SerializedName("count")
     val count: Int
 )
+
 fun MetaXX.toDomain() = MetaXXModel(
     count
 )
