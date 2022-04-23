@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.presentation.ui.adapters.anime
+package com.timplifier.kitsu.presentation.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

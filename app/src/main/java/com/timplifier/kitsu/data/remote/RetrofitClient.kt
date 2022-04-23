@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote
 
 import com.timplifier.kitsu.common.constants.Constants.BASE_URL
 import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
+import com.timplifier.kitsu.data.remote.apiservices.MangaApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -26,6 +27,8 @@ class RetrofitClient {
         .build()
 
     fun provideAnimeApiService(): AnimeApiService = retrofit.create(AnimeApiService::class.java)
+
+    fun provideMangaApiService(): MangaApiService = retrofit.create(MangaApiService::class.java)
 
 
 }

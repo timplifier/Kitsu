@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,8 +28,8 @@ class MainActivity : AppCompatActivity() {
             R.id.animeFragment,
             R.id.mangaFragment
         ).build()
-        NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration)
-        NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
+        setupWithNavController(binding.toolbar, navController, appBarConfiguration)
+        setupWithNavController(binding.bottomNavigationView, navController)
         binding.bottomNavigationView.itemIconTintList = null
     }
 }

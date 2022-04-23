@@ -9,7 +9,7 @@ import com.timplifier.kitsu.base.BaseFragment
 import com.timplifier.kitsu.common.extensions.isInternetAvailable
 import com.timplifier.kitsu.common.extensions.submitData
 import com.timplifier.kitsu.databinding.FragmentMangaBinding
-import com.timplifier.kitsu.presentation.ui.adapters.manga.MangaAdapter
+import com.timplifier.kitsu.presentation.ui.adapters.MangaAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
