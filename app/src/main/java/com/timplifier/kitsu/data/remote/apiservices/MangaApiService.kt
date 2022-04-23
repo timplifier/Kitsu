@@ -1,11 +1,11 @@
 package com.timplifier.kitsu.data.remote.apiservices
 
-import com.timplifier.kitsu.data.remote.dtos.manga.MangaList
+import com.timplifier.kitsu.data.remote.dtos.manga.MangaListDto
 import retrofit2.http.GET
 
 interface MangaApiService {
     @GET("manga")
-    suspend fun fetchManga(): MangaList
+    suspend fun fetchManga(): MangaListDto
 
 
 }

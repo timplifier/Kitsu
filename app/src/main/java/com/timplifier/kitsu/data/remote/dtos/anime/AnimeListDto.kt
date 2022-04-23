@@ -1,13 +1,13 @@
-package com.timplifier.kitsu.data.remote.dtos.manga
+package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
 
-data class MangaList(
+data class AnimeListDto(
     @SerializedName("data")
-    val data: List<MangaData>,
+    val data: List<AnimeData>,
     @SerializedName("meta")
     val meta: MetaXX,
     @SerializedName("links")
-    val links: LinksXXXXXXXXXXX
+    val links: LinksXXXXXXXXXXXXX
 )
