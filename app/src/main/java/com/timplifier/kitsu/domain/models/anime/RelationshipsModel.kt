@@ -1,7 +1,5 @@
 package com.timplifier.kitsu.domain.models.anime
 
-import com.timplifier.kitsu.data.remote.dtos.anime.*
-
 data class RelationshipsModel(
 
     val genres: GenresModel,
