@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.anime.CoverImageModel
 
 data class CoverImage(
     @SerializedName("tiny")
@@ -15,3 +16,5 @@ data class CoverImage(
     @SerializedName("meta")
     val meta: MetaX
 )
+
+fun CoverImage.toDomain() = CoverImageModel(tiny, small, large, original, meta.toDomain())

@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.anime.LargeXModel
 
 data class LargeX(
     @SerializedName("width")
@@ -9,3 +10,5 @@ data class LargeX(
     @SerializedName("height")
     val height: Any
 )
+
+fun LargeX.toDomain() = LargeXModel(width, height)
