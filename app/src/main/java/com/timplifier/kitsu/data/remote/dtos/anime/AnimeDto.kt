@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.anime.AnimeModel
 
 
 data class AnimeDto(
@@ -61,4 +62,36 @@ data class AnimeDto(
     val showType: String,
     @SerializedName("nsfw")
     val nsfw: Boolean
+)
+
+fun AnimeDto.toDomain() = AnimeModel(
+    createdAt,
+    updatedAt,
+    slug,
+    synopsis,
+    coverImageTopOffset,
+    titles.toDomain(),
+    canonicalTitle,
+    abbreviatedTitles,
+    averageRating,
+    ratingFrequencies.toDomain(),
+    userCount,
+    favoritesCount,
+    startDate,
+    endDate,
+    popularityRank,
+    ratingRank,
+    ageRating,
+    ageRatingGuide,
+    subtype,
+    status,
+    tba,
+    posterImage.toDomain(),
+    coverImage.toDomain(),
+    episodeCount,
+    episodeLength,
+    youtubeVideoId,
+    showType,
+    nsfw
+
 )

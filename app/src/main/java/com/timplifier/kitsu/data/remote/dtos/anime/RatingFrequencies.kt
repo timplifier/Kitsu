@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.anime.RatingFrequenciesModel
 
 data class RatingFrequencies(
     @SerializedName("2")
@@ -42,4 +43,8 @@ data class RatingFrequencies(
     val x19: String,
     @SerializedName("20")
     val x20: String
+)
+
+fun RatingFrequencies.toDomain() = RatingFrequenciesModel(
+    x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20
 )

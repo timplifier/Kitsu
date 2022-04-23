@@ -4,16 +4,16 @@ import com.timplifier.kitsu.data.remote.dtos.anime.*
 
 data class RelationshipsModel(
 
-    val genres: Genres,
-    val categories: Categories,
-    val castings: Castings,
-    val installments: Installments,
-    val mappings: Mappings,
-    val reviews: Reviews,
-    val mediaRelationships: MediaRelationships,
-    val episodes: Episodes,
-    val streamingLinks: StreamingLinks,
-    val animeProductions: AnimeProductions,
-    val animeCharacters: AnimeCharacters,
-    val animeStaff: AnimeStaff
+    val genres: GenresModel,
+    val categories: CategoriesModel,
+    val castings: CastingsModel,
+    val installments: InstallmentsModel,
+    val mappings: MappingsModel,
+    val reviews: ReviewsModel,
+    val mediaRelationships: MediaRelationshipsModel,
+    val episodes: EpisodesModel,
+    val streamingLinks: StreamingLinksModel,
+    val animeProductions: AnimeProductionsModel,
+    val animeCharacters: AnimeCharactersModel,
+    val animeStaff: AnimeStaffModel
 )

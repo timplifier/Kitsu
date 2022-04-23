@@ -32,5 +32,16 @@ data class Relationships(
 )
 
 fun Relationships.toDomain() = RelationshipsModel(
-
+    genres.toDomain(),
+    categories.toDomain(),
+    castings.toDomain(),
+    installments.toDomain(),
+    mappings.toDomain(),
+    reviews.toDomain(),
+    mediaRelationships.toDomain(),
+    episodes.toDomain(),
+    streamingLinks.toDomain(),
+    animeProductions.toDomain(),
+    animeCharacters.toDomain(),
+    animeStaff.toDomain()
 )
