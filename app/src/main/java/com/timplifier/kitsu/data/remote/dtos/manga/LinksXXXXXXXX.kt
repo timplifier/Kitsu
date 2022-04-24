@@ -8,4 +8,9 @@ data class LinksXXXXXXXX(
     val self: String,
     @SerializedName("related")
     val related: String
+
+)
+
+fun LinksXXXXXXXX.toDomain() = LinksXXXXXXXX(
+    self, related
 )
