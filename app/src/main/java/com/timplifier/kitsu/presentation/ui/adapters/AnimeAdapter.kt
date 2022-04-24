@@ -11,6 +11,7 @@ import com.timplifier.kitsu.databinding.ItemAnimeBinding
 
 
 class AnimeAdapter
+
     : ListAdapter<AnimeDataDto, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 

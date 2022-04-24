@@ -1,9 +1,8 @@
-package com.timplifier.kitsu.domain.models.anime
+package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.presentation.ui.models.anime.RatingFrequenciesUI
+import com.timplifier.kitsu.domain.models.anime.RatingFrequenciesModel
 
-data class RatingFrequenciesModel(
-
+data class RatingFrequenciesUI(
     val x2: String,
     val x3: String,
     val x4: String,
@@ -25,3 +24,6 @@ data class RatingFrequenciesModel(
     val x20: String
 )
 
+fun RatingFrequenciesModel.toUI() = RatingFrequenciesUI(
+    x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20
+)

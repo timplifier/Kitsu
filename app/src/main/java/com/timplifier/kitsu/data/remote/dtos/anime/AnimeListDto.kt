@@ -14,5 +14,5 @@ data class AnimeListDto(
 )
 
 fun AnimeListDto.toDomain() = AnimeListModel(
-    data.map { it.toDomain() }, meta.toDomain(), links.toDomain()
+    data.map{ it.toDomain()}, meta.toDomain(), links.toDomain()
 )
