@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.manga
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.manga.PosterImageModel
 
 data class PosterImage(
     @SerializedName("tiny")
@@ -17,3 +18,5 @@ data class PosterImage(
     @SerializedName("meta")
     val meta: Meta
 )
+
+fun PosterImage.toDomain() = PosterImageModel(tiny, small, medium, large, original, meta.toDomain())

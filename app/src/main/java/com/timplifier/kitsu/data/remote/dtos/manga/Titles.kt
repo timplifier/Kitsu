@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.manga
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.manga.TitlesModel
 
 data class Titles(
     @SerializedName("en")
@@ -11,3 +12,5 @@ data class Titles(
     @SerializedName("ja_jp")
     val jaJp: String
 )
+
+fun Titles.toDomain() = TitlesModel(en, enJp, jaJp)

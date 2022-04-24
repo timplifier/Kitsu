@@ -3,6 +3,7 @@ package com.timplifier.kitsu.data.remote.dtos.manga
 
 import com.google.gson.annotations.SerializedName
 import com.timplifier.kitsu.base.BaseDiffModel
+import com.timplifier.kitsu.domain.models.manga.MangaDataModel
 
 data class MangaData(
     @SerializedName("id")
@@ -16,3 +17,6 @@ data class MangaData(
     @SerializedName("relationships")
     val relationships: Relationships
 ) : BaseDiffModel<String>
+
+fun MangaData.toDomain() =
+    MangaDataModel(id, type, links.toDomain(), mangaDto.toDomain(), relationships.toDomain())
