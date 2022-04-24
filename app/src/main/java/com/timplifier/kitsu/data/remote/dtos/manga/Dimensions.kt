@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.manga
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.manga.DimensionsModel
 
 data class Dimensions(
     @SerializedName("tiny")
@@ -13,3 +14,6 @@ data class Dimensions(
     @SerializedName("large")
     val large: Large
 )
+
+fun Dimensions.toDomain() =
+    DimensionsModel(tiny.toDomain(), small.toDomain(), medium.toDomain(), large.toDomain())

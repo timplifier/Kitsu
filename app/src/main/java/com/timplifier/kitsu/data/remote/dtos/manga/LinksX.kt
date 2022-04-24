@@ -2,7 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.manga
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.LinksXModel
+import com.timplifier.kitsu.domain.models.manga.LinksXModel
 
 data class LinksX(
     @SerializedName("self")
@@ -10,6 +10,7 @@ data class LinksX(
     @SerializedName("related")
     val related: String
 )
+
 fun LinksX.toDomain() = LinksXModel(
-    self,related
+    self, related
 )
