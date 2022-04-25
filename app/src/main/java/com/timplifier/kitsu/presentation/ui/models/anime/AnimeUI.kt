@@ -1,7 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.CoverImageModel
-import com.timplifier.kitsu.domain.models.anime.PosterImageModel
+import com.timplifier.kitsu.domain.models.anime.AnimeModel
 
 data class AnimeUI(
     val createdAt: String,
@@ -25,11 +24,42 @@ data class AnimeUI(
     val subtype: String,
     val status: String,
     val tba: String,
-    val posterImage: PosterImageModel,
-    val coverImage: CoverImageModel,
+    val posterImage: PosterImageUI,
+    val coverImage: CoverImageUI,
     val episodeCount: Int,
     val episodeLength: Int,
     val youtubeVideoId: String,
     val showType: String,
     val nsfw: Boolean
+)
+
+fun AnimeModel.toUI() = AnimeUI(
+    createdAt,
+    updatedAt,
+    slug,
+    synopsis,
+    coverImageTopOffset,
+    titles.toUI(),
+    canonicalTitle,
+    abbreviatedTitles,
+    averageRating,
+    ratingFrequencies.toUI(),
+    userCount,
+    favoritesCount,
+    startDate,
+    endDate,
+    popularityRank,
+    ratingRank,
+    ageRating,
+    ageRatingGuide,
+    subtype,
+    status,
+    tba,
+    posterImage.toUI(),
+    coverImage.toUI(),
+    episodeCount,
+    episodeLength,
+    youtubeVideoId,
+    showType,
+    nsfw
 )
