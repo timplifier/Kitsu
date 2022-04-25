@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.base.BaseDiffUtil
 import com.timplifier.kitsu.common.extensions.loadImageWithGlide
-import com.timplifier.kitsu.data.remote.dtos.anime.AnimeDataDto
 import com.timplifier.kitsu.databinding.ItemAnimeBinding
+import com.timplifier.kitsu.presentation.ui.models.anime.AnimeDataUI
 
 
 class AnimeAdapter
 
-    : ListAdapter<AnimeDataDto, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
+    : ListAdapter<AnimeDataUI, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimeViewHolder {
@@ -31,7 +31,7 @@ class AnimeAdapter
 
     inner class AnimeViewHolder(private val binding: ItemAnimeBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(animeDataDto: AnimeDataDto) {
+        fun onBind(animeDataDto: AnimeDataUI) {
             val amountOfEpisodes: Int = animeDataDto.animeDto.episodeCount
             binding.apply {
                 tvAverageRating.text = animeDataDto.animeDto.averageRating

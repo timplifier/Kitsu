@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.*
+import com.timplifier.kitsu.domain.models.anime.RelationshipsModel
 
 data class RelationshipsUI(
     val genres: GenresUI,
@@ -10,9 +10,24 @@ data class RelationshipsUI(
     val mappings: MappingsUI,
     val reviews: ReviewsUI,
     val mediaRelationships: MediaRelationshipsUI,
-    val episodes:  EpisodesUI,
-    val streamingLinks: StreamingLinksModel,
-    val animeProductions: AnimeProductionsModel,
-    val animeCharacters: AnimeCharactersModel,
-    val animeStaff: AnimeStaffModel
+    val episodes: EpisodesUI,
+    val streamingLinks: StreamingLinksUI,
+    val animeProductions: AnimeProductionsUI,
+    val animeCharacters: AnimeCharactersUI,
+    val animeStaff: AnimeStaffUI
+)
+
+fun RelationshipsModel.toUI() = RelationshipsUI(
+    genres.toUI(),
+    categories.toUI(),
+    castings.toUI(),
+    installments.toUI(),
+    mappings.toUI(),
+    reviews.toUI(),
+    mediaRelationships.toUI(),
+    episodes.toUI(),
+    streamingLinks.toUI(),
+    animeProductions.toUI(),
+    animeCharacters.toUI(),
+    animeStaff.toUI()
 )
