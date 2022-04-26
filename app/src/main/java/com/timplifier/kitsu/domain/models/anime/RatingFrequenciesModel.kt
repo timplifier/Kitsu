@@ -1,7 +1,5 @@
 package com.timplifier.kitsu.domain.models.anime
 
-import com.timplifier.kitsu.presentation.ui.models.anime.RatingFrequenciesUI
-
 data class RatingFrequenciesModel(
 
     val x2: String,

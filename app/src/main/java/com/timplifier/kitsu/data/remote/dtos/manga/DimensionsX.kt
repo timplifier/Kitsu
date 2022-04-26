@@ -12,6 +12,7 @@ data class DimensionsX(
     @SerializedName("large")
     val large: LargeX
 )
+
 fun DimensionsX.toDomain() = DimensionsXModel(
     tiny.toDomain(), small.toDomain(), large.toDomain()
 )

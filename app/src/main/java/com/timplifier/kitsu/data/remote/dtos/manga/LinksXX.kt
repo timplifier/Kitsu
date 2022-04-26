@@ -10,6 +10,7 @@ data class LinksXX(
     @SerializedName("related")
     val related: String
 )
+
 fun LinksXX.toDomain() = LinksXXModel(
-    self,related
+    self, related
 )

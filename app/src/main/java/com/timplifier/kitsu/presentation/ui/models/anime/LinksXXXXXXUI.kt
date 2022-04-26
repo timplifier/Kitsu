@@ -6,4 +6,5 @@ data class LinksXXXXXXUI(
     val self: String,
     val related: String
 )
-fun LinksXXXXXXModel.toUI() = LinksXXXXXXUI(self,related)
+
+fun LinksXXXXXXModel.toUI() = LinksXXXXXXUI(self, related)
