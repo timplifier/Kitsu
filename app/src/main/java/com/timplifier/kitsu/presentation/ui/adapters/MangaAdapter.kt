@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.base.BaseDiffUtil
 import com.timplifier.kitsu.common.extensions.loadImageWithGlide
-import com.timplifier.kitsu.data.remote.dtos.manga.MangaData
 import com.timplifier.kitsu.databinding.ItemMangaBinding
+import com.timplifier.kitsu.presentation.ui.models.manga.MangaDataUI
 
 class MangaAdapter
-    : ListAdapter<MangaData, MangaAdapter.MangaViewHolder>(BaseDiffUtil()) {
+    : ListAdapter<MangaDataUI, MangaAdapter.MangaViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MangaViewHolder {
@@ -30,7 +30,7 @@ class MangaAdapter
 
     inner class MangaViewHolder(private val binding: ItemMangaBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(mangaData: MangaData) {
+        fun onBind(mangaData: MangaDataUI) {
             val chapterCount = mangaData.mangaDto.chapterCount
             val volumeCount = mangaData.mangaDto.volumeCount
             binding.apply {

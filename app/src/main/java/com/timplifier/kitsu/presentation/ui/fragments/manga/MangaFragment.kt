@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.presentation.ui.fragments.anime.manga
+package com.timplifier.kitsu.presentation.ui.fragments.manga
 
 import android.util.Log
 import androidx.fragment.app.viewModels
@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.base.BaseFragment
-import com.timplifier.kitsu.common.extensions.isInternetAvailable
 import com.timplifier.kitsu.common.extensions.submitData
 import com.timplifier.kitsu.databinding.FragmentMangaBinding
 import com.timplifier.kitsu.presentation.ui.adapters.MangaAdapter
+import com.timplifier.kitsu.presentation.ui.fragments.manga.MangaViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -37,11 +37,6 @@ class MangaFragment : BaseFragment<FragmentMangaBinding, MangaViewModel>(R.layou
             }
         )
 
-    }
-
-    override fun establishRequest() {
-        if (viewModel.mangaState == null && isInternetAvailable(context))
-            viewModel.fetchManga()
     }
 
 }

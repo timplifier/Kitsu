@@ -6,4 +6,6 @@
     <string name="something_in_japanese">カウボーイビバップ</string>
     <string name="imageview_for_an_anime_poster">imageview for an anime poster</string>
     <string name="imageview_for_an_anime_status">imageview for an anime status</string>
+    <string name="manga">Manga</string>
+    <string name="anime">Anime</string>
 </resources>

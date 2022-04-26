@@ -13,6 +13,4 @@ class AnimeRepositoryImpl @Inject constructor(
     override fun fetchAnime() = sendRequest {
         animeApiService.fetchAnime().toDomain()
     }
-
-
 }

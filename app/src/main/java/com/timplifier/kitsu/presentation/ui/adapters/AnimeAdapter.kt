@@ -9,9 +9,7 @@ import com.timplifier.kitsu.common.extensions.loadImageWithGlide
 import com.timplifier.kitsu.databinding.ItemAnimeBinding
 import com.timplifier.kitsu.presentation.ui.models.anime.AnimeDataUI
 
-
 class AnimeAdapter
-
     : ListAdapter<AnimeDataUI, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 
@@ -41,8 +39,6 @@ class AnimeAdapter
                 tvAmountOfEpisodes.text = "Episodes: $amountOfEpisodes TV"
                 tvStartDate.text = animeDataDto.animeDto.startDate
                 tvEndDate.text = animeDataDto.animeDto.endDate
-
-
             }
 
         }
@@ -50,4 +46,3 @@ class AnimeAdapter
     }
 
 }
-

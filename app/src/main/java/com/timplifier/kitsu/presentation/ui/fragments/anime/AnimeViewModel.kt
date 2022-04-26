@@ -20,9 +20,7 @@ class AnimeViewModel @Inject constructor(
         fetchAnime()
     }
 
-    fun fetchAnime() = fetchAnimeUseCase().gatherRequest(
+    private fun fetchAnime() = fetchAnimeUseCase().gatherRequest(
         _animeState
     ) { it.toUI() }
-
-
 }

@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/mangaFragment2"
-        android:name="com.timplifier.kitsu.presentation.ui.fragments.anime.manga.MangaFragment"
+        android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.MangaFragment"
         android:label="fragment_manga"
         tools:layout="@layout/fragment_manga" />
 </navigation>

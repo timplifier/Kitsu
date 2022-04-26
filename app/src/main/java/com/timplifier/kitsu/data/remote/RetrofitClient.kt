@@ -27,8 +27,5 @@ class RetrofitClient {
         .build()
 
     fun provideAnimeApiService(): AnimeApiService = retrofit.create(AnimeApiService::class.java)
-
     fun provideMangaApiService(): MangaApiService = retrofit.create(MangaApiService::class.java)
-
-
 }
