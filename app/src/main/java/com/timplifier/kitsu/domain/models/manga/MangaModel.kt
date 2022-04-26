@@ -21,7 +21,6 @@ data class MangaModel(
     val ageRatingGuide: String,
     val subtype: String,
     val status: String,
-    val tba: String,
     val posterImage: PosterImageModel,
     val coverImage: CoverImageModel,
     val chapterCount: Any,

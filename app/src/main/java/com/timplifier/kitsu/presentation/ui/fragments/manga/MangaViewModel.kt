@@ -21,5 +21,4 @@ class MangaViewModel @Inject constructor(
     }
 
     private fun fetchManga() = fetchMangaUseCase().gatherRequest(_mangaState) { it.toUI() }
-
 }

@@ -46,8 +46,6 @@ data class AnimeDto(
     val subtype: String,
     @SerializedName("status")
     val status: String,
-    @SerializedName("tba")
-    val tba: String,
     @SerializedName("posterImage")
     val posterImage: PosterImage,
     @SerializedName("coverImage")
@@ -85,7 +83,6 @@ fun AnimeDto.toDomain() = AnimeModel(
     ageRatingGuide,
     subtype,
     status,
-    tba,
     posterImage.toDomain(),
     coverImage.toDomain(),
     episodeCount,

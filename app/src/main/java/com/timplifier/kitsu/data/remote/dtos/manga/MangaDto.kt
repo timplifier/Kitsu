@@ -45,8 +45,6 @@ data class MangaDto(
     val subtype: String,
     @SerializedName("status")
     val status: String,
-    @SerializedName("tba")
-    val tba: String,
     @SerializedName("posterImage")
     val posterImage: PosterImage,
     @SerializedName("coverImage")
@@ -82,7 +80,6 @@ fun MangaDto.toDomain() = MangaModel(
     ageRatingGuide,
     subtype,
     status,
-    tba,
     posterImage.toDomain(),
     coverImage.toDomain(),
     chapterCount,

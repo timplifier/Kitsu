@@ -8,14 +8,14 @@
     <fragment
         android:id="@+id/animeFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.anime.AnimeFragment"
-        android:label="fragment_anime"
+        android:label="Anime"
         tools:layout="@layout/fragment_anime">
 
     </fragment>
 
     <fragment
-        android:id="@+id/mangaFragment2"
+        android:id="@+id/mangaFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.MangaFragment"
-        android:label="fragment_manga"
+        android:label="Manga"
         tools:layout="@layout/fragment_manga" />
 </navigation>

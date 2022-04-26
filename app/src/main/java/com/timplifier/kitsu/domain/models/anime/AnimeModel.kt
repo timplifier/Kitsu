@@ -21,7 +21,6 @@ data class AnimeModel(
     val ageRatingGuide: String,
     val subtype: String,
     val status: String,
-    val tba: String,
     val posterImage: PosterImageModel,
     val coverImage: CoverImageModel,
     val episodeCount: Int,
