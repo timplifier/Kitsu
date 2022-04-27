@@ -5,14 +5,12 @@
     android:id="@+id/nav_graph.xml"
     app:startDestination="@id/animeFragment">
 
+
     <fragment
         android:id="@+id/animeFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.anime.AnimeFragment"
         android:label="Anime"
-        tools:layout="@layout/fragment_anime">
-
-    </fragment>
-
+        tools:layout="@layout/fragment_anime" />
     <fragment
         android:id="@+id/mangaFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.MangaFragment"

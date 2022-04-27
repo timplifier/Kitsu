@@ -9,7 +9,7 @@ data class AnimeDataUI(
     val links: LinksUI,
     val animeDto: AnimeUI,
     val relationships: RelationshipsUI
-) : BaseDiffModel<String>
+) : BaseDiffModel
 
 fun AnimeDataModel.toUI() =
     AnimeDataUI(id, type, links.toUI(), animeDto.toUI(), relationships.toUI())
