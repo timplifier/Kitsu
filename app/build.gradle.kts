@@ -14,7 +14,6 @@ plugins {
 
     // Hilt
     id("com.google.dagger.hilt.android")
-
 }
 
 android {

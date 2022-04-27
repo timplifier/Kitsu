@@ -1,6 +1,7 @@
 [versions]
+agp = "7.1.3"
 gradle = "7.1.2"
-kotlin = "1.6.20"
+kotlin = "1.6.21"
 legacySupport = "1.0.0"
 coroutines = "1.6.0"
 material = "1.5.0"
@@ -41,11 +42,9 @@ lifecycle-liveData = { module = "androidx.lifecycle:lifecycle-livedata-ktx", ver
 
 navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
-navigation-safeArgsGradle = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation" }
 
 hilt-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
 
 
 retrofit-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
@@ -73,7 +72,18 @@ lifecycleBundle = ["lifecycle-viewModel", "lifecycle-runtime", "lifecycle-liveDa
 
 
 [plugins]
-hiltPlug = { id = "com.google.dagger.hilt.android" }
+agp-application = { id = "com.android.application" }
+agp-library = { id = "com.android.library", version.ref = "agp" }
+agp-applicationGradle = { id = "com.android.application", version.ref = "agp" }
+kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kotlin = { id = "org.jetbrains.kotlin.android" }
+kotlin-kapt = { id = "kotlin-kapt" }
+navigation-safeArgsGradle = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+navigation-safeArgsPlug = { id = "androidx.navigation.safeargs.kotlin" }
+hilt-hilt = { id = "com.google.dagger.hilt.android" }
+hilt-gradle = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+
 
 
 

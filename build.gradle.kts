@@ -1,7 +1,8 @@
 plugins {
-    id("com.android.application") version "7.1.2" apply false
-    id("com.android.library") version "7.1.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.6.20" apply false
-    id("androidx.navigation.safeargs.kotlin") version "2.4.1" apply false
-    id("com.google.dagger.hilt.android") version "2.41" apply false
+    alias(libs.plugins.agp.applicationGradle) apply false
+    alias(libs.plugins.agp.library) apply false
+    alias(libs.plugins.kotlin.gradle) apply false
+    alias(libs.plugins.navigation.safeArgsGradle) apply false
+    alias(libs.plugins.hilt.gradle) apply false
+
 }

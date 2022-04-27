@@ -1,5 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.fragments.anime
 
+import android.util.Log
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
@@ -27,6 +28,9 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
 
     override fun launchObservers() {
         viewModel.animeState.spectateUiState(
+            error = {
+                Log.e("tag", it.toString())
+            },
             success = {
                 animeAdapter.submitData(it.data)
             })
