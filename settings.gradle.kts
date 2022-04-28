@@ -23,3 +23,5 @@ dependencyResolutionManagement {
 rootProject.name = "Kitsu"
 include(":app")
 enableFeaturePreview("VERSION_CATALOGS")
+include(":domain")
+include(":data")
