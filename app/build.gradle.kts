@@ -52,6 +52,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":data"))
+    implementation(project(":domain"))
     // UI Components
     implementation(libs.bundles.uiComponents)
 
