@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.base
+package com.timplifier.data.repositories.base
 
 import com.timplifier.kitsu.domain.either.Either
 import kotlinx.coroutines.Dispatchers

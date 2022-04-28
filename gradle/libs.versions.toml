@@ -27,6 +27,8 @@ lifecycle = "2.4.1"
 navigation = "2.4.1"
 #Hilt
 hilt = "2.41"
+#Javax
+javax = "1"
 #Retrofit
 retrofit = "2.9.0"
 #OkHttp
@@ -46,8 +48,10 @@ koin = "3.2.0-beta-1"
 
 #Kotlin
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+#Coroutines
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 #Core
 android-core = { module = "androidx.core:core-ktx", version.ref = "core" }
 
@@ -79,6 +83,9 @@ navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref 
 #Hilt
 hilt-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+
+#Javax
+javax-inject = { module = "javax.inject:javax.inject", version.ref = "javax" }
 
 #Retrofit
 retrofit-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }

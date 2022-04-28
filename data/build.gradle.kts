@@ -1,6 +1,8 @@
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -41,5 +43,10 @@ dependencies {
 
     // OkHttp
     implementation(libs.bundles.okHttpBundle)
+
+    // Room with coroutines
+    implementation(libs.bundles.roomBundle)
+    kapt(libs.room.compiler)
+
 
 }

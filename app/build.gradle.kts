@@ -54,6 +54,7 @@ android {
 dependencies {
     implementation(project(":data"))
     implementation(project(":domain"))
+
     // UI Components
     implementation(libs.bundles.uiComponents)
 
@@ -66,17 +67,14 @@ dependencies {
     // Fragment
     implementation(libs.fragment.fragment)
 
+    // Coroutines
+    implementation(libs.coroutines.android)
+
     // Lifecycle
     implementation(libs.bundles.lifecycleBundle)
 
     // Navigation
     implementation(libs.bundles.navigationBundle)
-
-    // Retrofit
-    implementation(libs.bundles.retrofitBundle)
-
-    // OkHttpClient
-    implementation(libs.bundles.okHttpBundle)
 
     // Hilt
     implementation(libs.hilt.hilt)
@@ -91,8 +89,5 @@ dependencies {
     // SplashScreen
     implementation(libs.ui.splashScreen)
 
-    // Room with coroutines
-    implementation(libs.bundles.roomBundle)
-    kapt(libs.room.compiler)
 
 }
