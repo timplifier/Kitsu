@@ -74,9 +74,7 @@ dependencies {
     implementation(libs.bundles.retrofitBundle)
 
     // OkHttpClient
-    implementation(libs.okHttp.okHttp)
-    implementation(libs.okHttp.loggingInterceptor)
-    implementation(libs.okHttp.bom)
+    implementation(libs.bundles.okHttpBundle)
 
     // Hilt
     implementation(libs.hilt.hilt)
