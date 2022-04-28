@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.base.BaseDiffUtil
 import com.timplifier.kitsu.common.extensions.loadImageWithGlide
 import com.timplifier.kitsu.databinding.ItemAnimeBinding
-import com.timplifier.kitsu.domain.models.anime.AnimeDataModel
 import com.timplifier.kitsu.presentation.ui.models.anime.AnimeDataUI
 
 class AnimeAdapter

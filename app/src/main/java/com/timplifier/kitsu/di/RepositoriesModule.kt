@@ -1,9 +1,9 @@
 package com.timplifier.kitsu.di
 
-import com.timplifier.kitsu.data.repositories.AnimeRepositoryImpl
-import com.timplifier.kitsu.data.repositories.MangaRepositoryImpl
-import com.timplifier.kitsu.domain.repositories.AnimeRepository
-import com.timplifier.kitsu.domain.repositories.MangaRepository
+import com.timplifier.data.repositories.AnimeRepositoryImpl
+import com.timplifier.data.repositories.MangaRepositoryImpl
+import com.timplifier.domain.repositories.AnimeRepository
+import com.timplifier.domain.repositories.MangaRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

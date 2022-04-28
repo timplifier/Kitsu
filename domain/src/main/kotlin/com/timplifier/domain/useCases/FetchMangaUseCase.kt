@@ -1,6 +1,6 @@
-package com.timplifier.kitsu.domain.useCases
+package com.timplifier.domain.useCases
 
-import com.timplifier.kitsu.domain.repositories.MangaRepository
+import com.timplifier.domain.repositories.MangaRepository
 import javax.inject.Inject
 
 class FetchMangaUseCase @Inject constructor(

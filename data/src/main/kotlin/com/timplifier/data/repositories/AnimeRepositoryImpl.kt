@@ -1,9 +1,8 @@
-package com.timplifier.kitsu.data.repositories
+package com.timplifier.data.repositories
 
-import com.timplifier.kitsu.base.BaseRepository
-import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
-import com.timplifier.kitsu.data.remote.dtos.anime.toDomain
-import com.timplifier.kitsu.domain.repositories.AnimeRepository
+import com.timplifier.data.repositories.base.BaseRepository
+import com.timplifier.data.remote.apiservices.AnimeApiService
+import com.timplifier.domain.repositories.AnimeRepository
 import javax.inject.Inject
 
 class AnimeRepositoryImpl @Inject constructor(

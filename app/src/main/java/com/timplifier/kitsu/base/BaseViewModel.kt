@@ -2,7 +2,7 @@ package com.timplifier.kitsu.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.timplifier.kitsu.domain.either.Either
+import com.timplifier.domain.either.Either
 import com.timplifier.kitsu.presentation.ui.state.UIState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow

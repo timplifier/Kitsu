@@ -1,6 +1,6 @@
-package com.timplifier.kitsu.domain.useCases
+package com.timplifier.domain.useCases
 
-import com.timplifier.kitsu.domain.repositories.AnimeRepository
+import com.timplifier.domain.repositories.AnimeRepository
 import javax.inject.Inject
 
 class FetchAnimeUseCase @Inject constructor(

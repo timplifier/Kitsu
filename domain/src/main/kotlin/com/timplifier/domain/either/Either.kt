@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.domain.either
+package com.timplifier.domain.either
 
 sealed class Either<out A, out B> {
     class Left<out A>(val value: A) : Either<A, Nothing>()

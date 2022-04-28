@@ -1,9 +1,8 @@
 package com.timplifier.kitsu.presentation.ui.fragments.anime
 
-import com.timplifier.kitsu.base.BaseViewModel
 import com.timplifier.domain.useCases.FetchAnimeUseCase
+import com.timplifier.kitsu.base.BaseViewModel
 import com.timplifier.kitsu.presentation.ui.models.anime.AnimeListUI
-import com.timplifier.kitsu.presentation.ui.models.anime.toUI
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject

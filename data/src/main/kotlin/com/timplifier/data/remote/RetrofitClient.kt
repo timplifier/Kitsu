@@ -1,8 +1,7 @@
-package com.timplifier.kitsu.data.remote
+package com.timplifier.data.remote
 
-import com.timplifier.kitsu.common.constants.Constants.BASE_URL
-import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
-import com.timplifier.kitsu.data.remote.apiservices.MangaApiService
+import com.timplifier.data.remote.apiservices.AnimeApiService
+import com.timplifier.data.remote.apiservices.MangaApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -28,4 +27,8 @@ class RetrofitClient {
 
     fun provideAnimeApiService(): AnimeApiService = retrofit.create(AnimeApiService::class.java)
     fun provideMangaApiService(): MangaApiService = retrofit.create(MangaApiService::class.java)
+
+    companion object {
+        const val BASE_URL = "https://kitsu.io/api/edge/"
+    }
 }
