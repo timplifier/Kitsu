@@ -1,7 +1,7 @@
 package com.timplifier.kitsu.base
 
 interface BaseDiffModel {
-    val id: String
+    val id: Any
     override fun equals(other: Any?): Boolean
 
 }
