@@ -2,7 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.LinksXXXXXXXXXXXModel
+import com.timplifier.domain.models.anime.LinksXXXXXXXXXXXModel
 
 data class LinksXXXXXXXXXXX(
     @SerializedName("self")

@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.MediumModel
+import com.timplifier.domain.models.anime.MediumModel
 
 data class MediumUI(
     val width: Any,

@@ -2,7 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.MetaXXModel
+import com.timplifier.domain.models.anime.MetaXXModel
 
 data class MetaXX(
     @SerializedName("count")

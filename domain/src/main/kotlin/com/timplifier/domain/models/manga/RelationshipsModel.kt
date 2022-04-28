@@ -1,5 +1,7 @@
 package com.timplifier.kitsu.domain.models.manga
 
+import com.timplifier.domain.models.manga.*
+
 data class RelationshipsModel(
     val genres: GenresModel,
     val categories: CategoriesModel,

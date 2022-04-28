@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.DimensionsModel
+import com.timplifier.domain.models.anime.DimensionsModel
 
 data class DimensionsUI(
 

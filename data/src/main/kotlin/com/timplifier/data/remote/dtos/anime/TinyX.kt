@@ -2,7 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.TinyXModel
+import com.timplifier.domain.models.anime.TinyXModel
 
 data class TinyX(
     @SerializedName("width")

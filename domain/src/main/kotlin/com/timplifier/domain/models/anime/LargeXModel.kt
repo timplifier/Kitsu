@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.domain.models.anime
+package com.timplifier.domain.models.anime
 
 data class LargeXModel(
     val width: Any,

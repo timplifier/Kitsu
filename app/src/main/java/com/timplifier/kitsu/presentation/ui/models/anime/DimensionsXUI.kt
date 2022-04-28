@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.DimensionsXModel
+import com.timplifier.domain.models.anime.DimensionsXModel
 
 data class DimensionsXUI(
     val tiny: TinyXUI,

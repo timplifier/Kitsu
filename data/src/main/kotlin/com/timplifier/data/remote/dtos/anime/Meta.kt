@@ -1,7 +1,8 @@
-package com.timplifier.kitsu.data.remote.dtos.anime
+package com.timplifier.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.data.remote.dtos.anime.Dimensions
 import com.timplifier.kitsu.domain.models.anime.MetaModel
 
 data class Meta(

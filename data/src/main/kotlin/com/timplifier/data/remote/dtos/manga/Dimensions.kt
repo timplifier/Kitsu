@@ -2,7 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.manga
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.manga.DimensionsModel
+import com.timplifier.domain.models.manga.DimensionsModel
 
 data class Dimensions(
     @SerializedName("tiny")

@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.TinyXModel
+import com.timplifier.domain.models.anime.TinyXModel
 
 data class TinyXUI(
     val width: Any,

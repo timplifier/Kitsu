@@ -4,7 +4,7 @@ package com.timplifier.data.remote.dtos.anime
 import com.google.gson.annotations.SerializedName
 import com.timplifier.kitsu.data.remote.dtos.anime.LinksXXXXXXXXXXXXX
 import com.timplifier.kitsu.data.remote.dtos.anime.MetaXX
-import com.timplifier.kitsu.domain.models.anime.AnimeListModel
+import com.timplifier.domain.models.anime.AnimeListModel
 
 data class AnimeListDto(
     @SerializedName("data")

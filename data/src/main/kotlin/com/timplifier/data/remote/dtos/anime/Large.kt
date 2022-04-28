@@ -2,7 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.LargeModel
+import com.timplifier.domain.models.anime.LargeModel
 
 data class Large(
     @SerializedName("width")

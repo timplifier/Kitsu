@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.PosterImageModel
+import com.timplifier.domain.models.anime.PosterImageModel
 
 data class PosterImageUI(
     val tiny: String,

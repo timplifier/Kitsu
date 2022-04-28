@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.manga
 
-import com.timplifier.kitsu.domain.models.manga.LargeXModel
+import com.timplifier.domain.models.manga.LargeXModel
 
 data class LargeXUI(
     val width: Any,

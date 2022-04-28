@@ -1,4 +1,6 @@
-package com.timplifier.kitsu.domain.models.anime
+package com.timplifier.domain.models.anime
+
+import com.timplifier.kitsu.domain.models.anime.RelationshipsModel
 
 
 data class AnimeDataModel(

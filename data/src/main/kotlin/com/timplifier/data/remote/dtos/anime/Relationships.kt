@@ -1,8 +1,8 @@
-package com.timplifier.kitsu.data.remote.dtos.anime
+package com.timplifier.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.data.remote.dtos.anime.*
+import com.timplifier.kitsu.data.remote.dtos.anime.*
 import com.timplifier.kitsu.domain.models.anime.RelationshipsModel
 
 data class Relationships(

@@ -3,8 +3,7 @@ package com.timplifier.data.remote.dtos.anime
 
 import com.google.gson.annotations.SerializedName
 import com.timplifier.kitsu.data.remote.dtos.anime.Links
-import com.timplifier.kitsu.data.remote.dtos.anime.Relationships
-import com.timplifier.kitsu.domain.models.anime.AnimeDataModel
+import com.timplifier.domain.models.anime.AnimeDataModel
 
 data class AnimeDataDto(
     @SerializedName("id")

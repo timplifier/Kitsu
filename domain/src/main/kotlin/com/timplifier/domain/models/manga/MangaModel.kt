@@ -1,5 +1,7 @@
 package com.timplifier.kitsu.domain.models.manga
 
+import com.timplifier.domain.models.manga.CoverImageModel
+
 data class MangaModel(
     val createdAt: String,
     val updatedAt: String,

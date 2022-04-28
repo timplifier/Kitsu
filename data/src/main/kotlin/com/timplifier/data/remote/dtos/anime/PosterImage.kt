@@ -2,7 +2,9 @@ package com.timplifier.kitsu.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.PosterImageModel
+import com.timplifier.data.remote.dtos.anime.Meta
+import com.timplifier.data.remote.dtos.anime.toDomain
+import com.timplifier.domain.models.anime.PosterImageModel
 
 data class PosterImage(
     @SerializedName("tiny")

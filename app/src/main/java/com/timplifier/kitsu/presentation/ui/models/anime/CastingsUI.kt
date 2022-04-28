@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.CastingsModel
+import com.timplifier.domain.models.anime.CastingsModel
 
 data class CastingsUI(
     val links: LinksXXXUI

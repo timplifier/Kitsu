@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.domain.models.anime.AnimeListModel
+import com.timplifier.domain.models.anime.AnimeListModel
 
 data class AnimeListUI(
     val data: List<AnimeDataUI>,

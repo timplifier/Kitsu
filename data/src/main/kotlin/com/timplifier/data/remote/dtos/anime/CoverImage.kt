@@ -2,9 +2,7 @@ package com.timplifier.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.data.remote.dtos.anime.MetaX
-import com.timplifier.kitsu.data.remote.dtos.anime.MetaX
-import com.timplifier.kitsu.domain.models.anime.CoverImageModel
+import com.timplifier.domain.models.anime.CoverImageModel
 
 data class CoverImage(
     @SerializedName("tiny")
