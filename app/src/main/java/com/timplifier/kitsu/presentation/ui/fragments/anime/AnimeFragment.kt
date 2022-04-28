@@ -29,7 +29,7 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
     override fun launchObservers() {
         viewModel.animeState.spectateUiState(
             error = {
-                Log.e("tag", it.toString())
+                Log.e("tag", it)
             },
             success = {
                 animeAdapter.submitData(it.data)

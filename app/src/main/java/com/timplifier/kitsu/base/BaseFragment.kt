@@ -51,7 +51,7 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
         lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
         success: ((data: T) -> Unit)? = null,
         loading: ((data: UIState.Loading<T>) -> Unit)? = null,
-        error: ((error: String) -> Unit)? = null,
+        error: ((error: String) -> Unit)?,
         idle: ((idle: UIState.Idle<T>) -> Unit)? = null,
         gatherIfSucceed: ((state: UIState<T>) -> Unit)? = null
     ) {

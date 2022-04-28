@@ -8,9 +8,9 @@ import javax.inject.Inject
 
 class AnimeRepositoryImpl @Inject constructor(
     private val animeApiService: AnimeApiService
-
 ) : BaseRepository(), AnimeRepository {
     override fun fetchAnime() = sendRequest {
         animeApiService.fetchAnime().toDomain()
     }
+
 }

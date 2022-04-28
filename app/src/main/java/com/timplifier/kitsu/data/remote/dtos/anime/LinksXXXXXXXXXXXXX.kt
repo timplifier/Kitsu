@@ -8,7 +8,7 @@ data class LinksXXXXXXXXXXXXX(
     @SerializedName("first")
     val first: String,
     @SerializedName("prev")
-    val prev: String,
+    val prev: String?,
     @SerializedName("next")
     val next: String,
     @SerializedName("last")

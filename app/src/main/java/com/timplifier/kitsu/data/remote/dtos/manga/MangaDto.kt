@@ -22,7 +22,7 @@ data class MangaDto(
     @SerializedName("abbreviatedTitles")
     val abbreviatedTitles: Any,
     @SerializedName("averageRating")
-    val averageRating: String,
+    val averageRating: String?,
     @SerializedName("ratingFrequencies")
     val ratingFrequencies: RatingFrequencies,
     @SerializedName("userCount")
@@ -30,31 +30,35 @@ data class MangaDto(
     @SerializedName("favoritesCount")
     val favoritesCount: Int,
     @SerializedName("startDate")
-    val startDate: String,
+    val startDate: String?,
     @SerializedName("endDate")
-    val endDate: String,
+    val endDate: String?,
+    @SerializedName("nextRelease")
+    val nextRelease: Any?,
     @SerializedName("popularityRank")
     val popularityRank: Int,
     @SerializedName("ratingRank")
-    val ratingRank: Int,
+    val ratingRank: Int?,
     @SerializedName("ageRating")
-    val ageRating: String,
+    val ageRating: String?,
     @SerializedName("ageRatingGuide")
-    val ageRatingGuide: String,
+    val ageRatingGuide: String?,
     @SerializedName("subtype")
     val subtype: String,
     @SerializedName("status")
     val status: String,
+    @SerializedName("tba")
+    val tba: String?,
     @SerializedName("posterImage")
     val posterImage: PosterImage,
     @SerializedName("coverImage")
-    val coverImage: CoverImage,
+    val coverImage: CoverImage?,
     @SerializedName("chapterCount")
-    val chapterCount: Any,
+    val chapterCount: Any?,
     @SerializedName("volumeCount")
     val volumeCount: Int,
     @SerializedName("serialization")
-    val serialization: String,
+    val serialization: String?,
     @SerializedName("mangaType")
     val mangaType: String
 )
@@ -74,14 +78,16 @@ fun MangaDto.toDomain() = MangaModel(
     favoritesCount,
     startDate,
     endDate,
+    nextRelease,
     popularityRank,
     ratingRank,
     ageRating,
     ageRatingGuide,
     subtype,
     status,
+    tba,
     posterImage.toDomain(),
-    coverImage.toDomain(),
+    coverImage?.toDomain(),
     chapterCount,
     volumeCount,
     serialization,
