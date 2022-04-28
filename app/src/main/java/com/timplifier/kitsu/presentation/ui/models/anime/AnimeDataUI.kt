@@ -1,7 +1,7 @@
 package com.timplifier.kitsu.presentation.ui.models.anime
 
-import com.timplifier.kitsu.base.BaseDiffModel
 import com.timplifier.domain.models.anime.AnimeDataModel
+import com.timplifier.kitsu.base.BaseDiffModel
 
 data class AnimeDataUI(
     override val id: String,

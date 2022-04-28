@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.manga
 
-import com.timplifier.kitsu.domain.models.manga.MangaModel
+import com.timplifier.domain.models.manga.MangaModel
 
 data class MangaUI(
     val createdAt: String,

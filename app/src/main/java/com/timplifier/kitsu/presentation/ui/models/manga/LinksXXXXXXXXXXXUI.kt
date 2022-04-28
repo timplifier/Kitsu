@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.manga
 
-import com.timplifier.kitsu.domain.models.manga.LinksXXXXXXXXXXXModel
+import com.timplifier.domain.models.manga.LinksXXXXXXXXXXXModel
 
 data class LinksXXXXXXXXXXXUI(
     val first: String,

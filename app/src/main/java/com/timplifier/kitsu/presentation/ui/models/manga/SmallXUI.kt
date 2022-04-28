@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.manga
 
-import com.timplifier.kitsu.domain.models.manga.SmallXModel
+import com.timplifier.domain.models.manga.SmallXModel
 
 data class SmallXUI(
     val width: Any,

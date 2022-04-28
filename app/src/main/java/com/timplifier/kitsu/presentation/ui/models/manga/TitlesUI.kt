@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.manga
 
-import com.timplifier.kitsu.domain.models.manga.TitlesModel
+import com.timplifier.domain.models.manga.TitlesModel
 
 data class TitlesUI(
     val en: String?,

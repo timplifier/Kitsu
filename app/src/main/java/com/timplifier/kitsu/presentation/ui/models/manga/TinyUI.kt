@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.models.manga
 
-import com.timplifier.kitsu.domain.models.manga.TinyModel
+import com.timplifier.domain.models.manga.TinyModel
 
 data class TinyUI(
     val width: Any,

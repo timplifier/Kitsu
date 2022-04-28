@@ -1,6 +1,6 @@
 package com.timplifier.data.remote.apiservices
 
-import com.timplifier.kitsu.data.remote.dtos.manga.MangaListDto
+import com.timplifier.data.remote.dtos.manga.MangaListDto
 import retrofit2.http.GET
 
 interface MangaApiService {

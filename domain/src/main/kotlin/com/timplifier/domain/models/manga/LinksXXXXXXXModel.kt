@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.domain.models.manga
+package com.timplifier.domain.models.manga
 
 data class LinksXXXXXXXModel(
     val self: String,

@@ -1,7 +1,7 @@
 package com.timplifier.kitsu.presentation.ui.models.manga
 
+import com.timplifier.domain.models.manga.MangaDataModel
 import com.timplifier.kitsu.base.BaseDiffModel
-import com.timplifier.kitsu.domain.models.manga.MangaDataModel
 
 data class MangaDataUI(
     override val id: String,

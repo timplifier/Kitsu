@@ -1,7 +1,8 @@
 package com.timplifier.data.repositories
 
-import com.timplifier.data.repositories.base.BaseRepository
 import com.timplifier.data.remote.apiservices.AnimeApiService
+import com.timplifier.data.remote.dtos.anime.toDomain
+import com.timplifier.data.repositories.base.BaseRepository
 import com.timplifier.domain.repositories.AnimeRepository
 import javax.inject.Inject
 

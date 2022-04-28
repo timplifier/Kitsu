@@ -1,8 +1,8 @@
 package com.timplifier.data.repositories
 
-import com.timplifier.data.repositories.base.BaseRepository
 import com.timplifier.data.remote.apiservices.MangaApiService
-import com.timplifier.kitsu.data.remote.dtos.manga.toDomain
+import com.timplifier.data.remote.dtos.manga.toDomain
+import com.timplifier.data.repositories.base.BaseRepository
 import com.timplifier.domain.repositories.MangaRepository
 import javax.inject.Inject
 

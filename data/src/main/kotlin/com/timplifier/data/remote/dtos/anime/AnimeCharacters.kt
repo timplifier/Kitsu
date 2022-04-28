@@ -2,7 +2,6 @@ package com.timplifier.data.remote.dtos.anime
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.data.remote.dtos.anime.LinksXXXXXXXXXXX
 import com.timplifier.domain.models.anime.AnimeCharactersModel
 
 data class AnimeCharacters(

@@ -1,8 +1,8 @@
-package com.timplifier.kitsu.data.remote.dtos.manga
+package com.timplifier.data.remote.dtos.manga
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.manga.MangaStaffModel
+import com.timplifier.domain.models.manga.MangaStaffModel
 
 data class MangaStaff(
     @SerializedName("links")
