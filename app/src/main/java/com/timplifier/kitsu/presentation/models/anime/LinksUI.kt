@@ -6,6 +6,6 @@ data class LinksUI(
     val self: String
 )
 
-fun com.timplifier.kitsu.domain.models.anime.LinksModel.toUI() = LinksUI(
+fun LinksModel.toUI() = LinksUI(
     self
 )

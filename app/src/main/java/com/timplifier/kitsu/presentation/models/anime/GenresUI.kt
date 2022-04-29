@@ -6,4 +6,4 @@ data class GenresUI(
     val linksXUI: LinksXUI
 )
 
-fun com.timplifier.kitsu.domain.models.anime.GenresModel.toUI() = GenresUI(linksXModel.toUI())
+fun GenresModel.toUI() = GenresUI(linksXModel.toUI())

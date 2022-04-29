@@ -6,4 +6,4 @@ data class MappingsUI(
     val links: LinksXXXXXUI
 )
 
-fun com.timplifier.kitsu.domain.models.anime.MappingsModel.toUI() = MappingsUI(links.toUI())
+fun MappingsModel.toUI() = MappingsUI(links.toUI())

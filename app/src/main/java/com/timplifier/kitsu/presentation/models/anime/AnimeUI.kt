@@ -34,7 +34,7 @@ data class AnimeUI(
     val nsfw: Boolean
 )
 
-fun com.timplifier.kitsu.domain.models.anime.AnimeModel.toUI() = AnimeUI(
+fun AnimeModel.toUI() = AnimeUI(
     createdAt,
     updatedAt,
     slug,

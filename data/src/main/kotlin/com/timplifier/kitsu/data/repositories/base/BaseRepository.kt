@@ -10,14 +10,14 @@ abstract class BaseRepository {
     protected fun <T> sendRequest(
         gatherIfSucceed: ((T) -> Unit)? = null,
         request: suspend () -> T
-    ) = flow<com.timplifier.kitsu.domain.either.Either<String, T>> {
+    ) = flow<Either<String, T>> {
         request().also { data ->
             gatherIfSucceed?.invoke(data)
-            emit(com.timplifier.kitsu.domain.either.Either.Right(value = data))
+            emit(Either.Right(value = data))
         }
 
     }.flowOn(Dispatchers.IO).catch { exception ->
-        emit(com.timplifier.kitsu.domain.either.Either.Left(exception.localizedMessage ?: "An error occurred"))
+        emit(Either.Left(exception.localizedMessage ?: "An error occurred"))
 
     }
 }

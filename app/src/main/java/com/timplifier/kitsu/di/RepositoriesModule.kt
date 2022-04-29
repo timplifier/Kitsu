@@ -1,7 +1,7 @@
 package com.timplifier.kitsu.di
 
-import com.timplifier.data.repositories.AnimeRepositoryImpl
-import com.timplifier.data.repositories.MangaRepositoryImpl
+import com.timplifier.kitsu.data.repositories.AnimeRepositoryImpl
+import com.timplifier.kitsu.data.repositories.MangaRepositoryImpl
 import com.timplifier.kitsu.domain.repositories.AnimeRepository
 import com.timplifier.kitsu.domain.repositories.MangaRepository
 import dagger.Binds
@@ -16,8 +16,8 @@ abstract class RepositoriesModule {
     @Binds
     abstract fun bindAnimeRepository(
         animeRepositoryImpl: AnimeRepositoryImpl
-    ): com.timplifier.kitsu.domain.repositories.AnimeRepository
+    ): AnimeRepository
 
     @Binds
-    abstract fun bindMangaRepository(mangaRepositoryImpl: MangaRepositoryImpl): com.timplifier.kitsu.domain.repositories.MangaRepository
+    abstract fun bindMangaRepository(mangaRepositoryImpl: MangaRepositoryImpl): MangaRepository
 }

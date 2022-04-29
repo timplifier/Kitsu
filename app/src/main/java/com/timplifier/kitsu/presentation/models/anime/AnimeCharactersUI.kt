@@ -6,4 +6,4 @@ data class AnimeCharactersUI(
     val links: LinksXXXXXXXXXXXUI
 )
 
-fun com.timplifier.kitsu.domain.models.anime.AnimeCharactersModel.toUI() = AnimeCharactersUI(links.toUI())
+fun AnimeCharactersModel.toUI() = AnimeCharactersUI(links.toUI())

@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.fragments.manga
 
-import com.timplifier.domain.useCases.FetchMangaUseCase
+import com.timplifier.kitsu.domain.useCases.FetchMangaUseCase
 import com.timplifier.kitsu.presentation.base.BaseViewModel
 import com.timplifier.kitsu.presentation.models.manga.MangaListUI
 import com.timplifier.kitsu.presentation.models.manga.toUI

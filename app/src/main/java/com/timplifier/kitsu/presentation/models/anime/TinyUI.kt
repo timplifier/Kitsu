@@ -7,6 +7,6 @@ data class TinyUI(
     val height: Any
 )
 
-fun com.timplifier.kitsu.domain.models.anime.TinyModel.toUI() = TinyUI(
+fun TinyModel.toUI() = TinyUI(
     width, height
 )

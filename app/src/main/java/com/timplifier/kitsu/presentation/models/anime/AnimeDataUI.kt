@@ -11,5 +11,5 @@ data class AnimeDataUI(
     val relationships: RelationshipsUI
 ) : BaseDiffModel
 
-fun com.timplifier.kitsu.domain.models.anime.AnimeDataModel.toUI() =
+fun AnimeDataModel.toUI() =
     AnimeDataUI(id, type, links.toUI(), animeDto.toUI(), relationships.toUI())

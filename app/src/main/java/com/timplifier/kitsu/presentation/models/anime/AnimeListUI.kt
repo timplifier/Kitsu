@@ -8,4 +8,4 @@ data class AnimeListUI(
     val links: LinksXXXXXXXXXXXXXUI
 )
 
-fun com.timplifier.kitsu.domain.models.anime.AnimeListModel.toUI() = AnimeListUI(data.map { it.toUI() }, meta.toUI(), links.toUI())
+fun AnimeListModel.toUI() = AnimeListUI(data.map { it.toUI() }, meta.toUI(), links.toUI())

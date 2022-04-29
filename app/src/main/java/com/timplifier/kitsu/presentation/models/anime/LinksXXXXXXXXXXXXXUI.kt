@@ -9,4 +9,4 @@ data class LinksXXXXXXXXXXXXXUI(
     val last: String
 )
 
-fun com.timplifier.kitsu.domain.models.anime.LinksXXXXXXXXXXXXXModel.toUI() = LinksXXXXXXXXXXXXXUI(first, prev, next, last)
+fun LinksXXXXXXXXXXXXXModel.toUI() = LinksXXXXXXXXXXXXXUI(first, prev, next, last)

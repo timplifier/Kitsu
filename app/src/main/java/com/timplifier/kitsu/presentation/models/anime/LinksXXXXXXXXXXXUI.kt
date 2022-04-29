@@ -7,4 +7,4 @@ data class LinksXXXXXXXXXXXUI(
     val related: String
 )
 
-fun com.timplifier.kitsu.domain.models.anime.LinksXXXXXXXXXXXModel.toUI() = LinksXXXXXXXXXXXUI(self, related)
+fun LinksXXXXXXXXXXXModel.toUI() = LinksXXXXXXXXXXXUI(self, related)

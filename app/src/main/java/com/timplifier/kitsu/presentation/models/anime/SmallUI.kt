@@ -7,4 +7,4 @@ data class SmallUI(
     val height: Any
 )
 
-fun com.timplifier.kitsu.domain.models.anime.SmallModel.toUI() = SmallUI(width, height)
+fun SmallModel.toUI() = SmallUI(width, height)

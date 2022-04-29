@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.fragments.anime
 
-import com.timplifier.domain.useCases.FetchAnimeUseCase
+import com.timplifier.kitsu.domain.useCases.FetchAnimeUseCase
 import com.timplifier.kitsu.presentation.base.BaseViewModel
 import com.timplifier.kitsu.presentation.models.anime.AnimeListUI
 import com.timplifier.kitsu.presentation.models.anime.toUI

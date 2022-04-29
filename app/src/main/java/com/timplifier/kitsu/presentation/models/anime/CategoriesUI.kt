@@ -6,4 +6,4 @@ data class CategoriesUI(
     val links: LinksXXUI
 )
 
-fun com.timplifier.kitsu.domain.models.anime.CategoriesModel.toUI() = CategoriesUI(links.toUI())
+fun CategoriesModel.toUI() = CategoriesUI(links.toUI())

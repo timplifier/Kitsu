@@ -6,4 +6,4 @@ data class CastingsUI(
     val links: LinksXXXUI
 )
 
-fun com.timplifier.kitsu.domain.models.anime.CastingsModel.toUI() = CastingsUI(links.toUI())
+fun CastingsModel.toUI() = CastingsUI(links.toUI())

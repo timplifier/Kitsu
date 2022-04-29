@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.timplifier.kitsu.databinding.ItemMangaBinding
 import com.timplifier.kitsu.presentation.base.BaseDiffUtil
 import com.timplifier.kitsu.presentation.extensions.loadImageWithGlide
-import com.timplifier.kitsu.databinding.ItemMangaBinding
 import com.timplifier.kitsu.presentation.models.manga.MangaDataUI
 
 class MangaAdapter

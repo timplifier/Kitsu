@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 abstract class BaseViewModel : ViewModel() {
     protected fun <T> mutableUiStateFlow() = MutableStateFlow<UIState<T>>(UIState.Idle())
 
-    protected fun <T, S> Flow<com.timplifier.kitsu.domain.either.Either<String, T>>.gatherRequest(
+    protected fun <T, S> Flow<Either<String, T>>.gatherRequest(
         state: MutableStateFlow<UIState<S>>,
         mappedData: (data: T) -> S
     ) {
@@ -20,8 +20,8 @@ abstract class BaseViewModel : ViewModel() {
             state.value = UIState.Loading()
             this@gatherRequest.collect {
                 when (it) {
-                    is com.timplifier.kitsu.domain.either.Either.Left -> state.value = UIState.Error(it.value)
-                    is com.timplifier.kitsu.domain.either.Either.Right -> state.value = UIState.Success(mappedData(it.value))
+                    is Either.Left -> state.value = UIState.Error(it.value)
+                    is Either.Right -> state.value = UIState.Success(mappedData(it.value))
                 }
             }
 
