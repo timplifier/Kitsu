@@ -9,4 +9,4 @@ data class DimensionsUI(
     val large: LargeUI
 )
 
-fun com.timplifier.kitsu.domain.models.manga.DimensionsModel.toUI() = DimensionsUI(tiny.toUI(), small.toUI(), medium.toUI(), large.toUI())
+fun DimensionsModel.toUI() = DimensionsUI(tiny.toUI(), small.toUI(), medium.toUI(), large.toUI())

@@ -7,4 +7,4 @@ data class ReviewsUI(
     LinksXXXXXXUI
 )
 
-fun com.timplifier.kitsu.domain.models.manga.ReviewsModel.toUI() = ReviewsUI(links.toUI())
+fun ReviewsModel.toUI() = ReviewsUI(links.toUI())

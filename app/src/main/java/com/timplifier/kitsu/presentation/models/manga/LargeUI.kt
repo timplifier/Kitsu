@@ -7,4 +7,4 @@ data class LargeUI(
     val height: Any
 )
 
-fun com.timplifier.kitsu.domain.models.manga.LargeModel.toUI() = LargeUI(width, height)
+fun LargeModel.toUI() = LargeUI(width, height)

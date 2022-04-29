@@ -7,4 +7,4 @@ data class MediumUI(
     val height: Any
 )
 
-fun com.timplifier.kitsu.domain.models.manga.MediumModel.toUI() = MediumUI(width, height)
+fun MediumModel.toUI() = MediumUI(width, height)

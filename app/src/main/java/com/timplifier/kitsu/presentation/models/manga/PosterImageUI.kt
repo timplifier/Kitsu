@@ -11,4 +11,4 @@ data class PosterImageUI(
     val meta: MetaUI
 )
 
-fun com.timplifier.kitsu.domain.models.manga.PosterImageModel.toUI() = PosterImageUI(tiny, small, medium, large, original, meta.toUI())
+fun PosterImageModel.toUI() = PosterImageUI(tiny, small, medium, large, original, meta.toUI())

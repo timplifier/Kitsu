@@ -24,7 +24,7 @@ data class RatingFrequenciesUI(
     val x20: String
 )
 
-fun com.timplifier.kitsu.domain.models.manga.RatingFrequenciesModel.toUI() = RatingFrequenciesUI(
+fun RatingFrequenciesModel.toUI() = RatingFrequenciesUI(
     x2,
     x3,
     x4,

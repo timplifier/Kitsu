@@ -6,4 +6,4 @@ data class MetaXUI(
     val dimensionsXUI: DimensionsXUI
 )
 
-fun com.timplifier.kitsu.domain.models.manga.MetaXModel.toUI() = MetaXUI(dimensionsXModel.toUI())
+fun MetaXModel.toUI() = MetaXUI(dimensionsXModel.toUI())

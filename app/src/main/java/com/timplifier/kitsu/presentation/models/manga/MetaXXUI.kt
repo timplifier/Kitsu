@@ -6,4 +6,4 @@ data class MetaXXUI(
     val count: Int
 )
 
-fun com.timplifier.kitsu.domain.models.manga.MetaXXModel.toUI() = MetaXXUI(count)
+fun MetaXXModel.toUI() = MetaXXUI(count)

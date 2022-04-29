@@ -8,4 +8,4 @@ data class TitlesUI(
     val jaJp: String?
 )
 
-fun com.timplifier.kitsu.domain.models.manga.TitlesModel.toUI() = TitlesUI(en, enJp, jaJp)
+fun TitlesModel.toUI() = TitlesUI(en, enJp, jaJp)

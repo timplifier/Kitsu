@@ -10,4 +10,4 @@ data class CoverImageUI(
     val meta: MetaXUI
 )
 
-fun com.timplifier.kitsu.domain.models.manga.CoverImageModel.toUI() = CoverImageUI(tiny, small, large, original, meta.toUI())
+fun CoverImageModel.toUI() = CoverImageUI(tiny, small, large, original, meta.toUI())

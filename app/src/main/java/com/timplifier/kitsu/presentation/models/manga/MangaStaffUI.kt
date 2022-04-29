@@ -6,4 +6,4 @@ data class MangaStaffUI(
     val links: LinksXXXXXXXXXXUI
 )
 
-fun com.timplifier.kitsu.domain.models.manga.MangaStaffModel.toUI() = MangaStaffUI(links.toUI())
+fun MangaStaffModel.toUI() = MangaStaffUI(links.toUI())
