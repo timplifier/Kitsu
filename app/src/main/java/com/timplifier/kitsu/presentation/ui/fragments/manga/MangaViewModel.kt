@@ -1,9 +1,9 @@
 package com.timplifier.kitsu.presentation.ui.fragments.manga
 
 import com.timplifier.domain.useCases.FetchMangaUseCase
-import com.timplifier.kitsu.base.BaseViewModel
-import com.timplifier.kitsu.presentation.ui.models.manga.MangaListUI
-import com.timplifier.kitsu.presentation.ui.models.manga.toUI
+import com.timplifier.kitsu.presentation.base.BaseViewModel
+import com.timplifier.kitsu.presentation.models.manga.MangaListUI
+import com.timplifier.kitsu.presentation.models.manga.toUI
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject

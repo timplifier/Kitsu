@@ -70,17 +70,14 @@ dependencies {
     implementation(libs.coroutines.android)
 
     // Lifecycle
-    implementation(libs.bundles.lifecycleBundle)
+    implementation(libs.bundles.lifecycle)
 
     // Navigation
-    implementation(libs.bundles.navigationBundle)
+    implementation(libs.bundles.navigation)
 
     // Hilt
     implementation(libs.hilt.hilt)
     kapt(libs.hilt.compiler)
-
-    // Legacy Support
-    implementation(libs.legacySupport.legacySupport)
 
     // Glide
     implementation(libs.glide.glide)

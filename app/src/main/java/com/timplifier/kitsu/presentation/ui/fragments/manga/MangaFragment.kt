@@ -4,9 +4,9 @@ import android.util.Log
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
-import com.timplifier.kitsu.base.BaseFragment
-import com.timplifier.kitsu.common.extensions.isInternetAvailable
-import com.timplifier.kitsu.common.extensions.submitData
+import com.timplifier.kitsu.presentation.base.BaseFragment
+import com.timplifier.kitsu.presentation.extensions.isInternetAvailable
+import com.timplifier.kitsu.presentation.extensions.submitData
 import com.timplifier.kitsu.databinding.FragmentMangaBinding
 import com.timplifier.kitsu.presentation.ui.adapters.MangaAdapter
 import dagger.hilt.android.AndroidEntryPoint

@@ -38,13 +38,13 @@ dependencies {
     implementation(project(":domain"))
 
     // Retrofit
-    implementation(libs.bundles.retrofitBundle)
+    implementation(libs.bundles.retrofit)
 
     // OkHttp
-    implementation(libs.bundles.okHttpBundle)
+    implementation(libs.bundles.okHttp)
 
     // Room with coroutines
-    implementation(libs.bundles.roomBundle)
+    implementation(libs.bundles.room)
     kapt(libs.room.compiler)
 
 

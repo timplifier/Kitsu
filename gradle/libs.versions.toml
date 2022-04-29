@@ -52,16 +52,13 @@ kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.
 #Coroutines
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
 #Core
 android-core = { module = "androidx.core:core-ktx", version.ref = "core" }
 
-#Fragment
-fragment-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
-
-#Activity
-activity-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
-
 #UI Components
+activity-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+fragment-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
 ui-material = { module = "com.google.android.material:material", version.ref = "material" }
 ui-appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
 ui-constraint = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint" }
@@ -83,6 +80,7 @@ navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref 
 #Hilt
 hilt-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-android= { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 
 #Javax
 javax-inject = { module = "javax.inject:javax.inject", version.ref = "javax" }
@@ -116,21 +114,21 @@ koin-koin = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
 [bundles]
 #UI Components
-uiComponents = ["ui-appCompat", "ui-constraint", "ui-material", "ui-viewBindingPropertyDelegate"]
+uiComponents = ["activity-activity", "fragment-fragment", "ui-appCompat", "ui-constraint", "ui-material", "ui-viewBindingPropertyDelegate", "glide-glide", "ui-splashScreen"]
 
 #Room
-roomBundle = ["room-runtime", "room-kotlinExtensionsAndCoroutinesSupport"]
+room = ["room-runtime", "room-kotlinExtensionsAndCoroutinesSupport"]
 
 #Retrofit
-retrofitBundle = ["retrofit-retrofit", "retrofit-gsonConverter"]
+retrofit = ["retrofit-retrofit", "retrofit-gsonConverter"]
 #OkHttp
-okHttpBundle = ["okHttp-bom", "okHttp-loggingInterceptor", "okHttp-okHttp"]
+okHttp = ["okHttp-bom", "okHttp-loggingInterceptor", "okHttp-okHttp"]
 
 #Navigation
-navigationBundle = ["navigation-fragment", "navigation-ui"]
+navigation = ["navigation-fragment", "navigation-ui"]
 
 #Lifecycle
-lifecycleBundle = ["lifecycle-viewModel", "lifecycle-runtime", "lifecycle-liveData"]
+lifecycle = ["lifecycle-viewModel", "lifecycle-runtime", "lifecycle-liveData"]
 
 
 [plugins]
