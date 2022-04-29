@@ -51,6 +51,7 @@ android {
 }
 
 dependencies {
+    
     implementation(project(":data"))
     implementation(project(":domain"))
 
@@ -59,12 +60,6 @@ dependencies {
 
     // Core
     implementation(libs.android.core)
-
-    // Activity
-    implementation(libs.activity.activity)
-
-    // Fragment
-    implementation(libs.fragment.fragment)
 
     // Coroutines
     implementation(libs.coroutines.android)
@@ -76,14 +71,6 @@ dependencies {
     implementation(libs.bundles.navigation)
 
     // Hilt
-    implementation(libs.hilt.hilt)
+    implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
-    // Glide
-    implementation(libs.glide.glide)
-
-    // SplashScreen
-    implementation(libs.ui.splashScreen)
-
-
 }

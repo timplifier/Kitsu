@@ -1,10 +1,10 @@
 package com.timplifier.kitsu.presentation.models.manga
 
-import com.timplifier.domain.models.manga.LinksXXXXXModel
+import com.timplifier.kitsu.domain.models.manga.LinksXXXXXModel
 
 data class LinksXXXXXUI(
     val self: String,
     val related: String
 )
 
-fun LinksXXXXXModel.toUI() = LinksXXXXXUI(self, related)
+fun com.timplifier.kitsu.domain.models.manga.LinksXXXXXModel.toUI() = LinksXXXXXUI(self, related)

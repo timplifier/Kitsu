@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.anime
 
-import com.timplifier.domain.models.anime.CoverImageModel
+import com.timplifier.kitsu.domain.models.anime.CoverImageModel
 
 data class CoverImageUI(
     val tiny: String,
@@ -10,4 +10,4 @@ data class CoverImageUI(
     val meta: MetaXUI
 )
 
-fun CoverImageModel.toUI() = CoverImageUI(tiny, small, large, original, meta.toUI())
+fun com.timplifier.kitsu.domain.models.anime.CoverImageModel.toUI() = CoverImageUI(tiny, small, large, original, meta.toUI())

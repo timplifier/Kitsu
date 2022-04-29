@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.anime
 
-import com.timplifier.domain.models.anime.AnimeDataModel
+import com.timplifier.kitsu.domain.models.anime.AnimeDataModel
 import com.timplifier.kitsu.presentation.base.BaseDiffModel
 
 data class AnimeDataUI(
@@ -11,5 +11,5 @@ data class AnimeDataUI(
     val relationships: RelationshipsUI
 ) : BaseDiffModel
 
-fun AnimeDataModel.toUI() =
+fun com.timplifier.kitsu.domain.models.anime.AnimeDataModel.toUI() =
     AnimeDataUI(id, type, links.toUI(), animeDto.toUI(), relationships.toUI())

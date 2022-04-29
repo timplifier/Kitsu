@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.anime
 
-import com.timplifier.domain.models.anime.AnimeListModel
+import com.timplifier.kitsu.domain.models.anime.AnimeListModel
 
 data class AnimeListUI(
     val data: List<AnimeDataUI>,
@@ -8,4 +8,4 @@ data class AnimeListUI(
     val links: LinksXXXXXXXXXXXXXUI
 )
 
-fun AnimeListModel.toUI() = AnimeListUI(data.map { it.toUI() }, meta.toUI(), links.toUI())
+fun com.timplifier.kitsu.domain.models.anime.AnimeListModel.toUI() = AnimeListUI(data.map { it.toUI() }, meta.toUI(), links.toUI())

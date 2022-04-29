@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.anime
 
-import com.timplifier.domain.models.anime.DimensionsModel
+import com.timplifier.kitsu.domain.models.anime.DimensionsModel
 
 data class DimensionsUI(
 
@@ -10,6 +10,6 @@ data class DimensionsUI(
     val large: LargeUI
 )
 
-fun DimensionsModel.toUI() = DimensionsUI(
+fun com.timplifier.kitsu.domain.models.anime.DimensionsModel.toUI() = DimensionsUI(
     tiny.toUI(), small.toUI(), medium.toUI(), large.toUI()
 )

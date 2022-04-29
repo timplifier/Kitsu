@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.di
 
-import com.timplifier.data.remote.RetrofitClient
+import com.timplifier.kitsu.data.remote.RetrofitClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,7 +11,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
     @Singleton
-    private val retrofit = RetrofitClient()
+    private val retrofit = com.timplifier.kitsu.data.remote.RetrofitClient()
 
     @Singleton
     @Provides

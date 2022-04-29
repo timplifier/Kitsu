@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.anime
 
-import com.timplifier.domain.models.anime.AnimeModel
+import com.timplifier.kitsu.domain.models.anime.AnimeModel
 
 data class AnimeUI(
     val createdAt: String,
@@ -34,7 +34,7 @@ data class AnimeUI(
     val nsfw: Boolean
 )
 
-fun AnimeModel.toUI() = AnimeUI(
+fun com.timplifier.kitsu.domain.models.anime.AnimeModel.toUI() = AnimeUI(
     createdAt,
     updatedAt,
     slug,

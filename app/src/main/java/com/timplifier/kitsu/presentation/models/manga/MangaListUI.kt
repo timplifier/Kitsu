@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.manga
 
-import com.timplifier.domain.models.manga.MangaListModel
+import com.timplifier.kitsu.domain.models.manga.MangaListModel
 
 data class MangaListUI(
     val data: List<MangaDataUI>,
@@ -8,4 +8,4 @@ data class MangaListUI(
     val links: LinksXXXXXXXXXXXUI
 )
 
-fun MangaListModel.toUI() = MangaListUI(data.map { it.toUI() }, meta.toUI(), links.toUI())
+fun com.timplifier.kitsu.domain.models.manga.MangaListModel.toUI() = MangaListUI(data.map { it.toUI() }, meta.toUI(), links.toUI())

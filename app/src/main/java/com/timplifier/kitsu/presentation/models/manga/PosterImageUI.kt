@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.manga
 
-import com.timplifier.domain.models.manga.PosterImageModel
+import com.timplifier.kitsu.domain.models.manga.PosterImageModel
 
 data class PosterImageUI(
     val tiny: String,
@@ -11,4 +11,4 @@ data class PosterImageUI(
     val meta: MetaUI
 )
 
-fun PosterImageModel.toUI() = PosterImageUI(tiny, small, medium, large, original, meta.toUI())
+fun com.timplifier.kitsu.domain.models.manga.PosterImageModel.toUI() = PosterImageUI(tiny, small, medium, large, original, meta.toUI())

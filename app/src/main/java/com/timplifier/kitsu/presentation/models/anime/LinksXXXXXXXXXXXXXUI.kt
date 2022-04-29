@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.anime
 
-import com.timplifier.domain.models.anime.LinksXXXXXXXXXXXXXModel
+import com.timplifier.kitsu.domain.models.anime.LinksXXXXXXXXXXXXXModel
 
 data class LinksXXXXXXXXXXXXXUI(
     val first: String,
@@ -9,4 +9,4 @@ data class LinksXXXXXXXXXXXXXUI(
     val last: String
 )
 
-fun LinksXXXXXXXXXXXXXModel.toUI() = LinksXXXXXXXXXXXXXUI(first, prev, next, last)
+fun com.timplifier.kitsu.domain.models.anime.LinksXXXXXXXXXXXXXModel.toUI() = LinksXXXXXXXXXXXXXUI(first, prev, next, last)

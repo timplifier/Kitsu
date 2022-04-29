@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.manga
 
-import com.timplifier.domain.models.manga.MangaDataModel
+import com.timplifier.kitsu.domain.models.manga.MangaDataModel
 import com.timplifier.kitsu.presentation.base.BaseDiffModel
 
 data class MangaDataUI(
@@ -11,5 +11,5 @@ data class MangaDataUI(
     val relationships: RelationshipsUI
 ) : BaseDiffModel
 
-fun MangaDataModel.toUI() =
+fun com.timplifier.kitsu.domain.models.manga.MangaDataModel.toUI() =
     MangaDataUI(id, type, links.toUI(), mangaDto.toUI(), relationships.toUI())

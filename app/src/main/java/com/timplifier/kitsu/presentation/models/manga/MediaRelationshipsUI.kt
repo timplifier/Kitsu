@@ -1,9 +1,9 @@
 package com.timplifier.kitsu.presentation.models.manga
 
-import com.timplifier.domain.models.manga.MediaRelationshipsModel
+import com.timplifier.kitsu.domain.models.manga.MediaRelationshipsModel
 
 data class MediaRelationshipsUI(
     val links: LinksXXXXXXXUI
 )
 
-fun MediaRelationshipsModel.toUI() = MediaRelationshipsUI(links.toUI())
+fun com.timplifier.kitsu.domain.models.manga.MediaRelationshipsModel.toUI() = MediaRelationshipsUI(links.toUI())

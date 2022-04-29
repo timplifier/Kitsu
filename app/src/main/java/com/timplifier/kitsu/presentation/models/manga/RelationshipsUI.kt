@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.manga
 
-import com.timplifier.domain.models.manga.RelationshipsModel
+import com.timplifier.kitsu.domain.models.manga.RelationshipsModel
 
 data class RelationshipsUI(
     val genres: GenresUI,
@@ -15,7 +15,7 @@ data class RelationshipsUI(
     val mangaStaff: MangaStaffUI
 )
 
-fun RelationshipsModel.toUI() =
+fun com.timplifier.kitsu.domain.models.manga.RelationshipsModel.toUI() =
     RelationshipsUI(
         genres.toUI(),
         categories.toUI(),

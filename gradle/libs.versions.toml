@@ -78,9 +78,8 @@ navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", 
 navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 
 #Hilt
-hilt-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
-hilt-android= { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 
 #Javax
 javax-inject = { module = "javax.inject:javax.inject", version.ref = "javax" }

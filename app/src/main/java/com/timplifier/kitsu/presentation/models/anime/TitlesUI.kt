@@ -1,6 +1,6 @@
 package com.timplifier.kitsu.presentation.models.anime
 
-import com.timplifier.domain.models.anime.TitlesModel
+import com.timplifier.kitsu.domain.models.anime.TitlesModel
 
 data class TitlesUI(
     val en: String?,
@@ -8,4 +8,4 @@ data class TitlesUI(
     val jaJp: String
 )
 
-fun TitlesModel.toUI() = TitlesUI(en, enJp, jaJp)
+fun com.timplifier.kitsu.domain.models.anime.TitlesModel.toUI() = TitlesUI(en, enJp, jaJp)
