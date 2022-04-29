@@ -2,16 +2,16 @@ package com.timplifier.kitsu.domain.models.anime
 
 data class RelationshipsModel(
 
-    val genres: com.timplifier.kitsu.domain.models.anime.GenresModel,
-    val categories: com.timplifier.kitsu.domain.models.anime.CategoriesModel,
-    val castings: com.timplifier.kitsu.domain.models.anime.CastingsModel,
-    val installments: com.timplifier.kitsu.domain.models.anime.InstallmentsModel,
-    val mappings: com.timplifier.kitsu.domain.models.anime.MappingsModel,
+    val genres: GenresModel,
+    val categories: CategoriesModel,
+    val castings: CastingsModel,
+    val installments: InstallmentsModel,
+    val mappings: MappingsModel,
     val reviews: ReviewsModel,
-    val mediaRelationships: com.timplifier.kitsu.domain.models.anime.MediaRelationshipsModel,
-    val episodes: com.timplifier.kitsu.domain.models.anime.EpisodesModel,
+    val mediaRelationships: MediaRelationshipsModel,
+    val episodes: EpisodesModel,
     val streamingLinks: StreamingLinksModel,
-    val animeProductions: com.timplifier.kitsu.domain.models.anime.AnimeProductionsModel,
-    val animeCharacters: com.timplifier.kitsu.domain.models.anime.AnimeCharactersModel,
-    val animeStaff: com.timplifier.kitsu.domain.models.anime.AnimeStaffModel
+    val animeProductions: AnimeProductionsModel,
+    val animeCharacters: AnimeCharactersModel,
+    val animeStaff: AnimeStaffModel
 )

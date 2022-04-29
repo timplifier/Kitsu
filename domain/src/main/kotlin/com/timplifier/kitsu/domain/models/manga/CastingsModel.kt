@@ -2,5 +2,5 @@ package com.timplifier.kitsu.domain.models.manga
 
 data class CastingsModel(
 
-    val links: com.timplifier.kitsu.domain.models.manga.LinksXXXModel
+    val links: LinksXXXModel
 )
