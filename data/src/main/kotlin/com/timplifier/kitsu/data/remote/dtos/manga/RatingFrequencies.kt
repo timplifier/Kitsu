@@ -45,7 +45,7 @@ data class RatingFrequencies(
     val x20: String
 )
 
-fun RatingFrequencies.toDomain() = com.timplifier.kitsu.domain.models.manga.RatingFrequenciesModel(
+fun RatingFrequencies.toDomain() = RatingFrequenciesModel(
     x2,
     x3,
     x4,

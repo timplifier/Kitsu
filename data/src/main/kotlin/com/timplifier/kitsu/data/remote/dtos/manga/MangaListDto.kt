@@ -14,7 +14,7 @@ data class MangaListDto(
 )
 
 fun MangaListDto.toDomain() =
-    com.timplifier.kitsu.domain.models.manga.MangaListModel(
+    MangaListModel(
         data.map { it.toDomain() },
         meta.toDomain(),
         links.toDomain()

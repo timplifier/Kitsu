@@ -9,4 +9,4 @@ data class Reviews(
     val links: LinksXXXXXX
 )
 
-fun Reviews.toDomain() = com.timplifier.kitsu.domain.models.manga.ReviewsModel(links.toDomain())
+fun Reviews.toDomain() = ReviewsModel(links.toDomain())

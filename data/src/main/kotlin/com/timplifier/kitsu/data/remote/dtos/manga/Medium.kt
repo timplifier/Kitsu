@@ -11,4 +11,4 @@ data class Medium(
     val height: Any
 )
 
-fun Medium.toDomain() = com.timplifier.kitsu.domain.models.manga.MediumModel(width, height)
+fun Medium.toDomain() = MediumModel(width, height)

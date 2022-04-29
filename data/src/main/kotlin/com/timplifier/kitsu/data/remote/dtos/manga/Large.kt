@@ -11,4 +11,4 @@ data class Large(
     val height: Any
 )
 
-fun Large.toDomain() = com.timplifier.kitsu.domain.models.manga.LargeModel(width, height)
+fun Large.toDomain() = LargeModel(width, height)

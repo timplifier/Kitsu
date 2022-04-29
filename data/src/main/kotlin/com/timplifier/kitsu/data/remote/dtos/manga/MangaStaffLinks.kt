@@ -2,15 +2,15 @@ package com.timplifier.kitsu.data.remote.dtos.manga
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.manga.LinksXXXXXModel
+import com.timplifier.kitsu.domain.models.manga.LinksXXXXXXXXXXModel
 
-data class LinksXXXXX(
+data class LinksXXXXXXXXXX(
     @SerializedName("self")
     val self: String,
     @SerializedName("related")
     val related: String
 )
 
-fun LinksXXXXX.toDomain() = com.timplifier.kitsu.domain.models.manga.LinksXXXXXModel(
+fun LinksXXXXXXXXXX.toDomain() = LinksXXXXXXXXXXModel(
     self, related
 )

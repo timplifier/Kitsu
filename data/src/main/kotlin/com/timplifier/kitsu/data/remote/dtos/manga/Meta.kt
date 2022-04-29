@@ -9,4 +9,4 @@ data class Meta(
     val dimensions: Dimensions
 )
 
-fun Meta.toDomain() = com.timplifier.kitsu.domain.models.manga.MetaModel(dimensions.toDomain())
+fun Meta.toDomain() = MetaModel(dimensions.toDomain())

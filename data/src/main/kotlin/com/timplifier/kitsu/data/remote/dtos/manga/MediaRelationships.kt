@@ -10,4 +10,4 @@ data class MediaRelationships(
 )
 
 fun MediaRelationships.toDomain() =
-    com.timplifier.kitsu.domain.models.manga.MediaRelationshipsModel(links.toDomain())
+    MediaRelationshipsModel(links.toDomain())

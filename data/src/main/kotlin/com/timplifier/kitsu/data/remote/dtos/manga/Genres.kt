@@ -9,4 +9,4 @@ data class Genres(
     val links: LinksX
 )
 
-fun Genres.toDomain() = com.timplifier.kitsu.domain.models.manga.GenresModel(links.toDomain())
+fun Genres.toDomain() = GenresModel(links.toDomain())

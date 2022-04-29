@@ -11,4 +11,4 @@ data class Small(
     val height: Any
 )
 
-fun Small.toDomain() = com.timplifier.kitsu.domain.models.manga.SmallModel(width, height)
+fun Small.toDomain() = SmallModel(width, height)

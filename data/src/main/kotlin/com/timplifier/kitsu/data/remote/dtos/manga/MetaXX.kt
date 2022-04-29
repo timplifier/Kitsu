@@ -9,4 +9,4 @@ data class MetaXX(
     val count: Int
 )
 
-fun MetaXX.toDomain() = com.timplifier.kitsu.domain.models.manga.MetaXXModel(count)
+fun MetaXX.toDomain() = MetaXXModel(count)

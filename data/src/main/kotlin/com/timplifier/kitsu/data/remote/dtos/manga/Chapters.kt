@@ -9,6 +9,6 @@ data class Chapters(
     val links: LinksXXXXXXXX
 )
 
-fun Chapters.toDomain() = com.timplifier.kitsu.domain.models.manga.ChaptersModel(
+fun Chapters.toDomain() = ChaptersModel(
     links.toDomain()
 )

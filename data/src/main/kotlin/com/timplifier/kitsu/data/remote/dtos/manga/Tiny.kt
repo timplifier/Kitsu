@@ -12,4 +12,4 @@ data class Tiny(
 
 )
 
-fun Tiny.toDomain() = com.timplifier.kitsu.domain.models.manga.TinyModel(width, height)
+fun Tiny.toDomain() = TinyModel(width, height)

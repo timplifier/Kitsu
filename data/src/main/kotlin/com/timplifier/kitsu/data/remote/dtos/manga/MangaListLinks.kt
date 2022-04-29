@@ -15,6 +15,6 @@ data class LinksXXXXXXXXXXX(
     val last: String
 )
 
-fun LinksXXXXXXXXXXX.toDomain() = com.timplifier.kitsu.domain.models.manga.LinksXXXXXXXXXXXModel(
+fun LinksXXXXXXXXXXX.toDomain() = LinksXXXXXXXXXXXModel(
     first, prev, next, last
 )

@@ -13,4 +13,4 @@ data class Titles(
     val jaJp: String?
 )
 
-fun Titles.toDomain() = com.timplifier.kitsu.domain.models.manga.TitlesModel(en, enJp, jaJp)
+fun Titles.toDomain() = TitlesModel(en, enJp, jaJp)

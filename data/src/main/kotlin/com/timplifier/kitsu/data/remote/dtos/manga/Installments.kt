@@ -10,4 +10,4 @@ data class Installments(
 )
 
 fun Installments.toDomain() =
-    com.timplifier.kitsu.domain.models.manga.InstallmentsModel(links.toDomain())
+    InstallmentsModel(links.toDomain())

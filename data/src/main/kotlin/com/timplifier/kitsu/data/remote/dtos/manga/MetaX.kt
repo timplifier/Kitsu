@@ -9,6 +9,6 @@ data class MetaX(
     val dimensions: DimensionsX
 )
 
-fun MetaX.toDomain() = com.timplifier.kitsu.domain.models.manga.MetaXModel(
+fun MetaX.toDomain() = MetaXModel(
     dimensions.toDomain()
 )
