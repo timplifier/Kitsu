@@ -1,5 +1,3 @@
-@file:JvmName("AnimeCharactersKt")
-
 package com.timplifier.kitsu.data.remote.dtos.anime
 
 

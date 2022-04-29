@@ -1,5 +1,3 @@
-@file:JvmName("MediaRelationshipsUIKt")
-
 package com.timplifier.kitsu.presentation.models.anime
 
 import com.timplifier.kitsu.domain.models.anime.LinksXXXXXXXModel

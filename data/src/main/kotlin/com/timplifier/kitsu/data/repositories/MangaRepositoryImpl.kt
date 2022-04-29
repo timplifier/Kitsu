@@ -1,9 +1,9 @@
 package com.timplifier.kitsu.data.repositories
 
-import com.timplifier.data.remote.apiservices.MangaApiService
-import com.timplifier.data.remote.dtos.manga.toDomain
-import com.timplifier.data.repositories.base.BaseRepository
-import com.timplifier.domain.repositories.MangaRepository
+import com.timplifier.kitsu.data.remote.apiservices.MangaApiService
+import com.timplifier.kitsu.data.remote.dtos.manga.toDomain
+import com.timplifier.kitsu.data.repositories.base.BaseRepository
+import com.timplifier.kitsu.domain.repositories.MangaRepository
 import javax.inject.Inject
 
 class MangaRepositoryImpl @Inject constructor(

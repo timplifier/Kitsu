@@ -4,10 +4,10 @@ import android.util.Log
 import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
+import com.timplifier.kitsu.databinding.FragmentAnimeBinding
 import com.timplifier.kitsu.presentation.base.BaseFragment
 import com.timplifier.kitsu.presentation.extensions.isInternetAvailable
 import com.timplifier.kitsu.presentation.extensions.submitData
-import com.timplifier.kitsu.databinding.FragmentAnimeBinding
 import com.timplifier.kitsu.presentation.ui.adapters.AnimeAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
