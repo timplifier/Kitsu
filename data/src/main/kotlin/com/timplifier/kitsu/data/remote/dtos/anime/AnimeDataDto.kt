@@ -17,6 +17,6 @@ data class AnimeDataDto(
     val relationships: Relationships
 )
 
-fun AnimeDataDto.toDomain() = com.timplifier.kitsu.domain.models.anime.AnimeDataModel(
+fun AnimeDataDto.toDomain() = AnimeDataModel(
     id, type, links.toDomain(), animeDto.toDomain(), relationships.toDomain()
 )

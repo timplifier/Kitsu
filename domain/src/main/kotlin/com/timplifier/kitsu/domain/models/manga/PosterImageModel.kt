@@ -6,5 +6,5 @@ data class PosterImageModel(
     val medium: String,
     val large: String,
     val original: String,
-    val meta: com.timplifier.kitsu.domain.models.manga.MetaModel
+    val meta: MetaModel
 )

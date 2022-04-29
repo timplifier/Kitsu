@@ -1,7 +1,7 @@
 package com.timplifier.kitsu.data.remote
 
-import com.timplifier.data.remote.apiservices.AnimeApiService
-import com.timplifier.data.remote.apiservices.MangaApiService
+import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
+import com.timplifier.kitsu.data.remote.apiservices.MangaApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

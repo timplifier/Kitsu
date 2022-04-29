@@ -5,5 +5,5 @@ data class CoverImageModel(
     val small: String,
     val large: String,
     val original: String,
-    val meta: com.timplifier.kitsu.domain.models.manga.MetaXModel
+    val meta: MetaXModel
 )
