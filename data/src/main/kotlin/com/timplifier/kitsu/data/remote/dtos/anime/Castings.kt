@@ -9,6 +9,6 @@ data class Castings(
     val links: LinksXXX
 )
 
-fun Castings.toDomain() = com.timplifier.kitsu.domain.models.anime.CastingsModel(
+fun Castings.toDomain() = CastingsModel(
     links.toDomain()
 )

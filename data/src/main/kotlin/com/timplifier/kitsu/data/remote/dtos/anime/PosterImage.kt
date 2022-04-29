@@ -19,7 +19,7 @@ data class PosterImage(
     val meta: Meta
 )
 
-fun PosterImage.toDomain() = com.timplifier.kitsu.domain.models.anime.PosterImageModel(
+fun PosterImage.toDomain() = PosterImageModel(
     tiny,
     small,
     medium,

@@ -9,4 +9,4 @@ data class Links(
     val self: String
 )
 
-fun Links.toDomain() = com.timplifier.kitsu.domain.models.anime.LinksModel(self)
+fun Links.toDomain() = LinksModel(self)

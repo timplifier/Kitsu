@@ -15,6 +15,6 @@ data class Dimensions(
     val large: Large
 )
 
-fun Dimensions.toDomain() = com.timplifier.kitsu.domain.models.anime.DimensionsModel(
+fun Dimensions.toDomain() = DimensionsModel(
     tiny.toDomain(), small.toDomain(), medium.toDomain(), large.toDomain()
 )

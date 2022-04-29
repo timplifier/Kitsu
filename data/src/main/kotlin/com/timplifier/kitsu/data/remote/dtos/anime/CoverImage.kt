@@ -17,7 +17,7 @@ data class CoverImage(
     val meta: MetaX
 )
 
-fun CoverImage.toDomain() = com.timplifier.kitsu.domain.models.anime.CoverImageModel(
+fun CoverImage.toDomain() = CoverImageModel(
     tiny,
     small,
     large,

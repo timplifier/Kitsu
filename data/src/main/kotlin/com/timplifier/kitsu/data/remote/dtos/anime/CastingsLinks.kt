@@ -11,6 +11,6 @@ data class LinksXXX(
     val related: String
 )
 
-fun LinksXXX.toDomain() = com.timplifier.kitsu.domain.models.anime.LinksXXXModel(
+fun LinksXXX.toDomain() = LinksXXXModel(
     self, related
 )

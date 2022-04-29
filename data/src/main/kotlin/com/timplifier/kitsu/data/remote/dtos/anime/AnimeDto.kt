@@ -66,7 +66,7 @@ data class AnimeDto(
     val nsfw: Boolean
 )
 
-fun AnimeDto.toDomain() = com.timplifier.kitsu.domain.models.anime.AnimeModel(
+fun AnimeDto.toDomain() = AnimeModel(
     createdAt,
     updatedAt,
     slug,

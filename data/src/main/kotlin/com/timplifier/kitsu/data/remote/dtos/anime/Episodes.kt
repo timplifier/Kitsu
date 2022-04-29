@@ -9,6 +9,6 @@ data class Episodes(
     val links: LinksXXXXXXXX
 )
 
-fun Episodes.toDomain() = com.timplifier.kitsu.domain.models.anime.EpisodesModel(
+fun Episodes.toDomain() = EpisodesModel(
     links.toDomain()
 )

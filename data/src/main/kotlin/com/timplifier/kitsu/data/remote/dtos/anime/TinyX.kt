@@ -11,4 +11,4 @@ data class TinyX(
     val height: Any
 )
 
-fun TinyX.toDomain() = com.timplifier.kitsu.domain.models.anime.TinyXModel(width, height)
+fun TinyX.toDomain() = TinyXModel(width, height)

@@ -13,6 +13,6 @@ data class AnimeListDto(
     val links: LinksXXXXXXXXXXXXX
 )
 
-fun AnimeListDto.toDomain() = com.timplifier.kitsu.domain.models.anime.AnimeListModel(
+fun AnimeListDto.toDomain() = AnimeListModel(
     data.map { it.toDomain() }, meta.toDomain(), links.toDomain()
 )
