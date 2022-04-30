@@ -38,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         app:itemIconTint="@color/bottom_navigation_item_foreground"
+        app:itemRippleColor="@null"
         app:itemTextColor="@color/bottom_navigation_item_foreground"
         app:layout_anchor="@id/nav_host_fragment"
         app:layout_anchorGravity="bottom"
