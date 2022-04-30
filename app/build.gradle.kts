@@ -1,13 +1,7 @@
-@Suppress(
-    "DSL_SCOPE_VIOLATION",
-    "MISSING_DEPENDENCY_CLASS",
-    "UNRESOLVED_REFERENCE_WRONG_RECEIVER",
-    "FUNCTION_CALL_EXPECTED"
-)
 plugins {
 
     // Application
-    id("com.android.application")
+    id(libs.plugins.agp.application.get().pluginId)
 
     // Kotlin
     id("kotlin-android")
@@ -16,10 +10,10 @@ plugins {
     id("kotlin-kapt")
 
     // Navigation SafeArgs
-    id("androidx.navigation.safeargs.kotlin")
+    id(libs.plugins.navigation.safeArgs.get().pluginId)
 
     // Hilt
-    id(libs.plugins.hilt.plug.get().pluginId)
+    id(libs.plugins.hilt.android.get().pluginId)
 
 }
 

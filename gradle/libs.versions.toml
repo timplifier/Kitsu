@@ -128,18 +128,15 @@ lifecycle = ["lifecycle-viewModel", "lifecycle-runtime", "lifecycle-liveData"]
 
 [plugins]
 #AGP
-agp-application = { id = "com.android.application" }
-agp-applicationGradle = { id = "com.android.application", version.ref = "agp" }
+
+agp-application = { id = "com.android.application", version.ref = "agp" }
 agp-library = { id = "com.android.library", version.ref = "agp" }
 
 #Kotlin
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 #Navigation
-navigation-safeArgsGradle = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
-navigation-safeArgs = { id = "androidx.navigation.safeargs.kotlin" }
+navigation-safeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
 
 #Hilt
-hilt-gradle = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-hilt-plug = { id = "com.google.dagger.hilt.android" }
-hilt-android = { id = "com.google.dagger.hilt.android" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }

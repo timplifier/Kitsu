@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.library")
+    id(libs.plugins.agp.libraryGradle.get().pluginId)
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
 }
@@ -22,6 +22,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://kitsu.io/api/edge/\"")
         }
     }
     compileOptions {
