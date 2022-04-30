@@ -21,9 +21,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_japanese_title"
-            app:layout_constraintStart_toStartOf="@+id/tv_japanese_title">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/im_average_rating"
@@ -31,19 +29,20 @@
                 android:layout_height="16dp"
                 android:layout_marginEnd="40dp"
                 android:src="@drawable/ic_star_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/tv_average_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
                 android:fontFamily="@font/nunito_bold"
                 android:textColor="@color/white"
                 android:textSize="11sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/im_average_rating"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_end_date"
                 tools:text="@tools:sample/lorem" />
 
             <ImageView
@@ -61,7 +60,7 @@
                 android:id="@+id/tv_english_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_bold"
+                android:fontFamily="@font/helvetica_bold"
 
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -74,7 +73,7 @@
                 android:id="@+id/tv_japanese_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_bold"
+                android:fontFamily="@font/helvetica_regular"
                 android:text="@string/something_in_japanese"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +84,7 @@
                 android:id="@+id/tv_amount_of_episodes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_regular"
+                android:fontFamily="@font/helvetica_regular"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +106,7 @@
                 android:id="@+id/tv_start_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_regular"
+                android:fontFamily="@font/helvetica_regular"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@id/tv_dash"
@@ -133,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
-                android:fontFamily="@font/nunito_regular"
+                android:fontFamily="@font/helvetica_regular"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/tv_dash"

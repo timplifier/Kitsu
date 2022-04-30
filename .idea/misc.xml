@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/drawable/anime_selected.xml" value="0.11" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/drawable/anime_unselected.xml" value="0.11" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/drawable/navigation_anime_selector.xml" value="0.11" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/drawable/navigation_character_selector.xml" value="0.11" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/drawable/navigation_manga_selector.xml" value="0.11" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/font/barlow.xml" value="0.21296296296296297" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/layout/fragment_anime.xml" value="0.18" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/layout/fragment_detailed_anime.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/layout/fragment_manga.xml" value="0.18333333333333332" />
-        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/layout/item_anime.xml" value="0.27296587926509186" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/layout/item_anime.xml" value="0.22" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Kitsu/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
