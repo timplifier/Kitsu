@@ -6,6 +6,4 @@ import retrofit2.http.GET
 interface AnimeApiService {
     @GET("anime")
     suspend fun fetchAnime(): AnimeListDto
-
-
 }

@@ -21,7 +21,8 @@ abstract class BaseViewModel : ViewModel() {
             this@gatherRequest.collect {
                 when (it) {
                     is Either.Left -> state.value = UIState.Error(it.value)
-                    is Either.Right -> state.value = UIState.Success(mappedData(it.value))
+                    is Either.Right -> state.value =
+                        UIState.Success(mappedData(it.value))
                 }
             }
 
