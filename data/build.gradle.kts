@@ -1,5 +1,5 @@
 plugins {
-    id(libs.plugins.agp.libraryGradle.get().pluginId)
+    id(libs.plugins.agp.library.get().pluginId)
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
 }

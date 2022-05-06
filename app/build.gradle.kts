@@ -18,7 +18,7 @@ plugins {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.timplifier.kitsu"
@@ -36,6 +36,9 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
+        }
+        getByName("debug") {
+            buildConfigField("String", "BASE_URL", "\"https://kitsu.io/api/edge/\"")
         }
     }
     compileOptions {
@@ -73,4 +76,5 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
 }

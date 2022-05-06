@@ -5,6 +5,10 @@ agp = "7.1.3"
 gradle = "7.1.2"
 #Kotlin
 kotlin = "1.6.21"
+#Android Config
+compileSdk = "32"
+minSdk = "23"
+targetSdk = "32"
 #Coroutines
 coroutines = "1.6.1"
 #Legacy support

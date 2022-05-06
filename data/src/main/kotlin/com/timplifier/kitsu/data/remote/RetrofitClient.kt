@@ -20,7 +20,7 @@ class RetrofitClient {
         HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl(com.timplifier.kitsu.data.remote.RetrofitClient.Companion.BASE_URL)
+        .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
