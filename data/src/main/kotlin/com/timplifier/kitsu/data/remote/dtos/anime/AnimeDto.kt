@@ -33,7 +33,7 @@ data class AnimeDto(
     @SerializedName("startDate")
     val startDate: String,
     @SerializedName("endDate")
-    val endDate: String,
+    val endDate: String?,
     @SerializedName("nextRelease")
     val nextRelease: Any?,
     @SerializedName("popularityRank")
@@ -59,7 +59,7 @@ data class AnimeDto(
     @SerializedName("episodeLength")
     val episodeLength: Int?,
     @SerializedName("youtubeVideoId")
-    val youtubeVideoId: String,
+    val youtubeVideoId: String?,
     @SerializedName("showType")
     val showType: String,
     @SerializedName("nsfw")
@@ -80,7 +80,7 @@ fun AnimeDto.toDomain() = AnimeModel(
     userCount,
     favoritesCount,
     startDate,
-    endDate,
+    endDate ?: "null",
     nextRelease,
     popularityRank,
     ratingRank,
@@ -93,7 +93,7 @@ fun AnimeDto.toDomain() = AnimeModel(
     coverImage?.toDomain(),
     episodeCount,
     episodeLength,
-    youtubeVideoId,
+    youtubeVideoId ?: "null",
     showType,
     nsfw
 

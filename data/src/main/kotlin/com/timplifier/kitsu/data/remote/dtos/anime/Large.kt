@@ -6,9 +6,9 @@ import com.timplifier.kitsu.domain.models.anime.LargeModel
 
 data class Large(
     @SerializedName("width")
-    val width: Any,
+    val width: Int?,
     @SerializedName("height")
-    val height: Any
+    val height: Int?
 )
 
-fun Large.toDomain() = LargeModel(width, height)
+fun Large.toDomain() = LargeModel(width ?: 100, height ?: 100)

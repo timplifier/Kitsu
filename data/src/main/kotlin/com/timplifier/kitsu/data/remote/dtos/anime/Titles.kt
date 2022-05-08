@@ -10,7 +10,7 @@ data class Titles(
     @SerializedName("en_jp")
     val enJp: String,
     @SerializedName("ja_jp")
-    val jaJp: String
+    val jaJp: String?
 )
 
 fun Titles.toDomain() = TitlesModel(

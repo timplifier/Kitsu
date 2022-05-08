@@ -25,31 +25,20 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
 
     }
 
-// //   override fun launchObservers() {
-//        viewModel.animeState.spectateUiState(
-//            error = {
-//                Log.e("tag", it)
-//            },
-//            success = {
-//                animeAdapter.submitData(it.data)
-//            })
-//    }
+    override fun launchObservers() {
+        viewModel.fetchAnime().spectatePaging(
+            error = {
+                Log.e("tag", it)
+            },
+            success = {
+                animeAdapter.submitData(it)
+            })
+    }
 
     override fun establishRequest() {
-        fetchPagedAnime()
         if (viewModel.animeState.value == null && isInternetAvailable(context))
             viewModel.fetchAnime()
     }
 
-    private fun fetchPagedAnime() {
-        viewModel.fetchAnime().spectatePaging(
-            success = {
 
-                animeAdapter.submitData(it)
-            }, error = {
-                Log.e("tag", it)
-            }
-        )
-
-    }
 }

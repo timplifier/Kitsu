@@ -6,9 +6,9 @@ import com.timplifier.kitsu.domain.models.anime.MediumModel
 
 data class Medium(
     @SerializedName("width")
-    val width: Any,
+    val width: Int?,
     @SerializedName("height")
-    val height: Any
+    val height: Int?
 )
 
-fun Medium.toDomain() = MediumModel(width, height)
+fun Medium.toDomain() = MediumModel(width ?: 0, height ?: 1)

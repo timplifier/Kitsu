@@ -13,23 +13,21 @@ class AnimePagingSource(
 ) : PagingSource<Int, AnimeDataDto>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, AnimeDataDto> {
-        val page = params.key ?: 1
+        val page = params.key ?: 10
         return try {
             val response =
-                animeApiService.fetchAnime(page, 5, 5)
+                animeApiService.fetchAnime(params.loadSize, page)
             val nextPage = if (response.links.next == null) {
                 null
             } else
-                Uri.parse(response.links.next).getQueryParameter("page")!!.toInt()
+                Uri.parse(response.links.next).getQueryParameter("page[offset]")!!.toInt()
             LoadResult.Page(
                 data = response.data,
                 null,
                 nextKey = nextPage
             )
 
-        } catch (
-            io: IOException
-        ) {
+        } catch (io: IOException) {
             LoadResult.Error(io)
         } catch (http: HttpException) {
             LoadResult.Error(http)

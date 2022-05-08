@@ -6,9 +6,9 @@ import com.timplifier.kitsu.domain.models.anime.TinyModel
 
 data class Tiny(
     @SerializedName("width")
-    val width: Any,
+    val width: Int?,
     @SerializedName("height")
-    val height: Any
+    val height: Int
 )
 
-fun Tiny.toDomain() = TinyModel(width, height)
+fun Tiny.toDomain() = TinyModel(width ?: 0, height)
