@@ -6,9 +6,9 @@ import com.timplifier.kitsu.domain.models.manga.TinyXModel
 
 data class TinyX(
     @SerializedName("width")
-    val width: Any,
+    val width: Int?,
     @SerializedName("height")
-    val height: Any
+    val height: Int?
 )
 
 fun TinyX.toDomain() = TinyXModel(
