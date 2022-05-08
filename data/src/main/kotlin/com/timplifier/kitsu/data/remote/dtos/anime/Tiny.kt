@@ -8,7 +8,7 @@ data class Tiny(
     @SerializedName("width")
     val width: Int?,
     @SerializedName("height")
-    val height: Int
+    val height: Int?
 )
 
-fun Tiny.toDomain() = TinyModel(width ?: 0, height)
+fun Tiny.toDomain() = TinyModel(width, height)

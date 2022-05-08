@@ -23,7 +23,7 @@ data class AnimeDto(
     @SerializedName("abbreviatedTitles")
     val abbreviatedTitles: List<String>,
     @SerializedName("averageRating")
-    val averageRating: String,
+    val averageRating: String?,
     @SerializedName("ratingFrequencies")
     val ratingFrequencies: RatingFrequencies,
     @SerializedName("userCount")
@@ -41,7 +41,7 @@ data class AnimeDto(
     @SerializedName("ratingRank")
     val ratingRank: Int,
     @SerializedName("ageRating")
-    val ageRating: String,
+    val ageRating: String?,
     @SerializedName("ageRatingGuide")
     val ageRatingGuide: String,
     @SerializedName("subtype")
@@ -80,7 +80,7 @@ fun AnimeDto.toDomain() = AnimeModel(
     userCount,
     favoritesCount,
     startDate,
-    endDate ?: "null",
+    endDate,
     nextRelease,
     popularityRank,
     ratingRank,
@@ -93,7 +93,7 @@ fun AnimeDto.toDomain() = AnimeModel(
     coverImage?.toDomain(),
     episodeCount,
     episodeLength,
-    youtubeVideoId ?: "null",
+    youtubeVideoId,
     showType,
     nsfw
 

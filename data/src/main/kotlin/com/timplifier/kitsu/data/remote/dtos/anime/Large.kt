@@ -11,4 +11,4 @@ data class Large(
     val height: Int?
 )
 
-fun Large.toDomain() = LargeModel(width ?: 100, height ?: 100)
+fun Large.toDomain() = LargeModel(width , height )

@@ -11,4 +11,4 @@ data class Medium(
     val height: Int?
 )
 
-fun Medium.toDomain() = MediumModel(width ?: 0, height ?: 1)
+fun Medium.toDomain() = MediumModel(width, height)
