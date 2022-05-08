@@ -13,7 +13,7 @@ class AnimePagingSource(
 ) : PagingSource<Int, AnimeDataDto>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, AnimeDataDto> {
-        val page = params.key ?: 10
+        val page = params.key ?: 20
         return try {
             val response =
                 animeApiService.fetchAnime(params.loadSize, page)

@@ -6,5 +6,5 @@ import javax.inject.Inject
 class FetchAnimeUseCase @Inject constructor(
     private val animeRepository: AnimeRepository
 ) {
-    operator fun invoke(page : Int) = animeRepository.fetchAnime(page)
+    operator fun invoke(page: Int) = animeRepository.fetchAnime(page)
 }

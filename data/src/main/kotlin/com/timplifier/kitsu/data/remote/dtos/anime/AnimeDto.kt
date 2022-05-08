@@ -31,7 +31,7 @@ data class AnimeDto(
     @SerializedName("favoritesCount")
     val favoritesCount: Int,
     @SerializedName("startDate")
-    val startDate: String,
+    val startDate: String?,
     @SerializedName("endDate")
     val endDate: String?,
     @SerializedName("nextRelease")
@@ -43,7 +43,7 @@ data class AnimeDto(
     @SerializedName("ageRating")
     val ageRating: String?,
     @SerializedName("ageRatingGuide")
-    val ageRatingGuide: String,
+    val ageRatingGuide: String?,
     @SerializedName("subtype")
     val subtype: String,
     @SerializedName("status")

@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 class AnimeRepositoryImpl @Inject constructor(
     private val animeApiService: AnimeApiService
-) : BaseRepository(),AnimeRepository {
+) : BaseRepository(), AnimeRepository {
 
     fun fetchPagedAnime() =
         Pager(PagingConfig(pageSize = 20, initialLoadSize = 10)) {

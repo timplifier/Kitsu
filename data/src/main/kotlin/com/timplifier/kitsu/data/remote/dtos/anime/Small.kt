@@ -11,4 +11,4 @@ data class Small(
     val height: Int?
 )
 
-fun Small.toDomain() = SmallModel(width , height)
+fun Small.toDomain() = SmallModel(width, height)

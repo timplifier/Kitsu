@@ -8,7 +8,7 @@ data class Titles(
     @SerializedName("en")
     val en: String?,
     @SerializedName("en_jp")
-    val enJp: String,
+    val enJp: String?,
     @SerializedName("ja_jp")
     val jaJp: String?
 )
