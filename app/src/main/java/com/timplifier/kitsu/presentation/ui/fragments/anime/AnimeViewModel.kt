@@ -1,5 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.fragments.anime
 
+import com.timplifier.kitsu.data.repositories.AnimeRepositoryImpl
 import com.timplifier.kitsu.domain.useCases.FetchAnimeUseCase
 import com.timplifier.kitsu.presentation.base.BaseViewModel
 import com.timplifier.kitsu.presentation.models.anime.AnimeListUI
@@ -10,7 +11,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AnimeViewModel @Inject constructor(
-    private val fetchAnimeUseCase: FetchAnimeUseCase
+    private val fetchAnimeUseCase: FetchAnimeUseCase,
+    private val animeRepositoryImpl: AnimeRepositoryImpl
+
+
 ) : BaseViewModel() {
     private val _animeState = mutableUiStateFlow<AnimeListUI>()
     var animeState = _animeState.asStateFlow()
@@ -20,9 +24,10 @@ class AnimeViewModel @Inject constructor(
         fetchAnime()
     }
 
-    fun fetchAnime() {
-        fetchAnimeUseCase().gatherRequest(
-            _animeState
-        ) { it.toUI() }
-    }
+    fun fetchAnime() =
+        animeRepositoryImpl.fetchPagedAnime().gatherPagingRequest {
+            it.toUI()
+        }
+
+
 }

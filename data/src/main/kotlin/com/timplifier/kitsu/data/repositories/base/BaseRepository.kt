@@ -20,4 +20,6 @@ abstract class BaseRepository {
         emit(Either.Left(exception.localizedMessage ?: "An error occurred"))
 
     }
+
+
 }

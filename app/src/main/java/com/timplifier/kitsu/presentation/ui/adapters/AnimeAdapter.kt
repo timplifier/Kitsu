@@ -2,7 +2,7 @@ package com.timplifier.kitsu.presentation.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.databinding.ItemAnimeBinding
 import com.timplifier.kitsu.presentation.base.BaseDiffUtil
@@ -10,7 +10,7 @@ import com.timplifier.kitsu.presentation.extensions.loadImageWithGlide
 import com.timplifier.kitsu.presentation.models.anime.AnimeDataUI
 
 class AnimeAdapter
-    : ListAdapter<AnimeDataUI, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
+    : PagingDataAdapter<AnimeDataUI, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimeViewHolder {

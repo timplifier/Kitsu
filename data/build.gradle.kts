@@ -40,11 +40,15 @@ dependencies {
 
     implementation(project(":domain"))
 
+
     // Retrofit
     implementation(libs.bundles.retrofit)
 
     // OkHttp
     implementation(libs.bundles.okHttp)
+
+    // Paging 3
+    api(libs.paging.paging)
 
     // Room with coroutines
     implementation(libs.bundles.room)
