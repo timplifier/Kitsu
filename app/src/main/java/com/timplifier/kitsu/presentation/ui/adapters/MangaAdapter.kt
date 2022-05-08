@@ -3,7 +3,7 @@ package com.timplifier.kitsu.presentation.ui.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.recyclerview.widget.ListAdapter
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.databinding.ItemMangaBinding
 import com.timplifier.kitsu.presentation.base.BaseDiffUtil
@@ -11,7 +11,7 @@ import com.timplifier.kitsu.presentation.extensions.loadImageWithGlide
 import com.timplifier.kitsu.presentation.models.manga.MangaDataUI
 
 class MangaAdapter
-    : ListAdapter<MangaDataUI, MangaAdapter.MangaViewHolder>(BaseDiffUtil()) {
+    : PagingDataAdapter<MangaDataUI, MangaAdapter.MangaViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MangaViewHolder {

@@ -6,8 +6,6 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.databinding.FragmentMangaBinding
 import com.timplifier.kitsu.presentation.base.BaseFragment
-import com.timplifier.kitsu.presentation.extensions.isInternetAvailable
-import com.timplifier.kitsu.presentation.extensions.submitData
 import com.timplifier.kitsu.presentation.ui.adapters.MangaAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,20 +23,16 @@ class MangaFragment : BaseFragment<FragmentMangaBinding, MangaViewModel>(R.layou
     }
 
     override fun launchObservers() {
-        viewModel.mangaState.spectateUiState(
+        viewModel.fetchManga().spectatePaging(
             error = {
                 Log.e("tag", it)
             },
             success = {
-                mangaAdapter.submitData(it.data)
+                mangaAdapter.submitData(it)
             }
         )
 
     }
 
-    override fun establishRequest() {
-        if (viewModel.mangaState == null && isInternetAvailable(context))
-            viewModel.fetchManga()
-    }
 
 }
