@@ -7,7 +7,6 @@ import com.timplifier.kitsu.R
 import com.timplifier.kitsu.databinding.FragmentAnimeBinding
 import com.timplifier.kitsu.presentation.base.BaseFragment
 import com.timplifier.kitsu.presentation.extensions.isInternetAvailable
-import com.timplifier.kitsu.presentation.extensions.submitData
 import com.timplifier.kitsu.presentation.ui.adapters.AnimeAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,18 +25,31 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
 
     }
 
-    override fun launchObservers() {
-        viewModel.animeState.spectateUiState(
-            error = {
-                Log.e("tag", it)
-            },
-            success = {
-                animeAdapter.submitData(it.data)
-            })
-    }
+// //   override fun launchObservers() {
+//        viewModel.animeState.spectateUiState(
+//            error = {
+//                Log.e("tag", it)
+//            },
+//            success = {
+//                animeAdapter.submitData(it.data)
+//            })
+//    }
 
     override fun establishRequest() {
+        fetchPagedAnime()
         if (viewModel.animeState.value == null && isInternetAvailable(context))
             viewModel.fetchAnime()
+    }
+
+    private fun fetchPagedAnime() {
+        viewModel.fetchAnime().spectatePaging(
+            success = {
+
+                animeAdapter.submitData(it)
+            }, error = {
+                Log.e("tag", it)
+            }
+        )
+
     }
 }
