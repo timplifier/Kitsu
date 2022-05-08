@@ -1,9 +1,9 @@
 package com.timplifier.kitsu.domain.repositories
 
 import com.timplifier.kitsu.domain.either.Either
-import com.timplifier.kitsu.domain.models.anime.AnimeListModel
+import com.timplifier.kitsu.domain.models.anime.AnimeDataModel
 import kotlinx.coroutines.flow.Flow
 
 interface AnimeRepository {
-    fun fetchAnime(page: Int): Flow<Either<String, AnimeListModel>>
+    fun fetchSingleAnime(id: Int): Flow<Either<String, AnimeDataModel>>
 }

@@ -39,6 +39,8 @@ retrofit = "2.9.0"
 okHttp = "5.0.0-alpha.5"
 #Room
 room = "2.4.2"
+#Datastore
+datastore = "1.0.0"
 #Paging
 paging = "3.1.1"
 #Firebase
@@ -102,6 +104,10 @@ room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-kotlinExtensionsAndCoroutinesSupport = { module = "androidx.room:room-ktx", version.ref = "room" }
 
+#Preferences and Datastore
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+datastore-proto = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+
 #Paging
 paging-paging = { module = "androidx.paging:paging-runtime-ktx", version.ref = "paging" }
 
@@ -118,8 +124,12 @@ uiComponents = ["activity-activity", "fragment-fragment", "ui-appCompat", "ui-co
 #Room
 room = ["room-runtime", "room-kotlinExtensionsAndCoroutinesSupport"]
 
+#Datastore
+datastore = ["datastore-preferences", "datastore-proto"]
+
 #Retrofit
 retrofit = ["retrofit-retrofit", "retrofit-gsonConverter"]
+
 #OkHttp
 okHttp = ["okHttp-bom", "okHttp-loggingInterceptor", "okHttp-okHttp"]
 
