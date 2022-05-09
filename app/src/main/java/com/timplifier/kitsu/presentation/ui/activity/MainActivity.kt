@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.timplifier.kitsu.R
 import com.timplifier.kitsu.databinding.ActivityMainBinding
+import com.timplifier.kitsu.presentation.ui.adapters.ViewPagerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,7 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         deployNavController()
+
     }
+
 
     private fun deployNavController() {
         val navHostFragment =

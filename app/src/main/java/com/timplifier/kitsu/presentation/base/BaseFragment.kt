@@ -29,7 +29,9 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
         establishRequest()
         launchObservers()
 
+
     }
+
 
     protected open fun initialize() {
     }
@@ -49,6 +51,7 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
 
     }
 
+
     protected fun <T : Any> Flow<PagingData<T>>.spectatePaging(
         lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
         success: suspend (data: PagingData<T>) -> Unit,
@@ -67,7 +70,7 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
         lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
         success: ((data: T) -> Unit)? = null,
         loading: ((data: UIState.Loading<T>) -> Unit)? = null,
-        error: ((error: String) -> Unit)?,
+        error: ((error: String) -> Unit)? = null,
         idle: ((idle: UIState.Idle<T>) -> Unit)? = null,
         gatherIfSucceed: ((state: UIState<T>) -> Unit)? = null
     ) {

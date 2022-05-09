@@ -10,10 +10,23 @@
         android:id="@+id/animeFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.anime.AnimeFragment"
         android:label="Anime"
-        tools:layout="@layout/fragment_anime" />
+        tools:layout="@layout/fragment_anime" >
+        <action
+            android:id="@+id/action_animeFragment_to_animeDetailedFragment"
+            app:destination="@id/animeDetailedFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mangaFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.MangaFragment"
         android:label="Manga"
         tools:layout="@layout/fragment_manga" />
+    <fragment
+        android:id="@+id/animeDetailedFragment"
+        android:name="com.timplifier.kitsu.presentation.ui.fragments.anime.detailed.AnimeDetailedFragment"
+        android:label="fragment_anime_detailed"
+        tools:layout="@layout/fragment_anime_detailed" >
+        <argument
+            android:name="animeId"
+            app:argType="string" />
+    </fragment>
 </navigation>

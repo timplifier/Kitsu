@@ -21,7 +21,7 @@ data class AnimeDto(
     @SerializedName("canonicalTitle")
     val canonicalTitle: String,
     @SerializedName("abbreviatedTitles")
-    val abbreviatedTitles: List<String>,
+    val abbreviatedTitles: List<String>?,
     @SerializedName("averageRating")
     val averageRating: String?,
     @SerializedName("ratingFrequencies")
@@ -51,7 +51,7 @@ data class AnimeDto(
     @SerializedName("tba")
     val tba: String?,
     @SerializedName("posterImage")
-    val posterImage: PosterImage,
+    val posterImage: PosterImage?,
     @SerializedName("coverImage")
     val coverImage: CoverImage?,
     @SerializedName("episodeCount")
@@ -89,7 +89,7 @@ fun AnimeDto.toDomain() = AnimeModel(
     subtype,
     status,
     tba,
-    posterImage.toDomain(),
+    posterImage?.toDomain(),
     coverImage?.toDomain(),
     episodeCount,
     episodeLength,

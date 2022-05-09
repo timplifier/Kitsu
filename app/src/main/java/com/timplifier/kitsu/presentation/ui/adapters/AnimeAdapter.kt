@@ -9,8 +9,9 @@ import com.timplifier.kitsu.presentation.base.BaseDiffUtil
 import com.timplifier.kitsu.presentation.extensions.loadImageWithGlide
 import com.timplifier.kitsu.presentation.models.anime.AnimeDataUI
 
-class AnimeAdapter
-    : PagingDataAdapter<AnimeDataUI, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
+class AnimeAdapter(
+    private val onItemClick: (id: String) -> Unit
+) : PagingDataAdapter<AnimeDataUI, AnimeAdapter.AnimeViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimeViewHolder {
@@ -33,12 +34,15 @@ class AnimeAdapter
             val amountOfEpisodes: Int = animeDataDto.animeDto.episodeCount
             binding.apply {
                 tvAverageRating.text = animeDataDto.animeDto.averageRating
-                imAnime.loadImageWithGlide(animeDataDto.animeDto.posterImage.original)
+                imAnime.loadImageWithGlide(animeDataDto.animeDto.posterImage?.original)
                 tvEnglishTitle.text = animeDataDto.animeDto.titles.en
                 tvJapaneseTitle.text = animeDataDto.animeDto.titles.jaJp
                 tvAmountOfEpisodes.text = "Episodes: $amountOfEpisodes TV"
                 tvStartDate.text = animeDataDto.animeDto.startDate
                 tvEndDate.text = animeDataDto.animeDto.endDate
+                root.setOnClickListener {
+                    onItemClick(animeDataDto.id)
+                }
             }
 
         }

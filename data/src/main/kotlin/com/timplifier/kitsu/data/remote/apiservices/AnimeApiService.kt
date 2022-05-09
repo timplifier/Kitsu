@@ -14,5 +14,5 @@ interface AnimeApiService {
     ): AnimeListDto
 
     @GET("anime/{id}")
-    fun fetchSingleCharacter(@Path("id") id: Int): AnimeDataDto
+    suspend fun fetchSingleCharacter(@Path("id") id: String): AnimeDataDto
 }

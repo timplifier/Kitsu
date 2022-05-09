@@ -5,5 +5,5 @@ import com.timplifier.kitsu.domain.models.anime.AnimeDataModel
 import kotlinx.coroutines.flow.Flow
 
 interface AnimeRepository {
-    fun fetchSingleAnime(id: Int): Flow<Either<String, AnimeDataModel>>
+    fun fetchSingleAnime(id: String): Flow<Either<String, AnimeDataModel>>
 }
