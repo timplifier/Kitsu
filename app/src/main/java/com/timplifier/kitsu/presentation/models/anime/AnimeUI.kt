@@ -7,7 +7,7 @@ data class AnimeUI(
     val updatedAt: String,
     val slug: String,
     val synopsis: String,
-    val coverImageTopOffset: Int,
+    val coverImageTopOffset: Int?,
     val titles: TitlesUI,
     val canonicalTitle: String,
     val abbreviatedTitles: List<String>?,

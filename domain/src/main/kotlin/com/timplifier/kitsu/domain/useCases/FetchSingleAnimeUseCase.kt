@@ -6,5 +6,5 @@ import javax.inject.Inject
 class FetchSingleAnimeUseCase @Inject constructor(
     private val animeRepository: AnimeRepository
 ) {
-    operator fun invoke(id: String) = animeRepository.fetchSingleAnime(id)
+    operator fun invoke(id: String) = animeRepository.fetchAnimeDetails(id)
 }

@@ -3,6 +3,7 @@ package com.timplifier.kitsu.presentation.ui.fragments.anime.detailed
 import com.timplifier.kitsu.domain.useCases.FetchSingleAnimeUseCase
 import com.timplifier.kitsu.presentation.base.BaseViewModel
 import com.timplifier.kitsu.presentation.models.anime.AnimeDataUI
+import com.timplifier.kitsu.presentation.models.anime.AnimeUI
 import com.timplifier.kitsu.presentation.models.anime.toUI
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.asStateFlow

@@ -15,7 +15,7 @@ data class AnimeDto(
     @SerializedName("synopsis")
     val synopsis: String,
     @SerializedName("coverImageTopOffset")
-    val coverImageTopOffset: Int,
+    val coverImageTopOffset: Int?,
     @SerializedName("titles")
     val titles: Titles,
     @SerializedName("canonicalTitle")

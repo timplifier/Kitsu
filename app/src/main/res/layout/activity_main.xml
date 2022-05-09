@@ -16,15 +16,15 @@
         app:tabSelectedTextColor="#cc8a83"
         app:tabTextColor="#4d454e">
 
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/anime" />-->
+        <!--        <com.google.android.material.tabs.TabItem-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/anime" />-->
 
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/manga" />-->
+        <!--        <com.google.android.material.tabs.TabItem-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="@string/manga" />-->
     </com.google.android.material.tabs.TabLayout>
 
 

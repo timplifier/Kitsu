@@ -5,7 +5,7 @@ data class AnimeModel(
     val updatedAt: String,
     val slug: String,
     val synopsis: String,
-    val coverImageTopOffset: Int,
+    val coverImageTopOffset: Int?,
     val titles: TitlesModel,
     val canonicalTitle: String,
     val abbreviatedTitles: List<String>?,
