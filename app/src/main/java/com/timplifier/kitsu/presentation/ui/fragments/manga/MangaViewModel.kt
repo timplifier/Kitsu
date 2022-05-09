@@ -1,7 +1,6 @@
 package com.timplifier.kitsu.presentation.ui.fragments.manga
 
 import com.timplifier.kitsu.data.repositories.MangaRepositoryImpl
-import com.timplifier.kitsu.domain.useCases.FetchMangaUseCase
 import com.timplifier.kitsu.presentation.base.BaseViewModel
 import com.timplifier.kitsu.presentation.models.manga.toUI
 import dagger.hilt.android.lifecycle.HiltViewModel
