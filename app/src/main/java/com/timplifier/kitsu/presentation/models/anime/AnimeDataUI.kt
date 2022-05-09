@@ -5,7 +5,7 @@ import com.timplifier.kitsu.presentation.base.BaseDiffModel
 
 data class AnimeDataUI(
     override val id: String,
-    val type: String,
+    val type: String?,
     val links: LinksUI?,
     val animeDto: AnimeUI,
     val relationships: RelationshipsUI?

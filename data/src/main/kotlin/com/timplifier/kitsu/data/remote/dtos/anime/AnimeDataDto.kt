@@ -8,7 +8,7 @@ data class AnimeDataDto(
     @SerializedName("id")
     val id: String,
     @SerializedName("type")
-    val type: String,
+    val type: String?,
     @SerializedName("links")
     val links: Links?,
     @SerializedName("attributes")

@@ -25,7 +25,7 @@ class AnimeDetailedFragment :
 
     private fun subscribeToSingleAnime() {
         viewModel.singleAnimeState.spectateUiState(success = {
-            binding.imCover.loadImageWithGlide(it.animeDto.coverImage?.original)
+            binding.imCover.loadImageWithGlide(it.animeDto?.coverImage?.original)
 
 
         }, error = { Log.e("tag", it) }

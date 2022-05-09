@@ -26,12 +26,19 @@
         android:layout_width="15dp"
         android:layout_height="100dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.04" />
+        app:layout_constraintGuide_begin="25dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="25dp" />
 
 
     <ImageView
         android:id="@+id/im_poster"
-        android:layout_width="80dp"
+        android:layout_width="125dp"
         android:layout_height="125dp"
         android:translationZ="10dp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
@@ -39,4 +46,62 @@
 
         tools:src="@tools:sample/avatars" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_subtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="155dp" />
+
+    <TextView
+        android:id="@+id/tv_subtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_regular"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/im_cover"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtype"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_synopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_regular"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/gl_poster_image"
+        app:layout_constraintTop_toBottomOf="@id/im_poster"
+        tools:text="@tools:sample/lorem" />
+
+
+    <TextView
+        android:id="@+id/tv_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/gl_poster_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_studios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_regular"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/gl_poster_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_details"
+        tools:text="@tools:sample/lorem" />
 </androidx.constraintlayout.widget.ConstraintLayout>
