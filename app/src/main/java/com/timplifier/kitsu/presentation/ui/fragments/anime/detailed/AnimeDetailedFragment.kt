@@ -25,7 +25,28 @@ class AnimeDetailedFragment :
 
     private fun subscribeToSingleAnime() {
         viewModel.singleAnimeState.spectateUiState(success = {
-            binding.imCover.loadImageWithGlide(it.animeDto?.coverImage?.original)
+            binding.apply {
+
+                it.apply {
+                    imCover.loadImageWithGlide(animeDto.coverImage?.original)
+                    imPoster.loadImageWithGlide(animeDto.posterImage?.original)
+                    tvSubtype.text = animeDto.subtype
+                    tvYear.text = animeDto.createdAt
+                    tvTitle.text = animeDto.titles.en
+                    tvSynopsis.text = animeDto.synopsis
+                    tvAverageRating.text = "${animeDto.averageRating}%"
+                    tvRating.text = "Rank #${animeDto.ratingRank}"
+                    tvPopularity.text = "Rank #${animeDto.popularityRank}"
+                    //                   tvStudio.text = relationships.
+                    tvEpisodes.text = "${animeDto.episodeCount}"
+                    tvStatus.text = animeDto.status
+                    tvPremiere.text = animeDto.startDate
+                    tvAgeRating.text = "${animeDto.ageRating}" + "-" + "${animeDto.ageRatingGuide}"
+
+
+                }
+
+            }
 
 
         }, error = { Log.e("tag", it) }

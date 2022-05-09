@@ -28,4 +28,8 @@
     <string name="tbd">TBD</string>
     <string name="rank_7691">Rank #7691</string>
     <string name="rank_204">Rank #204</string>
+    <string name="it_is_a_really_long_text_even_you_are_not_gonna_catch_up_with_me_typing_this">It is a really long text, even you are not gonna catch up with me typing this</string>
+    <string name="star_for_rating">star for rating</string>
+    <string name="heart_for_popularity">heart for popularity</string>
+    <string name="anime_s_poster">anime\'s poster</string>
 </resources>

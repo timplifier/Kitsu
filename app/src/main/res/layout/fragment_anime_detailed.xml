@@ -40,10 +40,11 @@
         android:id="@+id/im_poster"
         android:layout_width="125dp"
         android:layout_height="125dp"
+        android:contentDescription="@string/anime_s_poster"
         android:translationZ="10dp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
-        app:layout_constraintTop_toBottomOf="@id/gl_poster_image_margin"
 
+        app:layout_constraintTop_toBottomOf="@id/gl_poster_image_margin"
         tools:src="@tools:sample/avatars" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -114,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica_regular"
-        android:text="loremloremloremloremloremloremloremloremloremlorem"
+        android:text="@string/it_is_a_really_long_text_even_you_are_not_gonna_catch_up_with_me_typing_this"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
         app:layout_constraintTop_toBottomOf="@id/im_poster" />
@@ -124,9 +125,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:background="@android:color/darker_gray"
         android:elevation="20dp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
-        app:layout_constraintTop_toBottomOf="@id/tv_synopsis">
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -171,6 +175,7 @@
 
 
         android:layout_height="24dp"
+        android:contentDescription="@string/star_for_rating"
         android:src="@drawable/ic_detailed_star"
         app:layout_constraintBottom_toBottomOf="@id/cv_score"
         app:layout_constraintStart_toStartOf="@id/gl_ranks"
@@ -194,6 +199,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/heart_for_popularity"
         android:src="@drawable/heart"
         app:layout_constraintStart_toStartOf="@id/gl_ranks"
         app:layout_constraintTop_toBottomOf="@id/im_rating" />
