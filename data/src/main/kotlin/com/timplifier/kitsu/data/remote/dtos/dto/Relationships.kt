@@ -1,8 +1,7 @@
-package com.timplifier.kitsu.data.remote.dtos.anime
+package com.timplifier.kitsu.data.remote.dtos.dto
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.RelationshipsModel
 
 data class Relationships(
     @SerializedName("genres")
@@ -19,6 +18,14 @@ data class Relationships(
     val reviews: Reviews?,
     @SerializedName("mediaRelationships")
     val mediaRelationships: MediaRelationships?,
+    @SerializedName("characters")
+    val characters: Characters?,
+    @SerializedName("staff")
+    val staff: Staff?,
+    @SerializedName("productions")
+    val productions: Productions?,
+    @SerializedName("quotes")
+    val quotes: Quotes?,
     @SerializedName("episodes")
     val episodes: Episodes?,
     @SerializedName("streamingLinks")
@@ -29,19 +36,4 @@ data class Relationships(
     val animeCharacters: AnimeCharacters?,
     @SerializedName("animeStaff")
     val animeStaff: AnimeStaff?
-)
-
-fun Relationships.toDomain() = RelationshipsModel(
-    genres?.toDomain(),
-    categories?.toDomain(),
-    castings?.toDomain(),
-    installments?.toDomain(),
-    mappings?.toDomain(),
-    reviews?.toDomain(),
-    mediaRelationships?.toDomain(),
-    episodes?.toDomain(),
-    streamingLinks?.toDomain(),
-    animeProductions?.toDomain(),
-    animeCharacters?.toDomain(),
-    animeStaff?.toDomain()
 )

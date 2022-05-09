@@ -7,4 +7,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface AnimeRepository {
     fun fetchAnimeDetails(id: String): Flow<Either<String, AnimeDataModel>>
+    fun fetchDetailedAnime(id: String): Flow<Either<String, AnimeModel>>
 }

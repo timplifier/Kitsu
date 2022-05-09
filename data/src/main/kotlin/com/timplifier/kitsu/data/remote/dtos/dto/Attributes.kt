@@ -1,41 +1,41 @@
-package com.timplifier.kitsu.data.remote.dtos.anime
+package com.timplifier.kitsu.data.remote.dtos.dto
 
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.anime.AnimeModel
 
-
-data class AnimeDto(
+data class Attributes(
     @SerializedName("createdAt")
     val createdAt: String?,
     @SerializedName("updatedAt")
     val updatedAt: String?,
     @SerializedName("slug")
-    val slug: String,
+    val slug: String?,
     @SerializedName("synopsis")
-    val synopsis: String,
+    val synopsis: String?,
+    @SerializedName("description")
+    val description: String?,
     @SerializedName("coverImageTopOffset")
-    val coverImageTopOffset: Int,
+    val coverImageTopOffset: Int?,
     @SerializedName("titles")
     val titles: Titles?,
     @SerializedName("canonicalTitle")
     val canonicalTitle: String?,
     @SerializedName("abbreviatedTitles")
-    val abbreviatedTitles: List<String>?,
+    val abbreviatedTitles: List<Any>?,
     @SerializedName("averageRating")
     val averageRating: String?,
     @SerializedName("ratingFrequencies")
     val ratingFrequencies: RatingFrequencies?,
     @SerializedName("userCount")
-    val userCount: Int,
+    val userCount: Int?,
     @SerializedName("favoritesCount")
-    val favoritesCount: Int,
+    val favoritesCount: Int?,
     @SerializedName("startDate")
     val startDate: String?,
     @SerializedName("endDate")
     val endDate: String?,
     @SerializedName("nextRelease")
-    val nextRelease: Any?,
+    val nextRelease: NextRelease?,
     @SerializedName("popularityRank")
     val popularityRank: Int?,
     @SerializedName("ratingRank")
@@ -45,9 +45,9 @@ data class AnimeDto(
     @SerializedName("ageRatingGuide")
     val ageRatingGuide: String?,
     @SerializedName("subtype")
-    val subtype: String,
+    val subtype: String?,
     @SerializedName("status")
-    val status: String,
+    val status: String?,
     @SerializedName("tba")
     val tba: String?,
     @SerializedName("posterImage")
@@ -58,43 +58,12 @@ data class AnimeDto(
     val episodeCount: Int?,
     @SerializedName("episodeLength")
     val episodeLength: Int?,
+    @SerializedName("totalLength")
+    val totalLength: Int?,
     @SerializedName("youtubeVideoId")
     val youtubeVideoId: String?,
     @SerializedName("showType")
     val showType: String?,
     @SerializedName("nsfw")
     val nsfw: Boolean?
-)
-
-fun AnimeDto.toDomain() = AnimeModel(
-    createdAt,
-    updatedAt,
-    slug,
-    synopsis,
-    coverImageTopOffset,
-    titles?.toDomain(),
-    canonicalTitle,
-    abbreviatedTitles,
-    averageRating,
-    ratingFrequencies?.toDomain(),
-    userCount,
-    favoritesCount,
-    startDate,
-    endDate,
-    nextRelease,
-    popularityRank,
-    ratingRank,
-    ageRating,
-    ageRatingGuide,
-    subtype,
-    status,
-    tba,
-    posterImage?.toDomain(),
-    coverImage?.toDomain(),
-    episodeCount,
-    episodeLength,
-    youtubeVideoId,
-    showType,
-    nsfw
-
 )

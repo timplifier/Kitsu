@@ -25,5 +25,9 @@ class AnimeRepositoryImpl @Inject constructor(
         animeApiService.fetchSingleAnime(id).toDomain()
     }
 
+    override fun fetchDetailedAnime(id: String) = sendRequest {
+        animeApiService.fetchDetailedAnime(id).toDomain()
+    }
+
 
 }

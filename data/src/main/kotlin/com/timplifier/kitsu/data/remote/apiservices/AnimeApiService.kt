@@ -17,5 +17,8 @@ interface AnimeApiService {
     @GET("anime/{id}")
     suspend fun fetchSingleAnime(@Path("id") id: String): AnimeDataDto
 
+    @GET("anime/{id}")
+    suspend fun fetchDetailedAnime(@Path("id") id: String): AnimeDto
+
 
 }

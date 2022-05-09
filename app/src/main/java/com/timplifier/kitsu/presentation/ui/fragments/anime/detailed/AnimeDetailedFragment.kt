@@ -18,33 +18,34 @@ class AnimeDetailedFragment :
     override val viewModel: DetailedAnimeViewModel by viewModels()
     private val args: AnimeDetailedFragmentArgs by navArgs()
 
+
+    override fun establishRequest() {
+        viewModel.fetchDetailedAnime(args.animeId)
+    }
+
     override fun launchObservers() {
         subscribeToSingleAnime()
 
     }
 
     private fun subscribeToSingleAnime() {
-        viewModel.singleAnimeState.spectateUiState(success = {
+        viewModel.detailedAnimeState.spectateUiState(success = {
             binding.apply {
 
-                it.apply {
-                    imCover.loadImageWithGlide(animeDto.coverImage?.original)
-                    imPoster.loadImageWithGlide(animeDto.posterImage?.original)
-                    tvSubtype.text = animeDto.subtype
-                    tvYear.text = animeDto.createdAt
-                    tvTitle.text = animeDto.titles.en
-                    tvSynopsis.text = animeDto.synopsis
-                    tvAverageRating.text = "${animeDto.averageRating}%"
-                    tvRating.text = "Rank #${animeDto.ratingRank}"
-                    tvPopularity.text = "Rank #${animeDto.popularityRank}"
-                    //                   tvStudio.text = relationships.
-                    tvEpisodes.text = "${animeDto.episodeCount}"
-                    tvStatus.text = animeDto.status
-                    tvPremiere.text = animeDto.startDate
-                    tvAgeRating.text = "${animeDto.ageRating}" + "-" + "${animeDto.ageRatingGuide}"
+                imCover.loadImageWithGlide(it.coverImage?.original)
+                imPoster.loadImageWithGlide(it.posterImage?.original)
+                tvSubtype.text = it.subtype
+                tvYear.text = it.createdAt
+                tvTitle.text = it.titles?.en
+                tvSynopsis.text = it.synopsis
+//             //   tvAverageRating.text = "${it.averageRating}%"
+//                tvRating.text = "Rank #${it.ratingRank}"
+//                tvPopularity.text = "Rank #${it.popularityRank}"
+//                tvEpisodes.text = "${it.episodeCount}"
+//                tvStatus.text = it.status
+//                tvPremiere.text = it.startDate
+//                tvAgeRating.text = "${it.ageRating}" + "-" + "${it.ageRatingGuide}"
 
-
-                }
 
             }
 
@@ -53,8 +54,5 @@ class AnimeDetailedFragment :
         )
     }
 
-    override fun establishRequest() {
-        viewModel.fetchSingleAnime(args.animeId)
-    }
 
 }
