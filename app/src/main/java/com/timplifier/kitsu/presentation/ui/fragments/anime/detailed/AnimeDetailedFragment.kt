@@ -20,7 +20,7 @@ class AnimeDetailedFragment :
 
 
     override fun establishRequest() {
-        viewModel.fetchDetailedAnime(args.animeId)
+        viewModel.fetchSingleAnime(args.animeId)
     }
 
     override fun launchObservers() {
@@ -29,15 +29,15 @@ class AnimeDetailedFragment :
     }
 
     private fun subscribeToSingleAnime() {
-        viewModel.detailedAnimeState.spectateUiState(success = {
+        viewModel.singleAnimeState.spectateUiState(success = {
             binding.apply {
 
-                imCover.loadImageWithGlide(it.coverImage?.original)
-                imPoster.loadImageWithGlide(it.posterImage?.original)
-                tvSubtype.text = it.subtype
-                tvYear.text = it.createdAt
-                tvTitle.text = it.titles?.en
-                tvSynopsis.text = it.synopsis
+                imCover.loadImageWithGlide(it.animeDto.coverImage?.original)
+                imPoster.loadImageWithGlide(it.animeDto.posterImage?.original)
+                tvSubtype.text = it.animeDto.subtype
+                tvYear.text = it.animeDto.createdAt
+                tvTitle.text = it.animeDto.titles?.en
+                tvSynopsis.text = it.animeDto.synopsis
 //             //   tvAverageRating.text = "${it.averageRating}%"
 //                tvRating.text = "Rank #${it.ratingRank}"
 //                tvPopularity.text = "Rank #${it.popularityRank}"

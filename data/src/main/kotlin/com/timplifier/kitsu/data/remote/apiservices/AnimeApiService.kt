@@ -1,7 +1,6 @@
 package com.timplifier.kitsu.data.remote.apiservices
 
 import com.timplifier.kitsu.data.remote.dtos.anime.AnimeDataDto
-import com.timplifier.kitsu.data.remote.dtos.anime.AnimeDto
 import com.timplifier.kitsu.data.remote.dtos.anime.AnimeListDto
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -16,9 +15,6 @@ interface AnimeApiService {
 
     @GET("anime/{id}")
     suspend fun fetchSingleAnime(@Path("id") id: String): AnimeDataDto
-
-    @GET("anime/{id}")
-    suspend fun fetchDetailedAnime(@Path("id") id: String): AnimeDto
 
 
 }

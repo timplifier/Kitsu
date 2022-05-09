@@ -11,9 +11,9 @@ data class AnimeDto(
     @SerializedName("updatedAt")
     val updatedAt: String?,
     @SerializedName("slug")
-    val slug: String,
+    val slug: String?,
     @SerializedName("synopsis")
-    val synopsis: String,
+    val synopsis: String?,
     @SerializedName("coverImageTopOffset")
     val coverImageTopOffset: Int,
     @SerializedName("titles")
@@ -45,9 +45,9 @@ data class AnimeDto(
     @SerializedName("ageRatingGuide")
     val ageRatingGuide: String?,
     @SerializedName("subtype")
-    val subtype: String,
+    val subtype: String?,
     @SerializedName("status")
-    val status: String,
+    val status: String?,
     @SerializedName("tba")
     val tba: String?,
     @SerializedName("posterImage")
