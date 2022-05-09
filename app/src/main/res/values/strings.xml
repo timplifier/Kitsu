@@ -12,4 +12,13 @@
     <string name="image_for_anime_s_cover_image">image for anime\'s cover image</string>
     <string name="_64">64%</string>
     <string name="kitsu_score">Kitsu Score</string>
+    <string name="bullet_point">•</string>
+    <string name="_2017">2017</string>
+    <string name="tv">TV</string>
+    <string name="age_rating">Age Rating</string>
+    <string name="premiered">Premiered</string>
+    <string name="status">Status</string>
+    <string name="studios">Studios</string>
+    <string name="details">Details</string>
+    <string name="episodes">Episodes</string>
 </resources>
