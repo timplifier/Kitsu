@@ -26,7 +26,7 @@
         android:layout_width="15dp"
         android:layout_height="100dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="25dp" />
+        app:layout_constraintGuide_begin="20dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_end"
@@ -52,6 +52,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="155dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_ranks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="135dp" />
 
     <TextView
         android:id="@+id/tv_subtype"
@@ -107,10 +114,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica_regular"
+        android:text="loremloremloremloremloremloremloremloremloremlorem"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
-        app:layout_constraintTop_toBottomOf="@id/im_poster"
-        tools:text="@tools:sample/lorem" />
+        app:layout_constraintTop_toBottomOf="@id/im_poster" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_score"
@@ -158,6 +165,51 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <ImageView
+        android:id="@+id/im_rating"
+        android:layout_width="24dp"
+
+
+        android:layout_height="24dp"
+        android:src="@drawable/ic_detailed_star"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/gl_ranks"
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis" />
+
+    <TextView
+        android:id="@+id/tv_rating"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/rank_7691"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis" />
+
+    <ImageView
+        android:id="@+id/im_popularity"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/heart"
+        app:layout_constraintStart_toStartOf="@id/gl_ranks"
+        app:layout_constraintTop_toBottomOf="@id/im_rating" />
+
+    <TextView
+        android:id="@+id/tv_popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/rank_204"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/im_rating" />
+
 
     <TextView
         android:id="@+id/tv_details"
@@ -174,7 +226,7 @@
         android:id="@+id/tv_studios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/studios"
         android:textSize="14sp"
@@ -186,13 +238,12 @@
         android:id="@+id/tv_studio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/helvetica_bold"
+        android:text="@string/pierrot_studio_pierrot"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tv_studio"
-        app:layout_constraintTop_toBottomOf="@id/tv_details"
-        tools:text="@tools:sample/lorem" />
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/tv_details" />
 
 
     <View
@@ -207,7 +258,7 @@
         android:id="@+id/tv_episode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/episodes"
         android:textSize="14sp"
@@ -218,13 +269,12 @@
         android:id="@+id/tv_episodes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/helvetica_bold"
+        android:text="@string/tbd"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/tv_studio"
-        app:layout_constraintStart_toEndOf="@id/tv_episode"
-        app:layout_constraintTop_toBottomOf="@id/studios_underline"
-        tools:text="@tools:sample/lorem" />
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/studios_underline" />
 
     <View
         android:id="@+id/episode_underline"
@@ -236,7 +286,7 @@
 
 
     <TextView
-        android:id="@+id/tv_status"
+        android:id="@+id/tv_stat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -247,9 +297,15 @@
         app:layout_constraintTop_toBottomOf="@id/episode_underline" />
 
     <TextView
-        android:id="@+id/tv_statu"
+        android:id="@+id/tv_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/currently_airing"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/episode_underline" />
 
     <View
         android:id="@+id/status_underline"
@@ -271,6 +327,17 @@
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
         app:layout_constraintTop_toBottomOf="@id/status_underline" />
 
+    <TextView
+        android:id="@+id/tv_premiere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/apr_5_spring_2017"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/status_underline" />
+
     <View
         android:id="@+id/premiered_underline"
         android:layout_width="match_parent"
@@ -281,7 +348,7 @@
 
 
     <TextView
-        android:id="@+id/tv_age_rating"
+        android:id="@+id/tv_age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -290,6 +357,18 @@
         android:text="@string/age_rating"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
+        app:layout_constraintTop_toBottomOf="@id/premiered_underline" />
+
+    <TextView
+        android:id="@+id/tv_age_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/helvetica_bold"
+        android:text="@string/pg_teens_13_or_older"
+        android:textSize="14sp"
+
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
         app:layout_constraintTop_toBottomOf="@id/premiered_underline" />
 
     <View

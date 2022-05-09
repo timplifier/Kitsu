@@ -21,4 +21,11 @@
     <string name="studios">Studios</string>
     <string name="details">Details</string>
     <string name="episodes">Episodes</string>
+    <string name="pierrot_studio_pierrot">Pierrot, Studio Pierrot</string>
+    <string name="currently_airing">Currently Airing</string>
+    <string name="apr_5_spring_2017">Apr 5, Spring 2017</string>
+    <string name="pg_teens_13_or_older">PG - Teens 13 or older</string>
+    <string name="tbd">TBD</string>
+    <string name="rank_7691">Rank #7691</string>
+    <string name="rank_204">Rank #204</string>
 </resources>
