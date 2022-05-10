@@ -190,8 +190,6 @@
     <ImageView
         android:id="@+id/im_rating"
         android:layout_width="24dp"
-
-
         android:layout_height="24dp"
         android:contentDescription="@string/star_for_rating"
         android:src="@drawable/ic_detailed_star"
@@ -218,7 +216,7 @@
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/heart_for_popularity"
-        android:src="@drawable/heart_icon"
+        android:src="@drawable/ic_popularity"
         app:layout_constraintStart_toStartOf="@id/gl_ranks"
         app:layout_constraintTop_toBottomOf="@id/im_rating" />
 
@@ -227,6 +225,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/helvetica_bold"
         android:text="@string/rank_204"
         android:textSize="12sp"

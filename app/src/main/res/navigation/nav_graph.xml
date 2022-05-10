@@ -42,4 +42,5 @@
             android:name="mangaId"
             app:argType="string" />
     </fragment>
+
 </navigation>
