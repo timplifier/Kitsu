@@ -5,6 +5,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.map
 import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
 import com.timplifier.kitsu.data.remote.dtos.anime.toDomain
+import com.timplifier.kitsu.data.remote.dtos.toDomain
 import com.timplifier.kitsu.data.remote.pagingsources.AnimePagingSource
 import com.timplifier.kitsu.data.repositories.base.BaseRepository
 import com.timplifier.kitsu.domain.repositories.AnimeRepository

@@ -32,19 +32,23 @@ class AnimeDetailedFragment :
         viewModel.singleAnimeState.spectateUiState(success = {
             binding.apply {
 
-                imCover.loadImageWithGlide(it.data.get(0).animeDto.coverImage?.original)
-//                imPoster.loadImageWithGlide(it.animeDto.posterImage?.original)
-//                tvSubtype.text = it.animeDto.subtype
-//                tvYear.text = it.animeDto.createdAt
-//                tvTitle.text = it.animeDto.titles?.en
-//                tvSynopsis.text = it.animeDto.synopsis
-//             //   tvAverageRating.text = "${it.averageRating}%"
-//                tvRating.text = "Rank #${it.ratingRank}"
-//                tvPopularity.text = "Rank #${it.popularityRank}"
-//                tvEpisodes.text = "${it.episodeCount}"
-//                tvStatus.text = it.status
-//                tvPremiere.text = it.startDate
-//                tvAgeRating.text = "${it.ageRating}" + "-" + "${it.ageRatingGuide}"
+                it.apply {
+                    imCover.loadImageWithGlide(data.animeDto.coverImage?.original)
+                    imPoster.loadImageWithGlide(data.animeDto.posterImage?.medium)
+                    tvSubtype.text = data.animeDto.subtype?.uppercase()
+                    tvYear.text = data.animeDto.createdAt
+                    tvTitle.text = data.animeDto.titles?.en
+                    tvSynopsis.text = data.animeDto.synopsis
+                    tvAverageRating.text = "${data.animeDto.averageRating}%"
+                    tvRating.text = "Rank #${data.animeDto.ratingRank}"
+                    tvPopularity.text = "Rank #${data.animeDto.popularityRank}"
+                    tvEpisodes.text = "${data.animeDto.episodeCount}"
+                    tvStatus.text = data.animeDto.status
+                    tvPremiere.text = data.animeDto.startDate
+                    tvAgeRating.text =
+                        "${data.animeDto.ageRating}" + "-" + "${data.animeDto.ageRatingGuide}"
+
+                }
 
 
             }
