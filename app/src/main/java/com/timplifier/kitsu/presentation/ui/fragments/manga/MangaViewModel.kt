@@ -11,7 +11,5 @@ class MangaViewModel @Inject constructor(
     private val mangaRepositoryImpl: MangaRepositoryImpl
 
 ) : BaseViewModel() {
-
-
     fun fetchManga() = mangaRepositoryImpl.fetchPagedManga().gatherPagingRequest { it.toUI() }
 }

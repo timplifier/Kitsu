@@ -10,8 +10,9 @@ import com.timplifier.kitsu.presentation.base.BaseDiffUtil
 import com.timplifier.kitsu.presentation.extensions.loadImageWithGlide
 import com.timplifier.kitsu.presentation.models.manga.MangaDataUI
 
-class MangaAdapter
-    : PagingDataAdapter<MangaDataUI, MangaAdapter.MangaViewHolder>(BaseDiffUtil()) {
+class MangaAdapter(
+    private val onItemClick: (id: String) -> Unit
+) : PagingDataAdapter<MangaDataUI, MangaAdapter.MangaViewHolder>(BaseDiffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MangaViewHolder {
@@ -34,19 +35,25 @@ class MangaAdapter
             val chapterCount = mangaData.mangaDto.chapterCount
             val volumeCount = mangaData.mangaDto.volumeCount
             binding.apply {
-                mangaData.mangaDto.averageRating?.let {
-                    imAverageRating.isVisible = true
-                    tvAverageRating.text = mangaData.mangaDto.averageRating
-                }
-                imManga.loadImageWithGlide(mangaData.mangaDto.posterImage.original)
-                tvEnglishTitle.text = mangaData.mangaDto.titles.en
-                tvJapaneseTitle.text = mangaData.mangaDto.titles.jaJp
-                tvChapterCount.text = "Chapters: $chapterCount($volumeCount volumes)"
-                tvDash.text = ""
-                if (mangaData.mangaDto.startDate != null && mangaData.mangaDto.endDate != null) {
-                    tvDash.text = "-"
-                    tvStartDate.text = mangaData.mangaDto.startDate
-                    tvEndDate.text = mangaData.mangaDto.endDate
+                mangaData.apply {
+                    mangaDto.averageRating?.let {
+                        imAverageRating.isVisible = true
+                        tvAverageRating.text = mangaDto.averageRating
+                    }
+                    imManga.loadImageWithGlide(mangaDto.posterImage.original)
+                    tvEnglishTitle.text = mangaDto.titles.en
+                    tvJapaneseTitle.text = mangaDto.titles.jaJp
+                    tvChapterCount.text = "Chapters: $chapterCount($volumeCount volumes)"
+                    tvDash.text = ""
+                    if (mangaDto.startDate != null && mangaDto.endDate != null) {
+                        tvDash.text = "-"
+                        tvStartDate.text = mangaDto.startDate
+                        tvEndDate.text = mangaDto.endDate
+                    }
+                    root.setOnClickListener {
+                        onItemClick(id)
+                    }
+
                 }
 
             }

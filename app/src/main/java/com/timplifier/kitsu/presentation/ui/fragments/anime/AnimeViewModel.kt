@@ -10,6 +10,7 @@ import javax.inject.Inject
 class AnimeViewModel @Inject constructor(
     private val animeRepositoryImpl: AnimeRepositoryImpl
 ) : BaseViewModel() {
+
     fun fetchAnime() =
         animeRepositoryImpl.fetchPagedAnime().gatherPagingRequest {
             it.toUI()

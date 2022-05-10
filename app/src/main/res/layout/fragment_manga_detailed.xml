@@ -9,8 +9,10 @@
     <ImageView
         android:id="@+id/im_cover"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="250dp"
         android:contentDescription="@string/image_for_anime_s_cover_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
 
@@ -36,16 +38,28 @@
         app:layout_constraintGuide_end="25dp" />
 
 
-    <ImageView
-        android:id="@+id/im_poster"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:contentDescription="@string/anime_s_poster"
-        android:translationZ="10dp"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:elevation="10dp"
+        android:translationZ="1dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
-
         app:layout_constraintTop_toBottomOf="@id/gl_poster_image_margin"
-        tools:src="@tools:sample/avatars" />
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:id="@+id/im_poster"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/anime_s_poster"
+
+            tools:src="@tools:sample/avatars" />
+
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_subtype"
@@ -69,6 +83,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/tv"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/gl_subtype"
         app:layout_constraintTop_toBottomOf="@id/im_cover" />
@@ -80,6 +95,7 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/bullet_point"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@id/tv_year"
         app:layout_constraintStart_toEndOf="@id/tv_subtype"
@@ -93,6 +109,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/_2017"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/tv_subtype"
         app:layout_constraintTop_toBottomOf="@id/im_cover" />
@@ -104,6 +121,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/helvetica_bold"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/gl_subtype"
         app:layout_constraintTop_toBottomOf="@id/tv_subtype"
@@ -118,7 +136,7 @@
         android:text="@string/it_is_a_really_long_text_even_you_are_not_gonna_catch_up_with_me_typing_this"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
-        app:layout_constraintTop_toBottomOf="@id/im_poster" />
+        app:layout_constraintTop_toBottomOf="@id/cv_poster" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_score"
@@ -200,7 +218,7 @@
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/heart_for_popularity"
-        android:src="@drawable/heart"
+        android:src="@drawable/heart_icon"
         app:layout_constraintStart_toStartOf="@id/gl_ranks"
         app:layout_constraintTop_toBottomOf="@id/im_rating" />
 
