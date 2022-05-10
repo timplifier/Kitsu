@@ -14,9 +14,6 @@ import javax.inject.Inject
 class MangaRepositoryImpl @Inject constructor(
     private val mangaApiService: MangaApiService
 ) : BaseRepository(), MangaRepository {
-    override fun fetchManga() = sendRequest {
-        TODO()
-    }
 
     fun fetchPagedManga() = Pager(
         PagingConfig(
@@ -24,4 +21,8 @@ class MangaRepositoryImpl @Inject constructor(
             initialLoadSize = 10
         )
     ) { MangaPagingSource(mangaApiService) }.flow.map { data -> data.map { it.toDomain() } }
+
+    override fun fetchDetailedManga(id: String) = sendRequest {
+        mangaApiService.fetchDetailedManga(id).toDomain()
+    }
 }
