@@ -32,12 +32,12 @@ class AnimeDetailedFragment :
         viewModel.singleAnimeState.spectateUiState(success = {
             binding.apply {
 
-                imCover.loadImageWithGlide(it.animeDto.coverImage?.original)
-                imPoster.loadImageWithGlide(it.animeDto.posterImage?.original)
-                tvSubtype.text = it.animeDto.subtype
-                tvYear.text = it.animeDto.createdAt
-                tvTitle.text = it.animeDto.titles?.en
-                tvSynopsis.text = it.animeDto.synopsis
+                imCover.loadImageWithGlide(it.data.get(0).animeDto.coverImage?.original)
+//                imPoster.loadImageWithGlide(it.animeDto.posterImage?.original)
+//                tvSubtype.text = it.animeDto.subtype
+//                tvYear.text = it.animeDto.createdAt
+//                tvTitle.text = it.animeDto.titles?.en
+//                tvSynopsis.text = it.animeDto.synopsis
 //             //   tvAverageRating.text = "${it.averageRating}%"
 //                tvRating.text = "Rank #${it.ratingRank}"
 //                tvPopularity.text = "Rank #${it.popularityRank}"

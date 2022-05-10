@@ -8,11 +8,12 @@ data class AnimeListDto(
     @SerializedName("data")
     val data: List<AnimeDataDto>,
     @SerializedName("meta")
-    val meta: MetaXX,
+    val meta: MetaXX? = null,
     @SerializedName("links")
-    val links: LinksXXXXXXXXXXXXX
+    val links: LinksXXXXXXXXXXXXX? = null
 )
 
 fun AnimeListDto.toDomain() = AnimeListModel(
-    data.map { it.toDomain() }, meta.toDomain(), links.toDomain()
+    data.map { it.toDomain() }, meta?.toDomain(), links?.toDomain()
 )
+

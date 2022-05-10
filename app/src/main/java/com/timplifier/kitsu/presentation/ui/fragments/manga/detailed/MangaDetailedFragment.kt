@@ -12,6 +12,9 @@ class MangaDetailedFragment :
     override val binding by viewBinding(FragmentMangaDetailedBinding::bind)
     override val viewModel: DetailedMangaViewModel by viewModels()
 
+    override fun establishRequest() {
+    }
+
     override fun launchObservers() {
         subscribeToDetailedManga()
     }

@@ -1,0 +1,13 @@
+package com.timplifier.kitsu.data.remote.dtos
+
+import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.data.remote.dtos.anime.AnimeDataDto
+import com.timplifier.kitsu.data.remote.dtos.anime.toDomain
+import com.timplifier.kitsu.domain.models.SingleAnimeModel
+
+data class SingleAnimeDto(
+    @SerializedName("data")
+    val data: AnimeDataDto,
+)
+
+fun SingleAnimeDto.toDomain() = SingleAnimeModel(data.toDomain())

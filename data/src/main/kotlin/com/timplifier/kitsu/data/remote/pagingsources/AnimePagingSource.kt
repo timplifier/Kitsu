@@ -17,7 +17,7 @@ class AnimePagingSource(
         return try {
             val response =
                 animeApiService.fetchAnime(params.loadSize, page)
-            val nextPage = if (response.links.next == null) {
+            val nextPage = if (response.links?.next == null) {
                 null
             } else
                 Uri.parse(response.links.next).getQueryParameter("page[offset]")!!.toInt()
