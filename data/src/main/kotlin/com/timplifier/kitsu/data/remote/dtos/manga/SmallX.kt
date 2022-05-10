@@ -6,9 +6,9 @@ import com.timplifier.kitsu.domain.models.manga.SmallXModel
 
 data class SmallX(
     @SerializedName("width")
-    val width: Any,
+    val width: Int?,
     @SerializedName("height")
-    val height: Any
+    val height: Int?
 )
 
 fun SmallX.toDomain() = SmallXModel(width, height)

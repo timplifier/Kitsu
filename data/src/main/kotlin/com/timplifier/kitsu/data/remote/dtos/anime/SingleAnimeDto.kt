@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.data.remote.dtos
+package com.timplifier.kitsu.data.remote.dtos.anime
 
 import com.google.gson.annotations.SerializedName
 import com.timplifier.kitsu.data.remote.dtos.anime.AnimeDataDto

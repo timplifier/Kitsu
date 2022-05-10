@@ -83,6 +83,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/tv"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/gl_subtype"
         app:layout_constraintTop_toBottomOf="@id/im_cover" />
@@ -94,6 +95,7 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/bullet_point"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@id/tv_year"
         app:layout_constraintStart_toEndOf="@id/tv_subtype"
@@ -107,6 +109,7 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/_2017"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/tv_subtype"
         app:layout_constraintTop_toBottomOf="@id/im_cover" />
@@ -118,6 +121,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/helvetica_bold"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/gl_subtype"
         app:layout_constraintTop_toBottomOf="@id/tv_subtype"
@@ -214,7 +218,7 @@
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/heart_for_popularity"
-        android:src="@drawable/heart"
+        android:src="@drawable/heart_icon"
         app:layout_constraintStart_toStartOf="@id/gl_ranks"
         app:layout_constraintTop_toBottomOf="@id/im_rating" />
 
@@ -229,175 +233,6 @@
         app:layout_constraintBottom_toBottomOf="@id/cv_score"
         app:layout_constraintStart_toStartOf="@id/gl_subtype"
         app:layout_constraintTop_toBottomOf="@id/im_rating" />
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_details"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="50dp"-->
-    <!--        android:fontFamily="@font/helvetica_bold"-->
-    <!--        android:text="@string/details"-->
-    <!--        android:textSize="18sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_poster_image"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/cv_score" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_studios"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="14dp"-->
-    <!--        android:fontFamily="@font/helvetica_regular"-->
-    <!--        android:text="@string/studios"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_poster_image"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tv_details" />-->
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_studio"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="14dp"-->
-    <!--        android:fontFamily="@font/helvetica_bold"-->
-    <!--        android:text="@string/pierrot_studio_pierrot"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_subtype"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tv_details" />-->
-
-
-    <!--    <View-->
-    <!--        android:id="@+id/studios_underline"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="1dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:background="@android:color/darker_gray"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tv_studios" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_episode"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="14dp"-->
-    <!--        android:fontFamily="@font/helvetica_regular"-->
-    <!--        android:text="@string/episodes"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_poster_image"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/studios_underline" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_episodes"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="14dp"-->
-    <!--        android:fontFamily="@font/helvetica_bold"-->
-    <!--        android:text="@string/tbd"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_subtype"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/studios_underline" />-->
-
-    <!--    <View-->
-    <!--        android:id="@+id/episode_underline"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="1dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:background="@android:color/darker_gray"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tv_episode" />-->
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_stat"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        android:fontFamily="@font/helvetica_regular"-->
-    <!--        android:text="@string/status"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_poster_image"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/episode_underline" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_status"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="14dp"-->
-    <!--        android:fontFamily="@font/helvetica_bold"-->
-    <!--        android:text="@string/currently_airing"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_subtype"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/episode_underline" />-->
-
-    <!--    <View-->
-    <!--        android:id="@+id/status_underline"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="1dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:background="@android:color/darker_gray"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tv_status" />-->
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_premiered"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        android:fontFamily="@font/helvetica_regular"-->
-    <!--        android:text="@string/premiered"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_poster_image"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/status_underline" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_premiere"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        android:fontFamily="@font/helvetica_bold"-->
-    <!--        android:text="@string/apr_5_spring_2017"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_subtype"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/status_underline" />-->
-
-    <!--    <View-->
-    <!--        android:id="@+id/premiered_underline"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="1dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:background="@android:color/darker_gray"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tv_premiered" />-->
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_age"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        android:fontFamily="@font/helvetica_regular"-->
-    <!--        android:text="@string/age_rating"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_poster_image"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/premiered_underline" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_age_rating"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        android:fontFamily="@font/helvetica_bold"-->
-    <!--        android:text="@string/pg_teens_13_or_older"-->
-    <!--        android:textSize="14sp"-->
-
-    <!--        app:layout_constraintStart_toStartOf="@id/gl_subtype"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/premiered_underline" />-->
-
-    <!--    <View-->
-    <!--        android:id="@+id/age_rating_underline"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="1dp"-->
-    <!--        android:layout_marginTop="10dp"-->
-    <!--        android:background="@android:color/darker_gray"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tv_age_rating" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

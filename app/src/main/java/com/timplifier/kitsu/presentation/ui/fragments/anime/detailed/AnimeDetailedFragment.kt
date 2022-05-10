@@ -42,11 +42,6 @@ class AnimeDetailedFragment :
                     tvAverageRating.text = "${data.animeDto.averageRating}%"
                     tvRating.text = "Rank #${data.animeDto.ratingRank}"
                     tvPopularity.text = "Rank #${data.animeDto.popularityRank}"
-                    tvEpisodes.text = "${data.animeDto.episodeCount}"
-                    tvStatus.text = data.animeDto.status
-                    tvPremiere.text = data.animeDto.startDate
-                    tvAgeRating.text =
-                        "${data.animeDto.ageRating}" + "-" + "${data.animeDto.ageRatingGuide}"
 
                 }
 
