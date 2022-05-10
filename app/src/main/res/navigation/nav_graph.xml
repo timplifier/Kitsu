@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/mangaFragment">
+    app:startDestination="@id/animeFragment">
 
 
     <fragment
@@ -19,7 +19,7 @@
         android:id="@+id/mangaFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.MangaFragment"
         android:label="Manga"
-        tools:layout="@layout/fragment_manga" >
+        tools:layout="@layout/fragment_manga">
         <action
             android:id="@+id/action_mangaFragment_to_mangaDetailedFragment"
             app:destination="@id/mangaDetailedFragment" />
@@ -37,7 +37,7 @@
         android:id="@+id/mangaDetailedFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.detailed.MangaDetailedFragment"
         android:label="fragment_manga_detailed"
-        tools:layout="@layout/fragment_manga_detailed" >
+        tools:layout="@layout/fragment_manga_detailed">
         <argument
             android:name="mangaId"
             app:argType="string" />

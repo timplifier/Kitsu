@@ -31,19 +31,12 @@ class AnimeAdapter(
     inner class AnimeViewHolder(private val binding: ItemAnimeBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(animeDataDto: AnimeDataUI) {
-            val amountOfEpisodes = animeDataDto.animeDto.episodeCount
-            binding.apply {
-                tvAverageRating.text = animeDataDto.animeDto.averageRating
-                imAnime.loadImageWithGlide(animeDataDto.animeDto.posterImage?.original)
-                tvEnglishTitle.text = animeDataDto.animeDto.titles?.en
-                tvJapaneseTitle.text = animeDataDto.animeDto.titles?.jaJp
-                tvAmountOfEpisodes.text = "Episodes: $amountOfEpisodes TV"
-                tvStartDate.text = animeDataDto.animeDto.startDate
-                tvEndDate.text = animeDataDto.animeDto.endDate
-                root.setOnClickListener {
-                    onItemClick(animeDataDto.id)
-                }
+            binding.imAnime.loadImageWithGlide(animeDataDto.animeDto.posterImage?.original)
+
+            binding.root.setOnClickListener {
+                onItemClick(animeDataDto.id)
             }
+
 
         }
 

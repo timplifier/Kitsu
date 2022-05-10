@@ -2,7 +2,6 @@ package com.timplifier.kitsu.presentation.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.timplifier.kitsu.databinding.ItemMangaBinding
@@ -32,31 +31,11 @@ class MangaAdapter(
     inner class MangaViewHolder(private val binding: ItemMangaBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(mangaData: MangaDataUI) {
-            val chapterCount = mangaData.mangaDto.chapterCount
-            val volumeCount = mangaData.mangaDto.volumeCount
-            binding.apply {
-                mangaData.apply {
-                    mangaDto.averageRating?.let {
-                        imAverageRating.isVisible = true
-                        tvAverageRating.text = mangaDto.averageRating
-                    }
-                    imManga.loadImageWithGlide(mangaDto.posterImage.original)
-                    tvEnglishTitle.text = mangaDto.titles.en
-                    tvJapaneseTitle.text = mangaDto.titles.jaJp
-                    tvChapterCount.text = "Chapters: $chapterCount($volumeCount volumes)"
-                    tvDash.text = ""
-                    if (mangaDto.startDate != null && mangaDto.endDate != null) {
-                        tvDash.text = "-"
-                        tvStartDate.text = mangaDto.startDate
-                        tvEndDate.text = mangaDto.endDate
-                    }
-                    root.setOnClickListener {
-                        onItemClick(id)
-                    }
-
-                }
-
+            binding.imManga.loadImageWithGlide(mangaData.mangaDto.posterImage.original)
+            binding.root.setOnClickListener {
+                onItemClick(mangaData.id)
             }
+
 
         }
 

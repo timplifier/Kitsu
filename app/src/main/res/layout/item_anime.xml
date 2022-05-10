@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:padding="12dp">
 
     <com.google.android.material.card.MaterialCardView
@@ -24,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/im_anime"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="110dp"
+                android:layout_height="150dp"
                 android:contentDescription="@string/imageview_for_an_anime_poster"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
