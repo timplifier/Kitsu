@@ -65,6 +65,36 @@ abstract class BaseFragment<Binding : ViewBinding, ViewModel : BaseViewModel>(@L
         }
     }
 
+    protected fun <T : Any> StateFlow<UIState<PagingData<T>>>.spectatePagingData(
+        lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,
+        success: ((data: PagingData<T>) -> Unit)? = null,
+        loading: ((data: UIState.Loading<PagingData<T>>) -> Unit)? = null,
+        error: ((error: String) -> Unit)? = null,
+        idle: ((idle: UIState.Idle<PagingData<T>>) -> Unit)? = null,
+        gatherIfSucceed: ((state: UIState<PagingData<T>>) -> Unit)? = null
+
+    ) {
+        safeFlowGather(lifecycleState) {
+            collectLatest {
+                gatherIfSucceed?.invoke(it)
+                when (it) {
+                    is UIState.Idle -> {
+                        idle?.invoke(it)
+                    }
+                    is UIState.Loading -> {
+                        loading?.invoke(it)
+                    }
+                    is UIState.Error -> {
+                        error?.invoke(it.error)
+                    }
+                    is UIState.Success -> {
+                        success?.invoke(it.data)
+                    }
+                }
+            }
+        }
+    }
+
 
     protected fun <T> StateFlow<UIState<T>>.spectateUiState(
         lifecycleState: Lifecycle.State = Lifecycle.State.STARTED,

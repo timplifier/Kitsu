@@ -1,82 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.anime.detailed.AnimeDetailedFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/im_cover"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:contentDescription="@string/image_for_anime_s_cover_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@tools:sample/avatars"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/image_for_anime_s_cover_image" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_poster_image_margin"
+        app:layout_constraintGuide_begin="90dp"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="90dp" />
+        android:orientation="horizontal" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_poster_image"
+        app:layout_constraintGuide_begin="20dp"
         android:layout_width="15dp"
         android:layout_height="100dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:orientation="vertical" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_end"
+        app:layout_constraintGuide_end="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="25dp" />
+        android:orientation="vertical" />
 
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_poster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:elevation="10dp"
-        android:translationZ="1dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="@id/gl_poster_image"
         app:layout_constraintTop_toBottomOf="@id/gl_poster_image_margin"
         app:strokeColor="@color/white"
-        app:strokeWidth="1dp">
+        app:strokeWidth="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:elevation="10dp"
+        android:translationZ="1dp">
 
         <ImageView
             android:id="@+id/im_poster"
+            tools:src="@tools:sample/avatars"
             android:layout_width="100dp"
             android:layout_height="150dp"
-            android:contentDescription="@string/anime_s_poster"
 
-            tools:src="@tools:sample/avatars" />
+            android:contentDescription="@string/anime_s_poster" />
 
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_subtype"
+        app:layout_constraintGuide_begin="155dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="155dp" />
+        android:orientation="vertical" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_ranks"
+        app:layout_constraintGuide_begin="135dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="135dp" />
+        android:orientation="vertical" />
 
     <TextView
         android:id="@+id/tv_subtype"
+        app:layout_constraintStart_toEndOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/im_cover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -84,25 +85,25 @@
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/tv"
         android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@id/gl_subtype"
-        app:layout_constraintTop_toBottomOf="@id/im_cover" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_bullet_point"
+        app:layout_constraintEnd_toStartOf="@id/tv_year"
+        app:layout_constraintStart_toEndOf="@id/tv_subtype"
+        app:layout_constraintTop_toBottomOf="@id/im_cover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/bullet_point"
         android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@id/tv_year"
-        app:layout_constraintStart_toEndOf="@id/tv_subtype"
-        app:layout_constraintTop_toBottomOf="@id/im_cover" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tv_year"
+        app:layout_constraintStart_toEndOf="@id/tv_subtype"
+        app:layout_constraintTop_toBottomOf="@id/im_cover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -110,46 +111,44 @@
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/_2017"
         android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@id/tv_subtype"
-        app:layout_constraintTop_toBottomOf="@id/im_cover" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_title"
+        app:layout_constraintStart_toEndOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtype"
+        tools:text="@tools:sample/lorem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/helvetica_bold"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/gl_subtype"
-        app:layout_constraintTop_toBottomOf="@id/tv_subtype"
-        tools:text="@tools:sample/lorem" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tv_synopsis"
+        app:layout_constraintStart_toStartOf="@id/gl_poster_image"
+        app:layout_constraintTop_toBottomOf="@id/cv_poster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/it_is_a_really_long_text_even_you_are_not_gonna_catch_up_with_me_typing_this"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/gl_poster_image"
-        app:layout_constraintTop_toBottomOf="@id/cv_poster" />
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/gl_poster_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:background="@android:color/darker_gray"
-        android:elevation="20dp"
-        app:layout_constraintStart_toStartOf="@id/gl_poster_image"
-        app:layout_constraintTop_toBottomOf="@id/tv_synopsis"
-        app:strokeColor="@android:color/darker_gray"
-        app:strokeWidth="1dp">
+        android:elevation="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -157,6 +156,9 @@
 
             <TextView
                 android:id="@+id/tv_kitsu_score"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -164,25 +166,22 @@
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/helvetica_regular"
                 android:text="@string/kitsu_score"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tv_average_rating"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_kitsu_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/helvetica_bold"
                 android:text="@string/_64"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
 
-                app:layout_constraintTop_toBottomOf="@id/tv_kitsu_score" />
+                android:textSize="18sp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -190,49 +189,49 @@
 
     <ImageView
         android:id="@+id/im_rating"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/gl_ranks"
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:contentDescription="@string/star_for_rating"
-        android:src="@drawable/ic_detailed_star"
-        app:layout_constraintBottom_toBottomOf="@id/cv_score"
-        app:layout_constraintStart_toStartOf="@id/gl_ranks"
-        app:layout_constraintTop_toBottomOf="@id/tv_synopsis" />
+        android:src="@drawable/ic_detailed_star" />
 
     <TextView
         android:id="@+id/tv_rating"
 
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/tv_synopsis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/helvetica_bold"
         android:text="@string/rank_7691"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/cv_score"
-        app:layout_constraintStart_toStartOf="@id/gl_subtype"
-        app:layout_constraintTop_toBottomOf="@id/tv_synopsis" />
+        android:textSize="12sp" />
 
     <ImageView
         android:id="@+id/im_popularity"
+        app:layout_constraintStart_toStartOf="@id/gl_ranks"
+        app:layout_constraintTop_toBottomOf="@id/im_rating"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/heart_for_popularity"
-        android:src="@drawable/ic_popularity"
-        app:layout_constraintStart_toStartOf="@id/gl_ranks"
-        app:layout_constraintTop_toBottomOf="@id/im_rating" />
+        android:src="@drawable/ic_popularity" />
 
     <TextView
         android:id="@+id/tv_popularity"
+        app:layout_constraintBottom_toBottomOf="@id/cv_score"
+        app:layout_constraintStart_toStartOf="@id/gl_subtype"
+        app:layout_constraintTop_toBottomOf="@id/im_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/helvetica_bold"
         android:text="@string/rank_204"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/cv_score"
-        app:layout_constraintStart_toStartOf="@id/gl_subtype"
-        app:layout_constraintTop_toBottomOf="@id/im_rating" />
+        android:textSize="12sp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

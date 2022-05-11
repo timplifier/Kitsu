@@ -131,6 +131,7 @@
         android:id="@+id/tv_synopsis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/helvetica_regular"
         android:text="@string/it_is_a_really_long_text_even_you_are_not_gonna_catch_up_with_me_typing_this"
