@@ -6,26 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ui.activity.MainActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#443343"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabIndicatorHeight="0dp"
-        app:tabSelectedTextColor="#cc8a83"
-        app:tabTextColor="#4d454e">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/anime" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/manga" />
-    </com.google.android.material.tabs.TabLayout>
 
 
     <androidx.fragment.app.FragmentContainerView

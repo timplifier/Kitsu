@@ -7,40 +7,18 @@
 
 
     <fragment
-        android:id="@+id/animeFragment"
-        android:name="com.timplifier.kitsu.presentation.ui.fragments.anime.AnimeFragment"
-        android:label="Anime"
-        tools:layout="@layout/fragment_anime">
+        android:id="@+id/mainFlowFragment"
+        android:name="com.timplifier.kitsu.presentation.ui.fragments.main.MainFlowFragment"
+        android:label="fragment_main_flow"
+        tools:layout="@layout/fragment_main_flow" />
+    <fragment
+        android:id="@+id/signInFlowFragment"
+        android:name="com.timplifier.kitsu.presentation.ui.fragments.auth.SignInFlowFragment"
+        android:label="fragment_sign_in_flow"
+        tools:layout="@layout/fragment_sign_in_flow" >
         <action
-            android:id="@+id/action_animeFragment_to_animeDetailedFragment"
-            app:destination="@id/animeDetailedFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/mangaFragment"
-        android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.MangaFragment"
-        android:label="Manga"
-        tools:layout="@layout/fragment_manga">
-        <action
-            android:id="@+id/action_mangaFragment_to_mangaDetailedFragment"
-            app:destination="@id/mangaDetailedFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/animeDetailedFragment"
-        android:name="com.timplifier.kitsu.presentation.ui.fragments.anime.detailed.AnimeDetailedFragment"
-        android:label="fragment_anime_detailed"
-        tools:layout="@layout/fragment_anime_detailed">
-        <argument
-            android:name="animeId"
-            app:argType="string" />
-    </fragment>
-    <fragment
-        android:id="@+id/mangaDetailedFragment"
-        android:name="com.timplifier.kitsu.presentation.ui.fragments.manga.detailed.MangaDetailedFragment"
-        android:label="fragment_manga_detailed"
-        tools:layout="@layout/fragment_manga_detailed">
-        <argument
-            android:name="mangaId"
-            app:argType="string" />
+            android:id="@+id/action_signInFlowFragment_to_mainFlowFragment"
+            app:destination="@id/mainFlowFragment" />
     </fragment>
 
 </navigation>

@@ -33,4 +33,7 @@
     <string name="heart_for_popularity">heart for popularity</string>
     <string name="anime_s_poster">anime\'s poster</string>
     <string name="chapters">Chapters</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign in</string>
 </resources>
