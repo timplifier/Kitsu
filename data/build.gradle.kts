@@ -24,7 +24,8 @@ android {
             )
         }
         debug {
-            buildConfigField("String", "BASE_URL", "\"https://kitsu.io/api/edge/\"")
+            buildConfigField("String", "MAIN_BASE_URL", "\"https://kitsu.io/api/edge/\"")
+            buildConfigField("String", "AUTH_BASE_URL", "\"https://kitsu.io/api/oauth/\"")
         }
     }
     compileOptions {
