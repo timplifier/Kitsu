@@ -2,9 +2,11 @@ package com.timplifier.kitsu.data.local.preferences
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.timplifier.kitsu.data.local.preferences.PreferencesKeys.ACCESS_TOKEN_KEY
 import com.timplifier.kitsu.data.local.preferences.PreferencesKeys.IS_AUTHENTICATED
 import com.timplifier.kitsu.data.local.preferences.PreferencesKeys.LOGIN_KEY
 import com.timplifier.kitsu.data.local.preferences.PreferencesKeys.PASSWORD_KEY
+import com.timplifier.kitsu.data.local.preferences.PreferencesKeys.REFRESH_TOKEN_KEY
 
 class PreferencesHelper(context: Context) {
 
@@ -20,5 +22,11 @@ class PreferencesHelper(context: Context) {
     var isAuthenticated
         get() = preferences.getBoolean(IS_AUTHENTICATED, false)
         set(value) = preferences.edit().putBoolean(IS_AUTHENTICATED, value).apply()
+    var accessToken
+        get() = preferences.getString(ACCESS_TOKEN_KEY, "access_token")
+        set(value) = preferences.edit().putString(ACCESS_TOKEN_KEY, value).apply()
+    var refreshToken
+        get() = preferences.getString(REFRESH_TOKEN_KEY, "refresh_token")
+        set(value) = preferences.edit().putString(REFRESH_TOKEN_KEY, value).apply()
 
 }
