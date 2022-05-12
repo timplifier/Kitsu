@@ -1,4 +1,4 @@
-package com.timplifier.kitsu.domain.models
+package com.timplifier.kitsu.domain.models.anime
 
 import com.timplifier.kitsu.domain.models.anime.AnimeDataModel
 

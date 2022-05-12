@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.auth
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.auth.TokenModel
 
 data class TokenDto(
     @SerializedName("access_token")
@@ -17,3 +18,6 @@ data class TokenDto(
     @SerializedName("token_type")
     val tokenType: String
 )
+
+fun TokenDto.toDomain() =
+    TokenModel(accessToken, createdAt, expiresIn, refreshToken, scope, tokenType)

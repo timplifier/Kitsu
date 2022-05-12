@@ -20,10 +20,7 @@ class AnimeRepositoryImpl @Inject constructor(
             AnimePagingSource(animeApiService)
         }.flow.map { data -> data.map { it.toDomain() } }
 
-
     override fun fetchAnimeDetails(id: String) = sendRequest {
         animeApiService.fetchSingleAnime(id).toDomain()
     }
-
-
 }

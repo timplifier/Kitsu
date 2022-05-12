@@ -1,7 +1,7 @@
 package com.timplifier.kitsu.data.remote.dtos.anime
 
 import com.google.gson.annotations.SerializedName
-import com.timplifier.kitsu.domain.models.SingleAnimeModel
+import com.timplifier.kitsu.domain.models.anime.SingleAnimeModel
 
 data class SingleAnimeDto(
     @SerializedName("data")
