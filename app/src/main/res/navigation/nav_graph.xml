@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/animeFragment">
+    app:startDestination="@id/signInFlowFragment">
 
 
     <fragment
@@ -15,7 +15,7 @@
         android:id="@+id/signInFlowFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.auth.SignInFlowFragment"
         android:label="fragment_sign_in_flow"
-        tools:layout="@layout/fragment_sign_in_flow" >
+        tools:layout="@layout/fragment_sign_in_flow">
         <action
             android:id="@+id/action_signInFlowFragment_to_mainFlowFragment"
             app:destination="@id/mainFlowFragment" />

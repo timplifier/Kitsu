@@ -16,6 +16,7 @@ class SignInFragment :
     BaseFragment<FragmentSignInBinding, SignInViewModel>(R.layout.fragment_sign_in) {
     override val binding by viewBinding(FragmentSignInBinding::bind)
     override val viewModel: SignInViewModel by viewModels()
+
     override fun launchObservers() {
         subscribeToAuthorization()
     }
@@ -42,5 +43,4 @@ class SignInFragment :
             viewModel.signIn(binding.etEmail.text.toString(), binding.etPassword.text.toString())
         }
     }
-
 }

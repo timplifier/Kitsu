@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Inject
-    private lateinit var preferences: PreferencesHelper
+    lateinit var preferences: PreferencesHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
