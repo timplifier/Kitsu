@@ -10,5 +10,4 @@ class BaseDiffUtil<T : BaseDiffModel> : DiffUtil.ItemCallback<T>() {
     override fun areContentsTheSame(oldItem: T, newItem: T): Boolean {
         return oldItem == newItem
     }
-
 }

@@ -41,20 +41,5 @@ abstract class BaseViewModel : ViewModel() {
 
     }.cachedIn(viewModelScope)
 
-    protected fun <T : Any, S : Any> Flow<Either<String, PagingData<T>>>.gatherPagedRequest(
-        state: MutableStateFlow<UIState<S>>,
-        mappedData: (data: PagingData<T>) -> S
-    ) = map {
-        viewModelScope.launch(Dispatchers.IO) {
-            this@gatherPagedRequest.collect {
-                when (it) {
-                    is Either.Left -> state.value = UIState.Error(it.value)
-                    is Either.Right -> state.value = UIState.Success(mappedData(it.value))
-                }
-            }
 
-
-        }
-
-    }
 }

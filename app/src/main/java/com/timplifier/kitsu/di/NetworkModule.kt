@@ -10,8 +10,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-
-
     @Singleton
     @Provides
     fun provideAnimeApiService(networkClient: NetworkClient) =
@@ -26,5 +24,4 @@ object NetworkModule {
     @Provides
     fun provideAuthenticationApiService(authenticationClient: NetworkClient.AuthenticationClient) =
         authenticationClient.provideAuthenticationApiService()
-
 }
