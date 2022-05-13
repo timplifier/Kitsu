@@ -5,6 +5,5 @@ import com.timplifier.kitsu.presentation.base.BaseFlowFragment
 
 
 class MainFlowFragment :
-    BaseFlowFragment(R.layout.fragment_main_flow, R.id.nav_host_main_fragment) {
+    BaseFlowFragment(R.layout.fragment_main_flow, R.id.nav_host_main_fragment)
 
-}

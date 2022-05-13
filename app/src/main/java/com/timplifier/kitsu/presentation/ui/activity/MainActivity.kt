@@ -8,6 +8,7 @@ import com.timplifier.kitsu.R
 import com.timplifier.kitsu.data.local.preferences.PreferencesHelper
 import com.timplifier.kitsu.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,10 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navHostFragment.navController
     }
+
+    @Inject
     private lateinit var preferences: PreferencesHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -39,4 +43,3 @@ class MainActivity : AppCompatActivity() {
         navController.graph = navGraph
     }
 }
-
