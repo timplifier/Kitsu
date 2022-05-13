@@ -21,4 +21,10 @@ object NetworkModule {
     @Provides
     fun provideMangaApiService(networkClient: NetworkClient) =
         networkClient.provideMangaApiService()
+
+    @Singleton
+    @Provides
+    fun provideAuthenticationApiService(authenticationClient: NetworkClient.AuthenticationClient) =
+        authenticationClient.provideAuthenticationApiService()
+
 }
