@@ -4,6 +4,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.map
 import com.timplifier.kitsu.data.remote.apiservices.AnimeApiService
+import com.timplifier.kitsu.data.remote.dtos.anime.genres.toDomain
 import com.timplifier.kitsu.data.remote.dtos.anime.toDomain
 import com.timplifier.kitsu.data.remote.pagingsources.AnimePagingSource
 import com.timplifier.kitsu.data.repositories.base.BaseRepository
@@ -22,5 +23,9 @@ class AnimeRepositoryImpl @Inject constructor(
 
     override fun fetchAnimeDetails(id: String) = sendRequest {
         animeApiService.fetchSingleAnime(id).toDomain()
+    }
+
+    override fun fetchAnimeGenres(id: String) = sendRequest {
+        animeApiService.fetchAnimeGenres(id).toDomain()
     }
 }

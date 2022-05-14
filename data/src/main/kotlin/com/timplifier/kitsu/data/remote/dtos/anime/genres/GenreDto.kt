@@ -2,6 +2,7 @@ package com.timplifier.kitsu.data.remote.dtos.anime.genres
 
 
 import com.google.gson.annotations.SerializedName
+import com.timplifier.kitsu.domain.models.anime.genres.GenreModel
 
 data class GenreDto(
     @SerializedName("createdAt")
@@ -15,3 +16,5 @@ data class GenreDto(
     @SerializedName("description")
     val description: String?
 )
+
+fun GenreDto.toDomain() = GenreModel(createdAt, updatedAt, name, slug, description)
