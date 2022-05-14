@@ -34,7 +34,7 @@ class SignInFragment :
                 mainNavControllerNavigation().safeNavigation(R.id.action_signInFlowFragment_to_mainFlowFragment)
 
             }, gatherIfSucceed = {
-                it.assembleViewVisibility(binding.progressbar)
+                it.assembleViewVisibility(binding.signInContainer, binding.progressbar)
             })
     }
 
