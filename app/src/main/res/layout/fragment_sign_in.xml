@@ -59,10 +59,10 @@
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/helvetica_bold"
             android:hint="@string/password"
+            android:inputType="textPassword"
             android:textColor="@android:color/darker_gray"
             android:textSize="16sp" />
 

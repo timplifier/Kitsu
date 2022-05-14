@@ -39,6 +39,7 @@ class OkHttp @Inject constructor() {
         return okHttpClient.build()
 
     }
+
     private fun provideLoggingInterceptor() = HttpLoggingInterceptor().setLevel(
         when {
             BuildConfig.DEBUG -> HttpLoggingInterceptor.Level.BODY
@@ -60,6 +61,3 @@ class OkHttp @Inject constructor() {
         }
     }
 }
-
-
-

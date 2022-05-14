@@ -9,5 +9,6 @@ interface AuthenticationApiService {
     @POST("token")
     suspend fun authenticate(
         @Body authDto: AuthDto
+
     ): TokenDto
 }

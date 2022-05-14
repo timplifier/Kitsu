@@ -1,11 +1,5 @@
 package com.timplifier.kitsu.data.remote.pagingsources.base
 
-import androidx.paging.PagingSource
-import androidx.paging.PagingState
-import retrofit2.HttpException
-import retrofit2.Response
-import java.io.IOException
-
 //abstract class BasePagingSource<Dto : Any, Domain : Any>(
 //    private val request: suspend (position: Int) -> Response<Dto>,
 //    private val mappedData: (data: List<Dto>) -> List<Domain>

@@ -13,8 +13,8 @@
         tools:layout="@layout/fragment_main_flow">
         <action
             android:id="@+id/action_mainFlowFragment_to_signInFlowFragment"
-            app:popUpTo="@id/nav_graph"
-            app:destination="@id/signInFlowFragment" />
+            app:destination="@id/signInFlowFragment"
+            app:popUpTo="@id/nav_graph" />
     </fragment>
     <fragment
         android:id="@+id/signInFlowFragment"
