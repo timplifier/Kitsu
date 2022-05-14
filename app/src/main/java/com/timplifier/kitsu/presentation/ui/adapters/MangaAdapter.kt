@@ -12,8 +12,6 @@ import com.timplifier.kitsu.presentation.models.manga.MangaDataUI
 class MangaAdapter(
     private val onItemClick: (id: String) -> Unit
 ) : PagingDataAdapter<MangaDataUI, MangaAdapter.MangaViewHolder>(BaseDiffUtil()) {
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MangaViewHolder {
         return MangaViewHolder(
             ItemMangaBinding.inflate(
@@ -35,11 +33,7 @@ class MangaAdapter(
             binding.root.setOnClickListener {
                 onItemClick(mangaData.id)
             }
-
-
         }
-
     }
-
 }
 

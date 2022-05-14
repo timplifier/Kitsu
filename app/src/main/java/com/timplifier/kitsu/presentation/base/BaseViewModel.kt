@@ -37,9 +37,5 @@ abstract class BaseViewModel : ViewModel() {
         mappedData: (data: T) -> S
     ) = map {
         it.map { data -> mappedData(data) }
-
-
     }.cachedIn(viewModelScope)
-
-
 }

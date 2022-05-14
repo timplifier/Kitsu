@@ -13,6 +13,7 @@ class AuthenticationRepositoryImpl @Inject constructor(
     private val authenticationApiService: AuthenticationApiService,
     private val preferencesHelper: PreferencesHelper
 ) : BaseRepository(), AuthenticationRepository {
+
     override fun authenticate(
         username: String,
         password: String

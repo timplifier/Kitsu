@@ -13,11 +13,8 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val navController: NavController by lazy(LazyThreadSafetyMode.NONE) {
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navHostFragment.navController
-    }
+    private lateinit var navController: NavController
+
 
     @Inject
     lateinit var preferences: PreferencesHelper
@@ -26,11 +23,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setStartDestination()
+        setupNavigation()
 
     }
 
-    private fun setStartDestination() {
+    private fun setupNavigation() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
         val navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
         when {
             !preferences.isAuthenticated -> {

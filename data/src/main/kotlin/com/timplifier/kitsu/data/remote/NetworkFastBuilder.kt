@@ -27,12 +27,20 @@ class NetworkFastBuilder @Inject constructor() {
 }
 
 class OkHttp @Inject constructor() {
-    fun provideOkHttpClient() = OkHttpClient.Builder()
-        .addInterceptor(provideLoggingInterceptor())
-        .connectTimeout(30, TimeUnit.SECONDS)
-        .writeTimeout(30, TimeUnit.SECONDS)
-        .readTimeout(30, TimeUnit.SECONDS)
-        .build()
+    fun provideOkHttpClient(authenticationInterceptor: AuthenticationInterceptor? = null): OkHttpClient {
+        val okHttpClient = OkHttpClient()
+            .newBuilder()
+            .addInterceptor(provideLoggingInterceptor())
+            .callTimeout(30, TimeUnit.SECONDS)
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .writeTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+        authenticationInterceptor?.let {
+            okHttpClient.addInterceptor(authenticationInterceptor)
+        }
+        return okHttpClient.build()
+
+    }
 
 
     private fun provideLoggingInterceptor() = HttpLoggingInterceptor().setLevel(
@@ -50,7 +58,7 @@ class OkHttp @Inject constructor() {
             val request = chain
                 .request()
                 .newBuilder()
-                .addHeader("Authorization : Bearer", "${preferencesHelper.accessToken}")
+                .addHeader("Authorization: Bearer", "${preferencesHelper.accessToken}")
                 .build()
             return chain.proceed(request)
         }

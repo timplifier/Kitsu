@@ -2,15 +2,20 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/signInFlowFragment">
+    android:id="@+id/nav_graph"
+    tools:ignore="InvalidNavigation">
 
 
     <fragment
         android:id="@+id/mainFlowFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.main.MainFlowFragment"
         android:label="fragment_main_flow"
-        tools:layout="@layout/fragment_main_flow" />
+        tools:layout="@layout/fragment_main_flow">
+        <action
+            android:id="@+id/action_mainFlowFragment_to_signInFlowFragment"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/signInFlowFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signInFlowFragment"
         android:name="com.timplifier.kitsu.presentation.ui.fragments.auth.SignInFlowFragment"

@@ -36,10 +36,6 @@ class AnimeAdapter(
             binding.root.setOnClickListener {
                 onItemClick(animeDataDto.id)
             }
-
-
         }
-
     }
-
 }
