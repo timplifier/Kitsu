@@ -28,5 +28,4 @@ class PreferencesHelper(context: Context) {
     var refreshToken
         get() = preferences.getString(REFRESH_TOKEN_KEY, "refresh_token")
         set(value) = preferences.edit().putString(REFRESH_TOKEN_KEY, value).apply()
-
 }

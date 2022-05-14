@@ -10,5 +10,4 @@ interface AuthenticationApiService {
     suspend fun authenticate(
         @Body authDto: AuthDto
     ): TokenDto
-
 }

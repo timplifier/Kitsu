@@ -23,6 +23,4 @@ class NetworkClient @Inject constructor(
 
         fun provideAuthenticationApiService(): AuthenticationApiService = retrofit.createAnApi()
     }
-
-
 }

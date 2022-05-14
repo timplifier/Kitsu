@@ -18,6 +18,4 @@ class DetailedAnimeViewModel @Inject constructor(
 
     fun fetchSingleAnime(id: String) =
         fetchSingleAnimeUseCase(id).gatherRequest(_singleAnimeState) { it.toUI() }
-
-
 }

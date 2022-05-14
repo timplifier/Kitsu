@@ -22,8 +22,6 @@ class NetworkFastBuilder @Inject constructor() {
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
-
-
 }
 
 class OkHttp @Inject constructor() {
@@ -41,8 +39,6 @@ class OkHttp @Inject constructor() {
         return okHttpClient.build()
 
     }
-
-
     private fun provideLoggingInterceptor() = HttpLoggingInterceptor().setLevel(
         when {
             BuildConfig.DEBUG -> HttpLoggingInterceptor.Level.BODY
@@ -62,10 +58,7 @@ class OkHttp @Inject constructor() {
                 .build()
             return chain.proceed(request)
         }
-
-
     }
-
 }
 
 

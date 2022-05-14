@@ -43,6 +43,4 @@ class AnimeFragment : BaseFragment<FragmentAnimeBinding, AnimeViewModel>(R.layou
             )
         )
     }
-
-
 }

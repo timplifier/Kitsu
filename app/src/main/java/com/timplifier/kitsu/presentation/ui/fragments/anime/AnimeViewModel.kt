@@ -15,6 +15,4 @@ class AnimeViewModel @Inject constructor(
         animeRepositoryImpl.fetchPagedAnime().gatherPagingRequest {
             it.toUI()
         }
-
-
 }

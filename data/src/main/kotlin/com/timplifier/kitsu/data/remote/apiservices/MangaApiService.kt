@@ -15,6 +15,4 @@ interface MangaApiService {
 
     @GET("manga/{id}")
     suspend fun fetchDetailedManga(@Path("id") id: String): SingleMangaDto
-
-
 }
